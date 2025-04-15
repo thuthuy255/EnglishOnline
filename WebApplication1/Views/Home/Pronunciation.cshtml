@@ -2,7 +2,18 @@
     ViewBag.Title = "Phát âm";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>
+    .card {
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            background-color: #f8f9fa;
+        }
+</style>
 <div class="text-center">
     <h1 class="h3 mb-2 font-weight-bold">Cùng học phát âm tiếng Anh nào!</h1>
     <p class="text-muted mb-4">Tập nghe và học phát âm các âm trong tiếng Anh</p>
@@ -224,7 +235,27 @@
         </div>
     </div> <!-- Đóng thẻ bg-white -->
 </div> <!-- Đóng thẻ text-center -->
+<script>
+    // Hàm đọc văn bản
+    function speak(text) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-US'; // Đặt ngôn ngữ là tiếng Anh
+        window.speechSynthesis.speak(utterance);
+    }
 
+    // Thêm sự kiện click cho tất cả card-body
+    document.addEventListener('DOMContentLoaded', function () {
+        const cardBodies = document.querySelectorAll('.card-body');
+
+        cardBodies.forEach(card => {
+            card.addEventListener('click', function () {
+                // Lấy text từ phần tử con thứ hai (text-muted)
+                const word = this.querySelector('.text-muted').textContent;
+                speak(word);
+            });
+        });
+    });
+</script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
