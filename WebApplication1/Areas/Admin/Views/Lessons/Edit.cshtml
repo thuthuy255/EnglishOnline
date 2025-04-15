@@ -1,0 +1,86 @@
+﻿@model Model.EF.Lessons
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <div class="d-flex justify-content-center align-items-center mt-5">
+        <div class="col-md-8 bg-white p-5 rounded shadow vh-10">
+            <h2 class="text-center">Sửa Người Dùng</h2>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.LessonID)
+
+                    <div class="form-group">
+                        Tên bài học 
+                        <div class="mb-3">
+                            @Html.EditorFor(model => model.LessonName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.LessonName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        Nội dung bài học
+                        <div class="mb-3">
+                            @Html.EditorFor(model => model.LessonContent, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.LessonContent, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        Loại bài học
+                        <div class="mb-3">
+                            @Html.EditorFor(model => model.LessonType, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.LessonType, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        Độ khó
+                        <div class="mb-3">
+                            @Html.EditorFor(model => model.DifficultyLevel, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.DifficultyLevel, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        Điểm
+                        <div class="mb-3">
+                            @Html.EditorFor(model => model.Score, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Score, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                       Tên chủ đề
+                        <div class="mb-3">
+                            @Html.DropDownList("TopicID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.TopicID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center w-100">
+                        <button type="submit" class="btn btn-primary">Cập nhật</button>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</body>
+</html>

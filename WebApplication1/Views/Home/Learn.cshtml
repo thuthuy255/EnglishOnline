@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Học Tiếng Anh";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int currentProgress = 4; // Bài đã học
+}
+
+@model List<Model.EF.Topic>
+
+<h2 class="text-center mb-5">📘 Chào mừng đến với khóa học tiếng Anh!</h2>
+<div class="container d-flex flex-column align-items-center gap-4">
+
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        var topic = Model[i];
+        var lessonIndex = i + 1;
+        var isCompleted = lessonIndex < currentProgress;
+        var isCurrent = lessonIndex == currentProgress;
+        var isLocked = lessonIndex > currentProgress;
+
+        string circleColor = isCompleted ? "bg-success" : isCurrent ? "bg-primary" : "bg-secondary";
+        string icon = isCompleted ? "fa-check" : isCurrent ? "fa-play" : "fa-lock";
+        string opacity = isLocked ? "opacity-50" : "";
+
+        <div class="lesson-item w-75 @opacity">
+            <div class="d-flex align-items-center gap-3 lesson-header">
+                <div class="lesson-circle @circleColor text-white">
+                    <i class="fas @icon"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <strong>Bài @lessonIndex: @topic.TopicName</strong>
+                </div>
+                @if (!isLocked)
+                {
+                    <button class="btn btn-outline-success main-lesson-btn" type="button" data-bs-toggle="collapse" data-bs-target="#lesson-@lessonIndex" aria-expanded="false" aria-controls="lesson-@lessonIndex">
+                        Học
+                    </button>
+                }
+            </div>
+
+            <!-- Danh sách bài học con với Collapse -->
+            <div id="lesson-@lessonIndex" class="collapse mt-3">
+                <div class="d-flex flex-column gap-2 ps-5">
+                    @foreach (var lesson in topic.Lessons)
+                    {
+                        <div class="d-flex align-items-center justify-content-between">
+                            <a href="@Url.Action("Lesson_3pic", "Lesson")" class="text-decoration-none text-dark">
+                                @lesson.LessonName
+                            </a>
+                            @if (!isLocked)
+                            {
+                                <a href="@Url.Action("Lesson_3pic", "Lesson")" class="btn btn-sm btn-success">Học</a>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+<div class="alert alert-info mt-5 text-center" role="alert">
+    🌟 Tiến độ của bạn: @currentProgress/@Model.Count bài đã hoàn thành.
+</div>
+
+<style>
+    .lesson-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+    }
+
+    .lesson-header:hover {
+        background-color: #f8f9fa;
+    }
+</style>

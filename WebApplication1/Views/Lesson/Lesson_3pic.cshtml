@@ -1,0 +1,561 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #ffffff;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .header-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-color: #ffffff;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .progress-container {
+            width: 60%;
+            height: 15px;
+        }
+
+        .progress-bar {
+            transition: width 0.5s ease-in-out;
+            background-color: #58A700;
+        }
+
+        .new_word {
+            margin-top: 100px;
+            font-size: 20px;
+        }
+
+            .new_word p {
+                font-size: 20px;
+            }
+
+        .option-box {
+            background-color: white !important;
+            color: #4B4B4B !important;
+            border: 1px solid #E5E5E5 !important;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom: 4px solid #E5E5E5 !important;
+            cursor: pointer;
+        }
+
+            .option-box:hover {
+                background-color: #F7F7F7 !important;
+            }
+
+            .option-box:active {
+                background-color: #DDF4FF !important;
+                transform: translateY(-2px);
+            }
+
+            .option-box.active {
+                background-color: #DDF4FF !important;
+                color: #1899D6 !important;
+                border: 1px solid #84D8FF !important;
+                border-bottom: 4px solid #84D8FF !important;
+            }
+
+            .option-box.disabled {
+                background-color: #E8E8E8 !important;
+                color: #B7B7B7 !important;
+                border: 1px solid #CECECE !important;
+                border-bottom: 4px solid #CECECE !important;
+                cursor: not-allowed !important;
+                pointer-events: none !important;
+            }
+
+            .option-box.correct {
+                background-color: #d4edda !important;
+                border-color: #c3e6cb !important;
+                border-bottom: 4px solid #c3e6cb !important;
+            }
+
+            .option-box.wrong {
+                background-color: #f8d7da !important;
+                border-color: #f5c6cb !important;
+                border-bottom: 4px solid #f5c6cb !important;
+            }
+
+            .option-box img {
+                width: 100px;
+                height: 120px;
+                object-fit: cover;
+                display: block;
+                margin: 0 auto 0.5rem auto;
+            }
+
+        .horizontal {
+            width: 100%;
+            height: 1px;
+            background-color: #CECECE;
+            position: fixed;
+            bottom: 150px;
+            left: 0;
+        }
+
+        .footer-btn {
+            position: fixed;
+            background-color: white;
+            display: flex;
+            z-index: 1000;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 65%;
+            justify-content: space-between;
+            border: 6px;
+        }
+
+            .footer-btn button {
+                width: 17%;
+            }
+
+        .btn-disabled {
+            background-color: #E8E8E8;
+            color: #B7B7B7;
+            cursor: not-allowed !important;
+            pointer-events: none !important;
+            border: 1px solid #CECECE;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            outline: none;
+            border-bottom: 5px solid #CECECE !important;
+        }
+
+        .btn-active {
+            background-color: #58CC02 !important;
+            color: white !important;
+            border: 1px solid #CECECE;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            outline: none;
+            border-bottom: 5px solid #58A700 !important;
+        }
+
+        .skip-btn {
+            background-color: #ffff;
+            color: #AFAFAF;
+            border: 1px solid #CECECE;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            outline: none;
+            border-bottom: 5px solid #CECECE !important;
+        }
+
+            .skip-btn:hover {
+                background-color: #E5E5E5;
+                color: #AFAFAF;
+            }
+
+        .success-message {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #e6ffe6;
+            padding: 20px;
+            text-align: center;
+            z-index: 2000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkmark {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            font-size: 24px;
+        }
+
+        .success-message .btn {
+            font-size: 16px;
+            padding: 8px 20px;
+            margin: 0 5px;
+        }
+
+        .success-message h5 {
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+
+        .content_bt {
+            background-color: white;
+            min-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="header-container container-fluid">
+            <div class="d-flex align-items-center justify-content-center w-100 gap-3 p-3">
+                <i class="fas fa-times text-secondary fs-4 me-3" onclick="goToHome()"></i>
+                <div class="progress progress-container me-3">
+                    <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-heart text-danger fs-4"></i>
+                    <span class="text-danger fs-4 ms-1">5</span>
+                </div>
+            </div>
+        </div>
+        <main>
+            <div id="question-container" class="new_word container" style="max-width:40%">
+                <div class="text-primary fw-semibold mb-1 d-flex">
+                    <img src="~/Assets/Client/clientAssets/img/blink.png" alt="Tiếng Anh" class="me-3" style="width: 35px;height:35px">
+                    <p>TỪ VỰNG MỚI</p>
+                </div>
+                <div id="question-text" class="mb-5 fw-bold"></div>
+            </div>
+
+            <div class="content">
+                <div id="options-container" class="row g-3 mb-4" style="max-width: 40%; margin-left: auto; margin-right: auto;"></div>
+            </div>
+        </main>
+
+        <audio id="correctSound" src="~/Assets/Client/clientAssets/audio/mixkit-correct-answer-tone-2870.wav" preload="auto"></audio>
+        <audio id="wrongSound" src="~/Assets/Client/clientAssets/audio/mixkit-wrong-long-buzzer-954.wav" preload="auto"></audio>
+
+        <div class="footer">
+            <div class="horizontal"></div>
+            <div class="footer-btn">
+                <button class="btn btn-light p-3 skip-btn">BỎ QUA</button>
+                <button id="checkBtn" class="btn btn-light p-3 btn-disabled">KIỂM TRA</button>
+            </div>
+        </div>
+
+        <div class="modal fade" id="wrongAnswerModal" tabindex="-1" aria-labelledby="wrongAnswerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-heart text-danger fs-3 me-1"></i>
+                            <i class="fas fa-heart text-danger fs-3 me-1"></i>
+                            <i class="fas fa-heart text-danger fs-3 me-1"></i>
+                            <i class="fas fa-heart text-danger fs-3 me-1"></i>
+                            <i class="fas fa-heart text-danger fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold">Mỗi lần sai bạn sẽ mất 1 trái tim!</h5>
+                        <p class="text-muted">Học chăm chỉ và tập trung để bảo toàn các trái tim nhé!</p>
+                        <button type="button" class="btn btn-primary w-100 mt-3" data-bs-dismiss="modal">TIẾP TỤC HỌC</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="successMessage" class="success-message d-none">
+            <span class="checkmark">✓</span>
+            <h5>Tuyệt vời!</h5>
+            <button id="continueBtn" class="btn btn-success">TIẾP TỤC</button>
+        </div>
+    </div>
+
+    <script>
+        function goToHome() {
+            window.location.href = "/Home/Learn"; // Chuyển hướng về trang chủ
+        }
+        window.onload = function () {
+            const progressBar = document.getElementById('progress-bar');
+            const checkBtn = document.getElementById('checkBtn');
+            const skipBtn = document.querySelector('.skip-btn'); // Thêm nút BỎ QUA
+            const heartsElement = document.querySelector('.text-danger.fs-4.ms-1');
+            const successMessage = document.getElementById('successMessage');
+            const correctSound = document.getElementById('correctSound');
+            const wrongSound = document.getElementById('wrongSound');
+            const questionContainer = document.getElementById('question-text');
+            const optionsContainer = document.getElementById('options-container');
+            let hearts = 5;
+            let currentQuestionIndex = 0;
+            let isChecked = false;
+            let completedQuestions = 0;
+            let wrongQuestions = [];
+            let hasShownWrongModal = false;
+
+            const questions = [
+                {
+                    question: 'Đâu là "cà phê"?',
+                    options: [
+                        { text: 'Coffee', image: 'https://storage.googleapis.com/a1aa/image/8hVYeLQpQHqEh3DzpsrcY5wSZER_iD5yInv7phY4hJQ.jpg', correct: true },
+                        { text: 'Milk', image: 'https://storage.googleapis.com/a1aa/image/ZC5XCJ-iYOIds5z5oX6HUQVGgZSt2T9GjRQHkLXw1Hk.jpg', correct: false },
+                        { text: 'Tea', image: 'https://storage.googleapis.com/a1aa/image/pYO6ZvZBqWj80bVaz8DzztMCvFQ7NluU4ZjHtEbLZS4.jpg', correct: false }
+                    ]
+                },
+                {
+                    question: 'Đâu là "mèo"?',
+                    options: [
+                        { text: 'Cat', image: 'https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=1200', correct: true },
+                        { text: 'Dog', image: 'https://images2.thanhnien.vn/528068263637045248/2024/4/5/edit-8f3f62b6-9941-4be8-97ec-e6b44a87dbd5-17123183829001605752417.jpeg', correct: false },
+                        { text: 'Bird', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV6nlfk6r0PvD_OqZq7-R4YehZUvHmDmL4Qw&s', correct: false }
+                    ]
+                },
+                {
+                    question: 'Đâu là "táo"?',
+                    options: [
+                        { text: 'Apple', image: 'https://storage.googleapis.com/a1aa/image/apple.jpg', correct: true },
+                        { text: 'Banana', image: 'https://storage.googleapis.com/a1aa/image/banana.jpg', correct: false },
+                        { text: 'Orange', image: 'https://storage.googleapis.com/a1aa/image/orange.jpg', correct: false }
+                    ]
+                },
+                {
+                    question: 'Đâu là "sách"?',
+                    options: [
+                        { text: 'Book', image: 'https://storage.googleapis.com/a1aa/image/book.jpg', correct: true },
+                        { text: 'Pen', image: 'https://storage.googleapis.com/a1aa/image/pen.jpg', correct: false },
+                        { text: 'Notebook', image: 'https://storage.googleapis.com/a1aa/image/notebook.jpg', correct: false }
+                    ]
+                },
+                {
+                    question: 'Đâu là "mặt trời"?',
+                    options: [
+                        { text: 'Sun', image: 'https://storage.googleapis.com/a1aa/image/sun.jpg', correct: true },
+                        { text: 'Moon', image: 'https://storage.googleapis.com/a1aa/image/moon.jpg', correct: false },
+                        { text: 'Star', image: 'https://storage.googleapis.com/a1aa/image/star.jpg', correct: false }
+                    ]
+                }
+            ];
+
+            let currentQuestions = [...questions];
+
+            function updateProgressBar() {
+                let width = (completedQuestions / questions.length) * 100;
+                progressBar.style.width = width + '%';
+                progressBar.setAttribute('aria-valuenow', width);
+            }
+
+            function loadQuestion(index) {
+                const question = currentQuestions[index];
+                questionContainer.textContent = question.question;
+
+                optionsContainer.innerHTML = '';
+                question.options.forEach((option, i) => {
+                    const div = document.createElement('div');
+                    div.className = 'col-12 col-sm-4';
+                    div.innerHTML = `
+                                <div class="p-3 text-center option-box" style="padding: 2.5rem !important;" data-answer="${option.correct ? 'correct' : 'incorrect'}">
+                                    <img src="${option.image}" alt="${option.text}" class="mb-3 img-fluid" width="200" height="200" style="margin-bottom: 0.5rem !important;">
+                                    <div class="fw-semibold text-secondary">${option.text}</div>
+                                    <div class="text-muted">${i + 1}</div>
+                                </div>
+                            `;
+                    optionsContainer.appendChild(div);
+                });
+
+                isChecked = false;
+                checkBtn.textContent = 'KIỂM TRA';
+                checkBtn.classList.remove('btn-active');
+                checkBtn.classList.add('btn-disabled');
+                document.querySelector('.footer-btn').classList.remove('correct', 'wrong');
+
+                document.querySelectorAll('.option-box').forEach(box => {
+                    box.addEventListener('click', function () {
+                        if (!isChecked) {
+                            const word = this.querySelector('.fw-semibold').textContent;
+                            speakText(word);
+                            document.querySelectorAll('.option-box').forEach(b => b.classList.remove('active'));
+                            this.classList.add('active');
+                            checkBtn.classList.remove('btn-disabled');
+                            checkBtn.classList.add('btn-active');
+                        }
+                    });
+                });
+            }
+
+            function speakText(text) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.rate = 1;
+                utterance.pitch = 1;
+                window.speechSynthesis.speak(utterance);
+            }
+
+            checkBtn.addEventListener('click', function () {
+                const selectedOption = document.querySelector('.option-box.active');
+                const footerBtn = document.querySelector('.footer-btn');
+
+                if (!selectedOption && !isChecked) {
+                    alert('Vui lòng chọn một đáp án trước!');
+                    return;
+                }
+
+                if (!isChecked) {
+                    isChecked = true;
+                    const isCorrect = selectedOption.getAttribute('data-answer') === 'correct';
+
+                    document.querySelectorAll('.option-box').forEach(box => {
+                        const isBoxCorrect = box.getAttribute('data-answer') === 'correct';
+                        if (isBoxCorrect) {
+                            box.classList.add('correct');
+                        } else if (box === selectedOption && !isCorrect) {
+                            box.classList.add('wrong');
+                        }
+                        box.classList.add('disabled');
+                    });
+
+                    footerBtn.classList.remove('correct', 'wrong');
+                    if (isCorrect) {
+                        footerBtn.classList.add('correct');
+                        correctSound.play();
+                        completedQuestions++;
+                        updateProgressBar();
+                        successMessage.classList.remove('d-none');
+                        checkBtn.textContent = 'TIẾP TỤC';
+                        checkBtn.classList.add('btn-active');
+                    } else {
+                        footerBtn.classList.add('wrong');
+                        wrongSound.play();
+                        hearts = Math.max(0, hearts - 1);
+                        heartsElement.textContent = hearts;
+
+                        if (!wrongQuestions.some(q => q.question === currentQuestions[currentQuestionIndex].question)) {
+                            wrongQuestions.push(currentQuestions[currentQuestionIndex]);
+                        }
+
+                        if (!hasShownWrongModal) {
+                            const wrongAnswerModal = new bootstrap.Modal(document.getElementById('wrongAnswerModal'));
+                            wrongAnswerModal.show();
+                            hasShownWrongModal = true;
+                        }
+
+                        checkBtn.textContent = 'TIẾP TỤC';
+                        checkBtn.classList.add('btn-active');
+
+                        if (hearts <= 0) {
+                            setTimeout(() => {
+                                alert('Bạn đã hết trái tim! Trò chơi kết thúc.');
+                                location.reload();
+                            }, 500);
+                        }
+                    }
+                } else {
+                    currentQuestionIndex++;
+                    if (currentQuestionIndex < currentQuestions.length) {
+                        loadQuestion(currentQuestionIndex);
+                    } else {
+                        if (wrongQuestions.length > 0) {
+                            currentQuestions = [...wrongQuestions];
+                            wrongQuestions = [];
+                            currentQuestionIndex = 0;
+                            loadQuestion(currentQuestionIndex);
+                        } else {
+                            progressBar.style.width = '100%';
+                            progressBar.setAttribute('aria-valuenow', 100);
+                            alert('Chúc mừng! Bạn đã hoàn thành tất cả câu hỏi đúng.');
+                            location.reload();
+                        }
+                    }
+                    successMessage.classList.add('d-none');
+                }
+            });
+
+            // Sự kiện cho nút "BỎ QUA"
+            skipBtn.addEventListener('click', function () {
+                if (!isChecked) {
+                    isChecked = true;
+                    const footerBtn = document.querySelector('.footer-btn');
+
+                    // Đánh dấu tất cả các tùy chọn là disabled và hiển thị đáp án đúng
+                    document.querySelectorAll('.option-box').forEach(box => {
+                        const isBoxCorrect = box.getAttribute('data-answer') === 'correct';
+                        if (isBoxCorrect) {
+                            box.classList.add('correct');
+                        }
+                        box.classList.add('disabled');
+                    });
+
+                    // Cập nhật giao diện và logic khi sai
+                    footerBtn.classList.remove('correct', 'wrong');
+                    footerBtn.classList.add('wrong');
+                    wrongSound.play();
+                    hearts = Math.max(0, hearts - 1);
+                    heartsElement.textContent = hearts;
+
+                    // Thêm câu hỏi vào danh sách sai nếu chưa có
+                    if (!wrongQuestions.some(q => q.question === currentQuestions[currentQuestionIndex].question)) {
+                        wrongQuestions.push(currentQuestions[currentQuestionIndex]);
+                    }
+
+                    // Hiển thị modal lần đầu sai (nếu chưa hiển thị)
+                    if (!hasShownWrongModal) {
+                        const wrongAnswerModal = new bootstrap.Modal(document.getElementById('wrongAnswerModal'));
+                        wrongAnswerModal.show();
+                        hasShownWrongModal = true;
+                    }
+
+                    // Cập nhật nút "KIỂM TRA" thành "TIẾP TỤC"
+                    checkBtn.textContent = 'TIẾP TỤC';
+                    checkBtn.classList.remove('btn-disabled');
+                    checkBtn.classList.add('btn-active');
+
+                    // Kiểm tra nếu hết tim
+                    if (hearts <= 0) {
+                        setTimeout(() => {
+                            alert('Bạn đã hết trái tim! Trò chơi kết thúc.');
+                            location.reload();
+                        }, 500);
+                    }
+                }
+            });
+
+            document.getElementById('continueBtn').addEventListener('click', function () {
+                currentQuestionIndex++;
+                if (currentQuestionIndex < currentQuestions.length) {
+                    loadQuestion(currentQuestionIndex);
+                } else {
+                    if (wrongQuestions.length > 0) {
+                        currentQuestions = [...wrongQuestions];
+                        wrongQuestions = [];
+                        currentQuestionIndex = 0;
+                        loadQuestion(currentQuestionIndex);
+                    } else {
+                        progressBar.style.width = '100%';
+                        progressBar.setAttribute('aria-valuenow', 100);
+                        alert('Chúc mừng! Bạn đã hoàn thành tất cả câu hỏi đúng.');
+                        location.reload();
+                    }
+                }
+                successMessage.classList.add('d-none');
+            });
+
+            progressBar.style.width = '0%';
+            progressBar.setAttribute('aria-valuenow', 0);
+            loadQuestion(currentQuestionIndex);
+        };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

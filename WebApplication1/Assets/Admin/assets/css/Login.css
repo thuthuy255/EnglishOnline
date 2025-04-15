@@ -1,0 +1,113 @@
+﻿/* Định dạng chung */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Chỉnh layout form */
+.h-custom {
+    height: 100vh;
+}
+
+.container-fluid {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Căn chỉnh hình ảnh */
+.img-fluid {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Định dạng form */
+form {
+    padding: 20px;
+}
+
+/* Nút đăng nhập */
+.btn-primary {
+    background: #6a11cb;
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    border: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn-primary:hover {
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        transform: scale(1.05);
+    }
+
+/* Các nút mạng xã hội */
+.btn-floating {
+    background-color: #ffffff;
+    color: #2575fc;
+    border: 1px solid #2575fc;
+    transition: all 0.3s ease;
+}
+
+    .btn-floating:hover {
+        background-color: #2575fc;
+        color: white;
+    }
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+    .divider:before, .divider:after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #ddd;
+        margin: 0 10px;
+    }
+
+/* Nhãn và input */
+.form-outline input {
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+    .form-outline input:focus {
+        border-color: #2575fc;
+        box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+    }
+
+/* Liên kết */
+.text-body {
+    color: #2575fc;
+    text-decoration: none;
+}
+
+    .text-body:hover {
+        text-decoration: underline;
+    }
+
+/* Footer */
+.bg-primary {
+    background: #2575fc !important;
+    color: white;
+}
+
+    .bg-primary a {
+        color: white;
+    }
+
+        .bg-primary a:hover {
+            opacity: 0.8;
+        }

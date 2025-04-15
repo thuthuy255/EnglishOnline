@@ -1,0 +1,144 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    ViewBag.Title = "Đăng Ký";
+}
+<!----------------------- Main Container -------------------------->
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+
+    <!----------------------- Register Container -------------------------->
+    <div class="row border rounded-5 p-3 bg-white shadow box-area">
+
+        <!--------------------------- Left Box ----------------------------->
+        <div class="col-md-6 rounded-4 left-box">
+            @*<div class="featured-image mb-3">
+                    <img src="images/register.png" class="img-fluid">
+                </div>
+                <p class="fs-2">Join Us</p>
+                <small>Become a part of our community.</small>*@
+        </div>
+
+        <!----------------------------- Right Box ----------------------------->
+        <div class="col-md-6 right-box">
+            <div class="row align-items-center">
+                <div class="header-text mb-4">
+                    <h2>Chào mừng!</h2>
+                    <p>Hãy tạo tài khoản để bắt đầu.</p>
+                </div>
+
+                <form id="registerForm">
+                    <div class="input-group mb-3 w-100">
+                        <input type="text" id="username" class="form-control form-control-lg bg-light fs-6 col-md-12" style="border-radius:10px" placeholder="Tên đăng nhập" required>
+                        <div class="invalid-feedback">Tên đăng nhập không hợp lệ.</div>
+                    </div>
+
+                    <div class="input-group mb-3 w-100">
+                        <input type="email" id="email" class="form-control form-control-lg bg-light fs-6 col-md-12" style="border-radius:10px" placeholder="Email" required>
+                        <div class="invalid-feedback">Email không hợp lệ.</div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input type="password" id="password" class="form-control form-control-lg bg-light fs-6 col-md-12" style="border-radius:10px" placeholder="Mật khẩu" required>
+                        <div class="invalid-feedback">Mật khẩu không hợp lệ.</div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input type="password" id="confirmPassword" class="form-control form-control-lg bg-light fs-6 col-md-12" style="border-radius:10px" placeholder="Nhập lại mật khẩu" required>
+                        <div class="invalid-feedback">Mật khẩu nhập lại không khớp.</div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Đăng Ký</button>
+                    </div>
+                </form>
+
+                <div class="row">
+                    <small>Đã có tài khoản? <a href="@Url.Action("Login", "Account")">Đăng nhập ngay</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<<!----------------------- JavaScript Validation -------------------------->
+
+<script>
+    function isValidEmail(email) {
+        let emailPattern = /^[^\s@@]+@@[^\s@@]+\.[^\s@@]+$/;
+        return emailPattern.test(email);
+    }
+    function isValidPassword(password) {
+    let passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@@$!%*?&])[A-Za-z\d@@$!%*?&]{6,}$/;
+    return passwordPattern.test(password);
+}
+
+    function handleRegisterSubmit(event) {
+        event.preventDefault();
+     let username = $("#username");
+     let emailInput = $("#email");
+     let passwordInput = $("#password");
+     let confirmPasswordInput = $("#confirmPassword");
+        let isValid = true;
+       
+     // 🛠 Kiểm tra email
+     if (!isValidEmail(emailInput.val())) {
+         emailInput.addClass("is-invalid");
+         isValid = false;
+     } else {
+         emailInput.removeClass("is-invalid");
+     }
+
+        // 🛠 Kiểm tra mật khẩu
+
+     if (!isValidPassword(passwordInput.val())) {
+         passwordInput.addClass("is-invalid");
+         isValid = false;
+     } else {
+         passwordInput.removeClass("is-invalid");
+     }
+
+        debugger
+     // 🛠 Kiểm tra mật khẩu nhập lại
+        if (confirmPasswordInput.val() !== passwordInput.val()) {
+            console.log(passwordInput.val());
+            console.log(confirmPasswordInput.val());
+         confirmPasswordInput.addClass("is-invalid");
+         isValid = false;
+     } else {
+         confirmPasswordInput.removeClass("is-invalid");
+     }
+
+     if (isValid) {
+         $.ajax({
+             url: "/Account/Register",
+             type: "POST",
+             data: {
+                 username: username.val(),
+                 email: emailInput.val(),
+                 password: passwordInput.val(),
+                 confirmPassword: confirmPasswordInput.val()
+             },
+             success: function (response) {
+                 if (response.success) {
+                     alert(response.message);
+                     window.location.href = "/Account/Login"; // Chuyển hướng sau khi đăng nhập thành công
+                 } else {
+                     alert(response.message);
+                 }
+             },
+             error: function () {
+                 alert("Có lỗi xảy ra, vui lòng thử lại!");
+             }
+         })
+     }
+    }
+
+
+    $(document).ready(function () {
+        $("#registerForm").on("submit", handleRegisterSubmit);
+        // Xóa lỗi khi người dùng nhập lại
+        $("input").on("input", function () {
+            $(this).removeClass("is-invalid");
+        });
+    });
+</script>
+

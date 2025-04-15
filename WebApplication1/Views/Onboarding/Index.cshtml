@@ -1,0 +1,396 @@
+﻿@using System.Web.Mvc
+@inherits System.Web.Mvc.WebViewPage
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duolingo Clone</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Bootstrap JS & Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        main {
+            margin-top: 80px;
+            flex: 1;
+            flex-grow: 1; /* Giúp main mở rộng để chiếm không gian còn lại */
+        }
+      
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .hero-section {
+            display: flex; /* Sử dụng Flexbox */
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            align-items: center; /* Căn giữa theo chiều dọc */
+        }
+
+            .hero-section img {
+                width: 35vw; /* Chiếm 50% chiều rộng màn hình */
+                max-width: 100%; /* Không vượt quá container */
+                height: auto;
+            }
+
+        .btn-green {
+            background-color: #58CC02;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            padding: 12px 24px;
+            width: 100%;
+            border-bottom: 4px solid #58A700; /* Viền dưới 2px, màu xanh dương */
+        }
+
+            .btn-green:hover {
+                color: white;
+                background-color: #61E002;
+                border-bottom: 4px solid #58A700; /* Viền dưới 2px, màu xanh dương */
+            }
+
+        .btn-white {
+            background-color: white;
+            color: #007bff;
+            font-weight: bold;
+            border-radius: 10px;
+            padding: 12px 24px;
+            width: 100%;
+            border: 2px solid #CECECE;
+            border-bottom: 4px solid #CECECE;
+        }
+
+            .btn-white:hover {
+                background-color: #E5E5E5;
+                border: 2px solid #CECECE;
+                border-bottom: 4px solid #CECECE;
+                color: #007bff;
+            }
+
+        .text-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            z-index: 1000;
+            transition: box-shadow 0.3s ease-in-out;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+            .header.scrolled {
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+        .dropdown-menu {
+            min-width: 150px;
+        }
+
+        .horizontal {
+            border-bottom: 2px solid #CECECE;
+        }
+
+        .bottom-language-bar {
+            margin-top: auto; /* Đẩy nó xuống cuối */
+            width: 100%;
+            background: white;
+            padding: 10px;
+        }
+
+        .new-section {
+            width: 100%;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer-section {
+            background-color: #58CC02;
+            color: white;
+            display: flex;
+        }
+
+            .footer-section h2 {
+                color: white;
+            }
+
+       
+
+        .footer-section h2 {
+            font-size: 17px; /* Chữ nhỏ hơn */
+        }
+
+        .list-unstyled {
+            font-size: 15px;
+        }
+
+        .custom-heading {
+            color: #58CC02; /* Màu xanh lá */
+        }
+
+        .footer-section ul li {
+            color: #A5ED6E;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="boarding">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content d-flex p-3 fixed-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-12 d-flex flex-column align-items-md-start align-items-center text-md-start text-center">
+                            <img src="https://d35aaqx5ub95lt.cloudfront.net/images/splash/f92d5f2f7d56636846861c458c0d0b6c.svg" alt="Duolingo Logo" class="logo">
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center justify-content-end ">
+                            <div class="dropdown">
+                                <button class="btn  dropdown-toggle d-none d-md-block" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    NGÔN NGỮ HIỂN THỊ: <span id="selected-lang">TIẾNG VIỆT</span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item lang-option" href="#" data-lang="vi">TIẾNG VIỆT</a></li>
+                                    <li><a class="dropdown-item lang-option" href="#" data-lang="en">ENGLISH</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Nội dung -->
+        <main class="container  ">
+
+            <div class=" row   hero-section">
+                <!-- Hình ảnh -->
+                <div class="col-md-6 text-center">
+                    <img src="https://media.giphy.com/media/Yldo4OWANKw970cVU5/giphy.gif" alt="Hình ảnh Duolingo" class="img-fluid">
+                </div>
+                <!-- Nội dung -->
+                <div class="col-md-6">
+                    <div class="text-container d-flex flex-column align-items-center justify-content-center p-5">
+                        <h2 class="fw-bold">Cách học ngôn ngữ miễn phí, vui nhộn và hiệu quả!</h2>
+                        <div class="w-65 mt-4">
+                            <button class="btn btn-green mt-2" onclick="goToWelcome()">BẮT ĐẦU</button>
+                            <a href="@Url.Action("Login", "Account")">
+                                <button class="btn btn-white mt-2">TÔI ĐÃ CÓ TÀI KHOẢN</button>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+
+
+        <div class=" bottom-language-bar d-none d-md-block ">
+            <div class="horizontal "></div>
+            <div class="d-flex p-3">
+                <button class="btn btn-sm">
+                    &lt;
+                </button>
+                <div class="">
+                    <div class="d-flex ">
+                        <button class="btn  ">
+                            <img src="~/Assets/Client/clientAssets/img/us.png" alt="Tiếng Anh" class="me-1" style="width: 20px;">
+                            <span>TIẾNG ANH</span>
+                        </button>
+                        <button class="btn ">
+                            <img src="~/Assets/Client/clientAssets/img/china.png" alt="Tiếng Hoa" class="me-1" style="width: 20px;">
+                            <span>TIẾNG HOA</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-sm">
+                    &gt;
+                </button>
+            </div>
+            <div class="horizontal"></div>
+        </div>
+
+
+        <div class="content">
+
+            <div class="container d-flex flex-column flex-md-row align-items-center justify-content-center min-vh-100 p-4">
+                <div class="text-center text-md-start col-md-6">
+                    <h1 class="custom-heading fw-bold display-4 mb-4">
+                        miễn phí. vui nhộn.<br />hiệu quả
+                    </h1>
+                    <p class="text-secondary fs-5">
+                        Học cùng Duolingo rất vui nhộn,
+                        <span class="text-primary">
+                            các nghiên cứu đã chứng minh tính hiệu quả của ứng dụng!
+                        </span>
+                        Qua từng bài học ngắn, nhỏ gọn bạn vừa ghi điểm, mở khóa cấp độ mới vừa được luyện tập các kỹ năng giao tiếp hữu dụng.
+                    </p>
+                </div>
+                <div class="mt-4 mt-md-0 col-md-6 d-flex justify-content-center">
+                    <div class="position-relative">
+                        <img alt="A mobile phone screen showing various icons and a character pointing to a #1 sign" class="img-fluid"
+                             src="https://media.giphy.com/media/MaxyuqBDPE73TRBWil/giphy.gif" />
+                        <div class="position-absolute bottom-0 start-50 translate-middle-x">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="container d-flex flex-column flex-md-row align-items-center justify-content-center min-vh-100 p-4 ">
+                <div class="col-12 col-md-6 d-flex justify-content-center">
+                    <img alt="Illustration of a person with a microscope and another person holding a beaker" class="img-fluid"
+                         src="https://media.giphy.com/media/RlZGPVAEoF3QQQDshT/giphy.gif" />
+                </div>
+                <div class="custom-heading text-md-start col-12 col-md-6 mt-4 mt-md-0">
+                    <h1 class="custom-heading fw-bold display-4 mb-4">
+                        Dựa trên căn cứ khoa học
+                    </h1>
+                    <p class="text-secondary fs-5 ">
+                        Chúng tôi kết hợp các phương pháp giảng dạy khoa học với nội dung học thú vị để tạo nên những khóa học hữu ích giúp bạn luyện tập nghe, nói, đọc và viết!
+                    </p>
+                </div>
+            </div>
+
+            <div class="container d-flex flex-column flex-md-row align-items-center justify-content-center min-vh-100 p-4">
+                <div class="text-center text-md-start col-12 col-md-6">
+                    <h1 class="custom-heading fw-bold display-4 mb-4">
+                        tiếp thêm động lực
+                    </h1>
+                    <p class="text-secondary fs-5">
+                        Ứng dụng giúp người học dễ dàng xây dựng thói quen học tập, qua những tính năng mô phỏng trò chơi, các thử thách vui vẻ, và nhắc nhở từ người bạn thân thiện – cú Duo.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center mt-4 mt-md-0">
+                    <img alt="Cartoon character running on a mobile app interface with a green pen beside it" class="img-fluid"
+                         src="https://media.giphy.com/media/Z8kwpBbHqkXxreBUy6/giphy.gif" />
+                </div>
+            </div>
+
+
+            <div class="container d-flex flex-column flex-md-row align-items-center justify-content-center min-vh-100 p-4">
+                <div class="col-12 col-md-6 d-flex justify-content-center">
+                    <img alt="Illustration of a person riding a motorcycle and another person holding a flower on a platform" class="img-fluid"
+                         src="https://media.giphy.com/media/kceydZaFue5n4kzhWB/giphy.gif" />
+                </div>
+                <div class="text-center text-md-start col-12 col-md-6 mt-4 mt-md-0">
+                    <h1 class="custom-heading  fw-bold display-4 mb-4">
+                        cá nhân hóa trải nghiệm học
+                    </h1>
+                    <p class="text-secondary fs-5">
+                        Kết hợp những điểm mạnh nhất của trí tuệ nhân tạo (AI) và khoa học về ngôn ngữ, các bài học được cá nhân hóa để giúp bạn tìm được cấp độ và nhịp độ học phù hợp nhất.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid footer-section">
+            <div class="container py-5">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+                    <div class="col">
+                        <h2 class="fw-bold mb-3">Giới thiệu</h2>
+                        <ul class="list-unstyled lh-lg">
+                            <li><a href="https://vi.duolingo.com/courses" class="text-decoration-none " style=" color: #A5ED6E">Khoá học</a></li>
+                            <li>Sứ mệnh</li>
+                            <li>Phương pháp</li>
+                            <li>Tính hiệu quả</li>
+                            <li>Duolingo Handbook</li>
+                            <li>Nghiên cứu</li>
+                            <li>Công việc</li>
+                            <li>Hướng dẫn Thương hiệu</li>
+                            <li>Cửa hàng</li>
+                            <li>Truyền thông</li>
+                            <li>Nhà đầu tư</li>
+                            <li>Liên hệ với chúng tôi</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h2 class="fw-bold mb-3">Sản phẩm</h2>
+                        <ul class="list-unstyled lh-lg">
+                            <li><a href="https://schools.duolingo.com/" class="text-decoration-none " style=" color: #A5ED6E">Duolingo</a></li>
+
+                            <li>Duolingo for Schools</li>
+                            <li>Duolingo English Test</li>
+                            <li>Podcast</li>
+                            <li>Duolingo for Business</li>
+                            <li>Super Duolingo</li>
+                            <li>Tặng Super Duolingo</li>
+                            <li>Duolingo Max</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h2 class="fw-bold mb-3">Ứng dụng</h2>
+                        <ul class="list-unstyled lh-lg">
+                            <li>Duolingo cho Android</li>
+                            <li>Duolingo cho iOS</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h2 class="fw-bold mb-3">Trợ giúp và hỗ trợ</h2>
+                        <ul class="list-unstyled lh-lg">
+                            <li>Hỏi & Đáp Duolingo</li>
+                            <li>Hỏi Đáp Nhà trường</li>
+                            <li>Hỏi & Đáp Duolingo English Test</li>
+                            <li>Tình trạng</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h2 class="fw-bold mb-3">Quyền riêng tư và điều khoản</h2>
+                        <ul class="list-unstyled lh-lg">
+                            <li>Nội quy diễn đàn</li>
+                            <li>Điều khoản</li>
+                            <li>Quyền riêng tư</li>
+                        </ul>
+                        <h2 class="fw-bold mb-3 mt-4">Mạng xã hội</h2>
+                        <ul class="list-unstyled lh-lg">
+                            <li>Blog</li>
+                            <li>Instagram</li>
+                            <li>TikTok</li>
+                            <li>Twitter</li>
+                            <li>YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        function goToWelcome() {
+            window.location.href = "/Onboarding/Welcome"; // Chỉ cần dùng tên action
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chào bạn! Tớ là cú Duo!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+            body.loaded {
+                opacity: 1;
+            }
+
+        .speech-bubble {
+            border: 2px solid #CECECE;
+            border-radius: 10px;
+            padding: 15px 15px;
+            font-size: 25px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #3C3C3C;
+            transition: opacity 0.5s ease-in-out;
+            
+        }
+
+        .duo-img {
+            max-width: 300px;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .continue-btn {
+            background-color: #58cc02;
+            color: white;
+            border-radius: 10px;
+            padding: 13px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            transition: background-color 0.3s;
+            position: absolute;
+            right: 200px;
+            margin-top: 50px;
+            border-bottom: 4px solid #58A700;
+        }
+
+            .continue-btn:hover {
+                background-color: #46a102;
+                transform: scale(1.05);
+            }
+
+        .horizontal {
+            width: 100%;
+            height: 1px;
+            background-color: #CECECE;
+            position: absolute;
+            left: 0;
+        }
+
+        .cover {
+            position: fixed;
+            bottom: 140px;
+            width: 100%;
+            background-color: white;
+        }
+
+        .fade {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+            .fade.show {
+                opacity: 1;
+            }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <div id="speech-bubble" class="speech-bubble fade show">Đôi lúc thật khó để giữ vững động lực học...</div>
+        <img id="duo-img" src="https://media.giphy.com/media/wH8aFVGkdmOjxBxR3I/giphy.gif?cid=790b7611qg8lj4zalt6iepb6l5r00xwvk63c1hpquaktizcy&ep=v1_stickers_search&rid=giphy.gif&ct=s" alt="Duo" class="duo-img">
+    </div>
+    <div class="cover">
+        <div class="horizontal"></div>
+        <button class="continue-btn" onclick="continueAction()">TIẾP TỤC</button>
+    </div>
+
+    <script>
+        let step = 0;
+
+        // Hàm xử lý khi nhấn nút "TIẾP TỤC"
+        function continueAction() {
+            let speechBubble = document.getElementById("speech-bubble");
+            let duoImg = document.getElementById("duo-img");
+
+            if (step === 0) {
+                // Thay đổi nội dung ở bước đầu tiên
+                speechBubble.textContent = "Nhưng tớ sẽ giúp cậu không bỏ cuộc đâu!";
+                step++;
+            } else if (step === 1) {
+                // Chuyển hướng sang trang mới ở bước thứ hai
+                window.location.href = "/Onboarding/Survey";
+            }
+        }
+
+        // Sự kiện khi trang được tải
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.classList.add("loaded");
+        });
+    </script>
+</body>
+</html>

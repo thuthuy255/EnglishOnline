@@ -1,0 +1,62 @@
+C:\Users\ngthu\source\repos\WebApplication1\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\ngthu\source\repos\WebApplication1\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+E:\StudyStudent\ASP MVC\EnglishOnline\Model\bin\Debug\Model.dll.config
+E:\StudyStudent\ASP MVC\EnglishOnline\Model\bin\Debug\Model.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\Model\bin\Debug\Model.pdb
+E:\StudyStudent\ASP MVC\EnglishOnline\Model\bin\Debug\EntityFramework.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\Model\bin\Debug\EntityFramework.xml
+E:\StudyStudent\ASP MVC\EnglishOnline\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\StudyStudent\ASP MVC\EnglishOnline\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+E:\StudyStudent\ASP MVC\EnglishOnline\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+E:\StudyStudent\ASP MVC\EnglishOnline\Model\obj\Debug\Model.csproj.Up2Date
+E:\StudyStudent\ASP MVC\EnglishOnline\Model\obj\Debug\Model.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\Model\obj\Debug\Model.pdb
+E:\StudyStudent\ASP MVC\EnglishOnline\Model\obj\Debug\Model.Migrations.InitialCreate.resources
+E:\StudyStudent\ASP MVC\EnglishOnline\Model\obj\Debug\Model.csproj.GenerateResource.cache
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\Model\bin\Debug\Model.dll.config
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\Model\bin\Debug\Model.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\Model\bin\Debug\Model.pdb
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\Model\bin\Debug\EntityFramework.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\Model\bin\Debug\EntityFramework.xml
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.csproj.Up2Date
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.pdb
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.InitialCreate.resources
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.csproj.GenerateResource.cache
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.InitialCreate1.resources
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\bin\Debug\Model.dll.config
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\bin\Debug\Model.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\bin\Debug\Model.pdb
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\bin\Debug\EntityFramework.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\bin\Debug\EntityFramework.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.InitialCreate.resources
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.csproj.GenerateResource.cache
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.csproj.Up2Date
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.pdb
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\bin\Debug\Model.dll.config
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\bin\Debug\Model.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\bin\Debug\Model.pdb
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\bin\Debug\EntityFramework.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\bin\Debug\EntityFramework.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.csproj.Up2Date
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.pdb
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.InitialCreate.resources
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.csproj.GenerateResource.cache
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.Remove_PrerequisiteTopicName.resources
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.AddImagePathToAnswers.resources
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.UpdateUserTopic.resources

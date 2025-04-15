@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    <!-- Bootstrap & custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/site.css" />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .app-wrapper {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            min-height: 100vh;
+            border-right: 1px solid #ddd;
+        }
+
+            .sidebar .menu-item {
+                padding: 10px 15px;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+                .sidebar .menu-item:hover {
+                    background-color: #e8f0fe;
+                }
+
+        .menu-active {
+            background-color: #d0ebff;
+            font-weight: bold;
+            color: #0d6efd !important;
+        }
+
+        .menu-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+            background-color: #ffffff;
+        }
+
+        .right-panel {
+            width: 250px;
+            background-color: #fafafa;
+            padding: 20px;
+            border-left: 1px solid #ccc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9em;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- Sidebar trái -->
+
+        <div class="sidebar d-flex flex-column p-4">
+            <div class="fs-3 fw-bold text-success mb-4">
+                duolingo
+            </div>
+            <div class="d-flex flex-column gap-2 w-100">
+                <div class="d-flex align-items-center menu-item menu-active" data-url="@Url.Action("Learn", "Home")">
+                    <img src="https://storage.googleapis.com/a1aa/image/LgKJUuVsB-aMxPO0db9CuWlLN2e-Cw9umIgecFPEX_4.jpg" alt="Home" class="me-2 menu-icon">
+                    <span>HỌC</span>
+                </div>
+
+                <div class="d-flex align-items-center menu-item" data-url="@Url.Action("Pronunciation", "Home")">
+                    <img src="https://storage.googleapis.com/a1aa/image/3yP6TaIa4BO3kJgAvERAHqm19_qgmxrzWmQ1IIN3b5k.jpg" alt="Phát âm" class="me-2 menu-icon">
+                    <span>PHÁT ÂM</span>
+                </div>
+
+                <div class="d-flex align-items-center menu-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/cQqsg0bjCpq5XoAurymT5QzHUw6THn3KchLShsVte5Q.jpg" alt="Bảng xếp hạng" class="me-2 menu-icon">
+                    <span>BẢNG XẾP HẠNG</span>
+                </div>
+
+                <div class="d-flex align-items-center menu-item" data-url="@Url.Action("DailyTasks", "Home")">
+                    <img src="https://storage.googleapis.com/a1aa/image/6kBdbbRl_5e6uKGAxkZFCGW8sKRAc2qqwtauZNOhBlo.jpg" alt="Nhiệm vụ" class="me-2 menu-icon">
+                    <span>NHIỆM VỤ</span>
+                </div>
+
+                <div class="d-flex align-items-center menu-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/Xv2ZOenU3Zm8i4moqgGPj2RzMPhyLqBuC-4ehRnINds.jpg" alt="Cửa hàng" class="me-2 menu-icon">
+                    <span>CỬA HÀNG</span>
+                </div>
+
+                <div class="d-flex align-items-center menu-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/c7sNGy80KvfpI-rgDp5T4opSL2_Vyk0X8Er0D_paCaI.jpg" alt="Hồ sơ" class="me-2 menu-icon">
+                    <span>HỒ SƠ</span>
+                </div>
+
+                <div class="d-flex align-items-center menu-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/zQcaFt3FtsjfRs2SkauV7yiUKG4HNMjrRdtteyap16c.jpg" alt="Xem thêm" class="me-2 menu-icon">
+                    <span>XEM THÊM</span>
+                </div>
+            </div>
+
+        </div>
+        <!-- Nội dung chính -->
+        <div class="main-content">
+            @RenderBody()
+
+
+        </div>
+
+        <!-- Sidebar phải -->
+
+        <div class="container mt-4" style="max-width: 400px;">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <img src="https://storage.googleapis.com/a1aa/image/rzgJ3V1mN7I2IjRoP2aruD6DgeAOWceptHnTvmoreTE.jpg" alt="Country flag" class="rounded-circle" width="40" height="40" />
+                <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex align-items-center text-secondary">
+                        <i class="fas fa-fire me-1"></i> <span>0</span>
+                    </div>
+                    <div class="d-flex align-items-center text-primary">
+                        <i class="fas fa-gem me-1"></i> <span>500</span>
+                    </div>
+                    <div class="d-flex align-items-center text-danger">
+                        <i class="fas fa-heart me-1"></i> <span>5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Unlock Ranking -->
+            <div class="border rounded p-3 mb-4 bg-white">
+                <h5 class="fw-bold mb-2">Mở khóa Bảng xếp hạng!</h5>
+                <div class="d-flex align-items-center">
+                    <img src="https://storage.googleapis.com/a1aa/image/v2mtvdwCOQZiMADy4hS90ANjYcLOU9xBLn8Q3zTY0rs.jpg" alt="Lock icon" width="40" height="40" class="me-3" />
+                    <p class="mb-0">Hoàn thành thêm 10 bài học để bắt đầu thi đua</p>
+                </div>
+            </div>
+
+            <!-- Daily Task -->
+            <div class="border rounded p-3 mb-4 bg-white">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="fw-bold mb-0">Nhiệm vụ hằng ngày</h5>
+                    <a href="#" class="text-primary">XEM TẤT CẢ</a>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                    <img src="https://storage.googleapis.com/a1aa/image/qqXlJcCZ44dyp7409Da9AET2P52E-63apdEI_VOaGFc.jpg" alt="Lightning icon" width="40" height="40" class="me-3" />
+                    <p class="mb-0">Kiếm 10 KN</p>
+                </div>
+                <div class="progress mb-1" style="height: 8px;">
+                    <div class="progress-bar bg-secondary" style="width: 0%"></div>
+                </div>
+                <div class="d-flex justify-content-between small">
+                    <span>0 / 10</span>
+                    <img src="https://storage.googleapis.com/a1aa/image/NgJUJBweZLTRLnKJa3dUDRu9M8JjSa2IXyO_e2VQ7lU.jpg" alt="Chest icon" width="20" height="20" />
+                </div>
+            </div>
+
+            <!-- Create Profile -->
+            <div class="border rounded p-3 mb-4 bg-white">
+                <h5 class="fw-bold mb-3">Tạo hồ sơ để lưu tiến trình của bạn!</h5>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success fw-bold">TẠO HỒ SƠ</button>
+                    <button class="btn btn-primary fw-bold">ĐĂNG NHẬP</button>
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const menuItems = document.querySelectorAll('.menu-item');
+        menuItems.forEach(item => {
+            item.addEventListener('click', function () {
+                menuItems.forEach(menu => menu.classList.remove('menu-active'));
+                this.classList.add('menu-active');
+                const url = this.getAttribute('data-url');
+                if (url) {
+                    setTimeout(() => {
+                        window.location.href = url;
+                    }, 200);
+                }
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

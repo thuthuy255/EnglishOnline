@@ -1,0 +1,148 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    ViewBag.Title = "Đăng Nhập";
+}
+
+
+
+<!----------------------- Main Container -------------------------->
+<div class="d-flex justify-content-center align-items-center  min-vh-100" >
+
+    <!----------------------- Login Container -------------------------->
+    <div class="row border rounded-5 p-3 bg-white shadow box-area">
+
+        <!--------------------------- Left Box ----------------------------->
+        <div class="d-flex col-md-6 rounded-4 justify-content-center " style="padding-top:10%">
+
+        <div class=" left-box">
+        </div>
+            @*<div class="featured-image mb-3">
+                <img src="images/1.png" class="img-fluid">
+            </div>
+            <p class="fs-2">Be Verified</p>
+            <small>Join experienced Designers on this platform.</small>*@
+        </div>
+
+        <!----------------------------- Right Box ----------------------------->
+        <div class="col-md-6 right-box">
+            <div class="row align-items-center">
+                <div class="header-text mb-4">
+                    <h2 >Đăng ký</h2>
+                </div>
+
+                <form id="loginForm">
+                    <div class="input-group mb-3 w-100">
+                        <input type="text" id="email" class="form-control form-control-lg bg-light fs-6 col-md-12" style="border-radius:10px" placeholder="Vui lòng nhập email">
+                        <div class="invalid-feedback">Email không hợp lệ.</div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input type="password" id="password" class="form-control form-control-lg bg-light fs-6 col-md-12" style="border-radius:10px" placeholder="Vui lòng nhập mật khẩu">
+                        <div class="invalid-feedback">Mật khẩu phải từ 6 ký tự.</div>
+                    </div>
+
+                    <div class="input-group mb-4 d-flex justify-content-between">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="formCheck">
+                            <label for="formCheck" class="form-check-label text-secondary"><small>Nhớ mật khẩu</small></label>
+                        </div>
+                        <div class="forgot">
+                            <small>
+                                <a href="@Url.Action("ForgotPassword", "Account")">Quên mật khẩu?</a>
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Đăng Nhập</button>
+                    </div>
+                </form>
+
+                @*<div class="input-group mb-3">
+            <button class="btn btn-lg btn-light w-100 fs-6">
+                <img src="images/google.png" style="width:20px" class="me-2">
+                <small>Sign In with Google</small>
+            </button>
+        </div>*@
+                <div class="text-center">
+                    <small class="text-muted">Hoặc đăng nhập bằng</small>
+                </div>
+                <div class="d-flex gap-2 justify-content-center my-3">
+
+                    <button class="btn border ">
+                        <div style="padding-left:20px" class=" btn-google" >
+                            <a href="https://accounts.google.com/signin" style="text-decoration: none; color: inherit;">Đăng nhập với Google</a>
+                        </div>
+                        
+                    </button>
+
+
+                </div>
+
+                <div class="row text-center">
+                    <small>Bạn chưa có tài khoản? <a href="/Account/Register">Đăng ký</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------------- JavaScript Validation -------------------------->
+<script>
+    // Hàm kiểm tra email hợp lệ
+    function isValidEmail(email) {
+         let emailPattern = /^[^\s@@]+@@[^\s@@]+\.[^\s@@]+$/;
+         return emailPattern.test(email);
+    }
+
+    // Hàm xử lý khi submit form đăng nhập
+    function handleLoginSubmit(event) {
+        event.preventDefault(); // Ngăn chặn form submit mặc định
+
+        let emailInput = $("#email");
+        let passwordInput = $("#password");
+        let isValid = true;
+
+        // Kiểm tra Email
+        if (!isValidEmail(emailInput.val())) {
+            emailInput.addClass("is-invalid");
+            isValid = false;
+        } else {
+            emailInput.removeClass("is-invalid");
+        }
+
+        // Kiểm tra Password (ít nhất 6 ký tự)
+        if (passwordInput.val().length < 6) {
+            passwordInput.addClass("is-invalid");
+            isValid = false;
+        } else {
+            passwordInput.removeClass("is-invalid");
+        }
+
+        if (isValid) {
+            $.ajax({
+                url: "/Account/Login",
+                type: "POST",
+                data: {
+                    email: emailInput.val(),
+                    password: passwordInput.val()
+                },
+                success: function (response) {
+                    if (response.success) {
+                        alert(response.message);
+                        window.location.href = response.redirectUrl; // Chuyển hướng sau khi đăng nhập thành công
+                    } else {
+                        alert(response.message);
+                    }
+                },
+                error: function () {
+                    alert("Có lỗi xảy ra, vui lòng thử lại!");
+                }
+            })
+        }
+    }
+
+  $(document).ready(function () {
+      $("#loginForm").on("submit", handleLoginSubmit);
+  });
+</script>

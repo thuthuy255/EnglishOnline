@@ -1,0 +1,83 @@
+﻿<div class="sidebar" data-background-color="dark">
+    <div class="sidebar-logo">
+        <div class="logo-header" data-background-color="dark">
+            <a href="index.html" class="logo">
+                <img src="/Assets/Admin/assets/img/kaiadmin/logo_light.svg"
+                     alt="navbar brand"
+                     class="navbar-brand"
+                     height="20" />
+            </a>
+            <div class="nav-toggle">
+                <button class="btn btn-toggle toggle-sidebar">
+                    <i class="gg-menu-right"></i>
+                </button>
+                <button class="btn btn-toggle sidenav-toggler">
+                    <i class="gg-menu-left"></i>
+                </button>
+            </div>
+            <button class="topbar-toggler more">
+                <i class="gg-more-vertical-alt"></i>
+            </button>
+        </div>
+    </div>
+                <div class="sidebar-wrapper scrollbar scrollbar-inner">
+                    <div class="sidebar-content">
+                        <ul class="nav nav-secondary" id="sidebar-menu">
+                            <li class="nav-item active">
+                                <a href="@Url.Action("Index", "Home", new { area = "Admin" })">
+                                    <i class="fas fa-home"></i>
+                                    <p>Dashboard</p>
+                                </a>
+                            </li>
+                            <li class="nav-item @(Request.Path.Contains("/Users") ? "active" : "")">
+                                <a href="@Url.Action("Index", "Users", new { area = "Admin" })">
+                                    <i class="fas fa-users"></i>
+                                    <p>Users</p>
+                                </a>
+                            </li>
+                            <li class="nav-item @(Request.Path.Contains("/Topics") ? "active" : "")">
+                                <a href="@Url.Action("Index", "Topics", new { area = "Admin" })">
+                                    <i class="fas fa-medal"></i>
+                                    <p>Topic</p>
+                                </a>
+                            </li>
+                            <li class="nav-item @(Request.Path.Contains("/Lessons") ? "active" : "")">
+                                <a href="@Url.Action("Index", "Lessons", new { area = "Admin" })">
+                                    <i class="fas fa-book"></i>
+                                    <p>Lessons</p>
+                                </a>
+                            </li>
+                            <li class="nav-item @(Request.Path.Contains("/Questions") ? "active" : "")">
+                                <a href="@Url.Action("Index", "Questions", new { area = "Admin" })">
+                                    <i class="fas fa-book"></i>
+                                    <p>Questions</p>
+                                </a>
+                            </li>
+                            <li class="nav-item @(Request.Path.Contains("/Answers") ? "active" : "")">
+                                <a href="@Url.Action("Index", "Answers", new { area = "Admin" })">
+                                    <i class="fas fa-reply"></i>
+                                    <p>Answers</p>
+                                </a>
+                            </li>
+                            <li class="nav-item @(Request.Path.Contains("/UserProgresses") ? "active" : "")">
+                                <a href="@Url.Action("Index", "UserProgresses", new { area = "Admin" })">
+                                    <i class="fas fa-chart-line"></i>
+                                    <p>User Progress</p>
+                                </a>
+                            </li>
+                            <li class="nav-item @(Request.Path.Contains("/Badges") ? "active" : "")">
+                                <a href="@Url.Action("Index", "Badges", new { area = "Admin" })">
+                                    <i class="fas fa-award"></i>
+                                    <p>Badges</p>
+                                </a>
+                            </li>
+                            <li class="nav-item @(Request.Path.Contains("/UserBadges") ? "active" : "")">
+                                <a href="@Url.Action("Index", "UserBadges", new { area = "Admin" })">
+                                    <i class="fas fa-medal"></i>
+                                    <p>User Badges</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </div>

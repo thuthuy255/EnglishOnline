@@ -1,0 +1,474 @@
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\WebApplication1.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\csc.exe
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\csc.exe.config
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\csc.rsp
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\csi.exe
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\csi.exe.config
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\csi.rsp
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.AppContext.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Console.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.IO.Compression.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Net.Http.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.ValueTuple.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\vbc.exe
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\vbc.exe.config
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\vbc.rsp
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\Antlr3.Runtime.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\Newtonsoft.Json.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Net.Http.Formatting.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.Helpers.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.Http.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.Http.WebHost.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.Mvc.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.Optimization.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.Razor.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.WebPages.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\WebGrease.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.Helpers.xml
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.Mvc.xml
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.Optimization.xml
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.Razor.xml
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.WebPages.xml
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\Newtonsoft.Json.xml
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\Antlr3.Runtime.pdb
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Net.Http.Formatting.xml
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.Http.xml
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\System.Web.Http.WebHost.xml
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\obj\Debug\WebAppli.7D14BD69.Up2Date
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\ngthu\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\WebApplication1.dll.config
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\WebApplication1.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\WebApplication1.pdb
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\Antlr3.Runtime.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\Newtonsoft.Json.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Net.Http.Formatting.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.Helpers.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.Http.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.Http.WebHost.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.Mvc.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.Optimization.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.Razor.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.WebPages.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.WebPages.Razor.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\WebGrease.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.Helpers.xml
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.Mvc.xml
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.Optimization.xml
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.Razor.xml
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.WebPages.xml
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.WebPages.Razor.xml
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\Newtonsoft.Json.xml
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\Antlr3.Runtime.pdb
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Net.Http.Formatting.xml
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.Http.xml
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\System.Web.Http.WebHost.xml
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\obj\Debug\WebAppli.7D14BD69.Up2Date
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.pdb
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\csc.exe
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\csc.exe.config
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\csc.rsp
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\csi.exe
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\csi.exe.config
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\csi.rsp
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.AppContext.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Console.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.IO.Compression.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Net.Http.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.ValueTuple.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\vbc.exe
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\vbc.exe.config
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\vbc.rsp
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\VBCSCompiler.exe
+E:\StudyStudent\ASP MVC\EnglishOnline\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\WebApplication1.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\WebApplication1.pdb
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csc.exe
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csc.exe.config
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csc.rsp
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csi.exe
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csi.exe.config
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csi.rsp
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.AppContext.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Console.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.IO.Compression.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Net.Http.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.ValueTuple.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\vbc.exe
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\vbc.exe.config
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\vbc.rsp
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\VBCSCompiler.exe
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\Antlr3.Runtime.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\EntityFramework.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\EntityFramework.SqlServer.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\Newtonsoft.Json.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Net.Http.Formatting.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Helpers.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Http.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Http.WebHost.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Mvc.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Optimization.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Razor.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.Razor.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\WebGrease.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\EntityFramework.xml
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\EntityFramework.SqlServer.xml
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Helpers.xml
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Mvc.xml
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Optimization.xml
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Razor.xml
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.xml
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.Razor.xml
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\Newtonsoft.Json.xml
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\Antlr3.Runtime.pdb
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Net.Http.Formatting.xml
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Http.xml
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Http.WebHost.xml
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebAppli.7D14BD69.Up2Date
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\Model.dll
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\Model.pdb
+C:\Users\Vu Tien Khoai\Downloads\EnglishOnline\EnglishOnline\WebApplication1\bin\Model.dll.config
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\WebApplication1.dll.config
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\WebApplication1.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\WebApplication1.pdb
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csc.exe
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csc.exe.config
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csc.rsp
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csi.exe
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csi.exe.config
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csi.rsp
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Buffers.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Memory.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Numerics.Vectors.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\vbc.exe
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\vbc.exe.config
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\vbc.rsp
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\VBCSCompiler.exe
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Antlr3.Runtime.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\BCrypt.Net-Next.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\EntityFramework.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\EntityFramework.SqlServer.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Security.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Security.Google.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Model.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Newtonsoft.Json.Bson.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Newtonsoft.Json.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Owin.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Buffers.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Memory.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Net.Http.Formatting.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Numerics.Vectors.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Helpers.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Http.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Http.WebHost.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Mvc.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Optimization.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Razor.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.Razor.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\WebGrease.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Model.pdb
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Model.dll.config
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\BCrypt.Net-Next.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\EntityFramework.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\EntityFramework.SqlServer.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Security.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Security.Google.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Newtonsoft.Json.Bson.pdb
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Newtonsoft.Json.Bson.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Buffers.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Memory.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Net.Http.Formatting.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Numerics.Vectors.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Helpers.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Http.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Http.WebHost.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Mvc.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Razor.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.Razor.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Optimization.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Newtonsoft.Json.xml
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\Antlr3.Runtime.pdb
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebAppli.7D14BD69.Up2Date
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\WebApplication1.dll.config
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\WebApplication1.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\WebApplication1.pdb
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csc.exe
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csc.exe.config
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csc.rsp
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csi.exe
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csi.exe.config
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\csi.rsp
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Buffers.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Memory.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Numerics.Vectors.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\vbc.exe
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\vbc.exe.config
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\vbc.rsp
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\VBCSCompiler.exe
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Antlr3.Runtime.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\BCrypt.Net-Next.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\EntityFramework.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\EntityFramework.SqlServer.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Security.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Security.Google.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Model.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Newtonsoft.Json.Bson.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Newtonsoft.Json.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Owin.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Buffers.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Memory.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Net.Http.Formatting.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Numerics.Vectors.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Helpers.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Http.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Http.WebHost.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Mvc.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Optimization.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Razor.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.Razor.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\WebGrease.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Model.pdb
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Model.dll.config
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\BCrypt.Net-Next.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\EntityFramework.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\EntityFramework.SqlServer.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Security.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Security.Google.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Newtonsoft.Json.Bson.pdb
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Newtonsoft.Json.Bson.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Buffers.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Memory.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Net.Http.Formatting.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Numerics.Vectors.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Helpers.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Http.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Http.WebHost.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Mvc.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Razor.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.WebPages.Razor.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\System.Web.Optimization.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Newtonsoft.Json.xml
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\bin\Antlr3.Runtime.pdb
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebAppli.7D14BD69.Up2Date
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.pdb

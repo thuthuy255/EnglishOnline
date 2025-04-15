@@ -1,0 +1,15 @@
+
+{
+  "vi": {
+    "greeting": "Xin chào!",
+    "description": "Đây là trang web của tôi."
+  },
+  "en": {
+    "greeting": "Hello!",
+    "description": "This is my website."
+  },
+  "fr": {
+    "greeting": "Bonjour!",
+    "description": "Ceci est mon site web."
+  }
+}

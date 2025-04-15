@@ -1,0 +1,167 @@
+﻿@model IEnumerable<Model.EF.Topic>
+
+@{
+    ViewBag.Title = "Manage Users";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Quản lý người dùng</title>
+
+    <!-- Bootstrap & Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="~/Assets/Admin/assets/css/UserManagement.css"
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<form id="deleteForm">
+    @Html.AntiForgeryToken()
+</form>
+<body>
+    <div class="container-fluid">
+        <div class="table-responsive">
+
+            <div class="table-wrapper">
+                <div class="table-title py-2">
+                    <div class="row">
+                        <div class="col-sm-6 d-flex align-items-center">
+                            <h5 class="p-0 m-0">Thêm người dùng</h5>
+                        </div>
+                        <div class="col-md-6 text-right">
+
+                            <a href="@Url.Action("Create")" class="btn btn-success btn-sm p-2">
+                                <i class="fa fa-user-plus"></i> <span>Thêm mới</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="table table-bordered table-hover shadow-sm rounded" style="height: calc(100vh - 300px);">
+                    <thead class="table-primary text-center">
+                        <tr>
+                            <th style="width: 20%">
+                                Tên chủ đề
+                            </th>
+                            <th style="width: 20%">
+                                Tên chủ đề liên kết
+                            </th>
+                            <th style="width: 20%">Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-middle">
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="text-center">
+                                    @Html.DisplayFor(modelItem => item.TopicName)
+                                </td>
+                                <td  class="text-center">
+                                    @(item.PrerequisiteTopic != null ? item.PrerequisiteTopic.TopicName : "Không có")
+                                </td>
+
+
+                                <td class="text-center">
+                                    <a href="@Url.Action("Edit", new { id = item.TopicID })" class="text-primary mx-1" title="Chỉnh sửa">
+                                        <i class="material-icons">edit</i>
+                                    </a>
+                                    <a class="text-danger mx-1 deleteIcon" data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                       data-id="@item.TopicID" style="cursor: pointer;" title="Xóa">
+                                        <i class="material-icons">delete</i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Xác nhận Xóa -->
+    <!-- Modal xác nhận xóa -->
+    <div class="modal" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Xác nhận xóa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn có chắc chắn muốn xóa chủ đề này không?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-danger" id="confirmDelete">Xóa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        $(document).ready(function () {
+            // Khi nhấn vào icon xóa
+            $(".deleteIcon").click(function () {
+                var topicID = $(this).attr("data-id"); // Lấy TopicID từ data-id
+                console.log("TopicID khi click:", topicID); // Kiểm tra giá trị ID trong console
+
+                if (!topicID) {
+                    showToast("Không lấy được topicID!", false); // Nếu không có TopicID
+                    return;
+                }
+
+                // Gán TopicID vào nút xác nhận xóa trong modal
+                $("#confirmDelete").attr("data-id", topicID);
+            });
+
+            // Khi xác nhận xóa trong modal
+            $("#confirmDelete").click(function () {
+                var topicID = $(this).attr("data-id"); // Lấy TopicID từ nút xác nhận
+                console.log("Gửi request xóa topicID:", topicID);
+
+                if (!topicID) {
+                    showToast("Không có topicID để xóa!", false); // Nếu không có TopicID
+                    return;
+                }
+
+                // Gửi yêu cầu AJAX xóa
+                $.ajax({
+                    url: "/Admin/Topics/DeleteConfirmed",
+                    type: "POST",
+                    data: { TopicID: topicID },
+                    headers: {
+                        "RequestVerificationToken": $('input[name="__RequestVerificationToken"]').val() // Chống CSRF
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            showToast("Xóa thành công!", true);
+                            setTimeout(() => location.reload(), 1500); // Reload sau 1.5 giây
+                        } else {
+                            showToast("Xóa thất bại! " + response.message, false);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.log("Lỗi AJAX:", xhr.responseText);
+                        showToast("Lỗi khi gửi yêu cầu xóa! Chi tiết lỗi: " + xhr.responseText, false);
+                    }
+                });
+            });
+        });
+
+    </script>
+
+
+    <script src="~/Assets/Admin/assets/js/UserManagement.js"></script>
+</body>
+</html>

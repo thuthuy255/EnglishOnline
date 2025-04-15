@@ -1,0 +1,324 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: 'Nunito', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #ffffff;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .progress-container {
+            width: 60%;
+            margin: 0 20px;
+        }
+
+        .progress-bar {
+            background-color: #28a745;
+        }
+
+        .content {
+            margin-top: 120px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .word-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .character-img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .word-bubble {
+            position: relative;
+            display: inline-block;
+            background-color: #e9ecef;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .option-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+            .option-box:hover {
+                background-color: #f8f9fa;
+            }
+
+            .option-box.active {
+                background-color: #d1e7dd;
+                border-color: #28a745;
+            }
+
+            .option-box.disabled {
+                background-color: #e9ecef;
+                color: #6c757d;
+                border-color: #ced4da;
+                cursor: not-allowed;
+                pointer-events: none;
+            }
+
+        .option-number {
+            margin-right: 10px;
+            font-weight: 700;
+            color: #6c757d;
+        }
+
+        .footer-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+            .footer-btn button {
+                font-size: 16px;
+                padding: 10px 20px;
+                border-radius: 20px;
+                border: 1px solid #ced4da;
+            }
+
+        .success-message {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #e6ffe6;
+            padding: 20px;
+            text-align: center;
+            z-index: 2000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkmark {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            font-size: 24px;
+        }
+
+        .success-message .btn {
+            font-size: 16px;
+            padding: 8px 20px;
+            margin: 0 5px;
+        }
+
+        .success-message h5 {
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="header-container">
+            <div class="d-flex align-items-center justify-content-center w-100 gap-3">
+                <i class="fas fa-times text-secondary fs-4"></i>
+                <div class="progress progress-container">
+                    <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-heart text-danger fs-4"></i>
+                    <span class="text-danger fs-4 ms-1">5</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="word-title">Chọn nghĩa đúng</div>
+            <img src="https://via.placeholder.com/100" alt="Character" class="character-img">
+            <div class="word-bubble">cà phê</div>
+            <div class="option-box" data-answer="correct">
+                <span class="option-number">1</span>
+                <span>coffee</span>
+            </div>
+            <div class="option-box" data-answer="incorrect">
+                <span class="option-number">2</span>
+                <span>tea</span>
+            </div>
+            <div class="option-box" data-answer="incorrect">
+                <span class="option-number">3</span>
+                <span>water</span>
+            </div>
+        </div>
+
+        <div class="footer-btn">
+            <button class="btn btn-outline-secondary">BỎ QUA</button>
+            <button id="checkBtn" class="btn btn-outline-secondary">KIỂM TRA</button>
+        </div>
+
+        <!-- Modal hiển thị khi chọn sai -->
+        <div class="modal fade" id="wrongAnswerModal" tabindex="-1" aria-labelledby="wrongAnswerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-heart text-danger fs-3 me-1"></i>
+                            <i class="fas fa-heart text-danger fs-3 me-1"></i>
+                            <i class="fas fa-heart text-danger fs-3 me-1"></i>
+                            <i class="fas fa-heart text-danger fs-3 me-1"></i>
+                            <i class="fas fa-heart text-danger fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold">Mỗi lần sai bạn sẽ mất 1 trái tim!</h5>
+                        <p class="text-muted">Học chăm chỉ và tập trung để bảo toàn các trái tim nhé!</p>
+                        <button type="button" class="btn btn-primary w-100 mt-3" data-bs-dismiss="modal">TIẾP TỤC HỌC</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phần tử hiển thị khi chọn đúng -->
+        <div id="successMessage" class="success-message d-none">
+            <div class="d-flex justify-content-center mb-2">
+                <span class="checkmark">✓</span>
+            </div>
+            <h5 class="fw-bold mb-2">Tuyệt vời!</h5>
+            <button id="continueBtn" class="btn btn-success">TIẾP TỤC</button>
+            <button class="btn btn-outline-secondary ms-2" onclick="report()">BÁO CÁO</button>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            const progressBar = document.getElementById('progress-bar');
+            const checkBtn = document.getElementById('checkBtn');
+            const heartsElement = document.querySelector('.text-danger.fs-4.ms-1');
+            let hearts = 5;
+            let width = 25;
+            const successMessage = document.getElementById('successMessage');
+            let isChecked = false;
+
+            // Progress bar animation
+            const interval = setInterval(() => {
+                if (width >= 100) {
+                    clearInterval(interval);
+                } else {
+                    width += 10;
+                    progressBar.style.width = width + '%';
+                    progressBar.setAttribute('aria-valuenow', width);
+                }
+            }, 500);
+
+            // Hàm đọc văn bản bằng Web Speech API
+            function speakText(text) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.rate = 1;
+                utterance.pitch = 1;
+                window.speechSynthesis.speak(utterance);
+            }
+
+            // Xử lý chọn option-box
+            document.querySelectorAll('.option-box').forEach(box => {
+                box.addEventListener('click', function () {
+                    if (!isChecked) {
+                        speakText(this.textContent.trim());
+                        document.querySelectorAll('.option-box').forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+
+            // Xử lý nút KIỂM TRA
+            checkBtn.addEventListener('click', function () {
+                const selectedOption = document.querySelector('.option-box.active');
+                if (selectedOption && !isChecked) {
+                    isChecked = true;
+                    const isCorrect = selectedOption.getAttribute('data-answer') === 'correct';
+                    if (isCorrect) {
+                        successMessage.classList.remove('d-none');
+                    } else {
+                        hearts -= 1;
+                        heartsElement.textContent = hearts;
+                        const wrongAnswerModal = new bootstrap.Modal(document.getElementById('wrongAnswerModal'));
+                        wrongAnswerModal.show();
+                        if (hearts <= 0) {
+                            alert('Bạn đã hết trái tim! Trò chơi kết thúc.');
+                        }
+                    }
+
+                    // Chuyển nút KIỂM TRA thành TIẾP TỤC và vô hiệu hóa option-box
+                    checkBtn.textContent = 'TIẾP TỤC';
+                    checkBtn.classList.remove('btn-outline-secondary');
+                    checkBtn.classList.add('btn-success');
+                    document.querySelectorAll('.option-box').forEach(box => box.classList.add('disabled'));
+                }
+            });
+
+            // Xử lý nút TIẾP TỤC
+            document.getElementById('continueBtn').addEventListener('click', function () {
+                successMessage.classList.add('d-none');
+                location.reload(); // Tạm thời reload, thay bằng logic chuyển câu hỏi
+            });
+
+            // Hàm báo cáo
+            function report() {
+                alert('Chức năng báo cáo đã được kích hoạt!');
+            }
+        };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

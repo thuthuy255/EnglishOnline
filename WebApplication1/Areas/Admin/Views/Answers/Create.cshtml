@@ -1,0 +1,82 @@
+﻿@model Model.EF.Answers
+
+@{
+    ViewBag.Title = "Thêm câu trả lời";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thêm câu trả lời</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+</head>
+<body class="bg-light">
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <div class="container mt-5">
+        <div class="col-md-8 offset-md-2 bg-white p-5 rounded shadow">
+            <h2 class="text-center mb-4">Thêm Câu Trả Lời</h2>
+
+            @using (Html.BeginForm("Create", "Answers", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <!-- Answer Text -->
+                    <div class="mb-3 row">
+                        @Html.LabelFor(model => model.AnswerText, htmlAttributes: new { @class = "col-sm-3 col-form-label" })
+                        <div class="col-sm-9">
+                            @Html.EditorFor(model => model.AnswerText, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AnswerText, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- IsCorrect -->
+                    <div class="mb-3 row">
+                        @Html.Label("IsCorrect", "Đáp án đúng", htmlAttributes: new { @class = "col-sm-3 col-form-label" })
+                        <div class="col-sm-9">
+                            <div class="form-check form-check-inline">
+                                @Html.RadioButtonFor(model => model.IsCorrect, true, new { @class = "form-check-input", id = "IsCorrectTrue" })
+                                <label class="form-check-label" for="IsCorrectTrue">Đúng</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                @Html.RadioButtonFor(model => model.IsCorrect, false, new { @class = "form-check-input", id = "IsCorrectFalse" })
+                                <label class="form-check-label" for="IsCorrectFalse">Sai</label>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.IsCorrect, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- QuestionID -->
+                    <div class="mb-3 row">
+                        @Html.LabelFor(model => model.QuestionID, "Câu hỏi", htmlAttributes: new { @class = "col-sm-3 col-form-label" })
+                        <div class="col-sm-9">
+                            @Html.DropDownList("QuestionID", null, htmlAttributes: new { @class = "form-select" })
+                            @Html.ValidationMessageFor(model => model.QuestionID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Image Upload -->
+                    <div class="mb-3 row">
+                        <label for="ImageUpload" class="col-sm-3 col-form-label">Ảnh minh họa</label>
+                        <div class="col-sm-9">
+                            <input type="file" name="ImageUpload" id="ImageUpload" class="form-control" accept="image/*" />
+                            @* Bạn có thể thêm phần hiển thị lỗi nếu cần *@
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="text-center">
+                        <input type="submit" value="Tạo Mới" class="btn btn-primary btn-lg mt-3" />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>
