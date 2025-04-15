@@ -29,24 +29,32 @@
             width: 250px;
             min-height: 100vh;
             border-right: 1px solid #ddd;
+            color: #777777 !important;
         }
 
             .sidebar .menu-item {
                 padding: 10px 15px;
                 border-radius: 8px;
                 cursor: pointer;
+                font-weight: 700;
             }
 
                 .sidebar .menu-item:hover {
-                    background-color: #e8f0fe;
+                    background-color: #F7F7F7;
                 }
 
-        .menu-active {
-            background-color: #d0ebff;
-            font-weight: bold;
-            color: #0d6efd !important;
+      
+        .sidebar .menu-item:hover,
+        .sidebar .menu-item.menu-active {
+            background-color: #F7F7F7;
         }
 
+        .menu-active {
+            background-color: #DDF4FF; /* Giữ màu nền riêng cho trạng thái active */
+            font-weight: bold;
+            color: #1CB0F6 !important;
+            border: 1px solid #84D8FF;
+        }
         .menu-icon {
             width: 24px;
             height: 24px;
@@ -78,43 +86,44 @@
     <div class="app-wrapper">
         <!-- Sidebar trái -->
 
-        <div class="sidebar d-flex flex-column p-4">
+        <div class="sidebar d-flex flex-column p-3">
             <div class="fs-3 fw-bold text-success mb-4">
                 duolingo
             </div>
-            <div class="d-flex flex-column gap-2 w-100">
+            <div class="d-flex flex-column gap-3 w-100">
                 <div class="d-flex align-items-center menu-item menu-active" data-url="@Url.Action("Learn", "Home")">
-                    <img src="https://storage.googleapis.com/a1aa/image/LgKJUuVsB-aMxPO0db9CuWlLN2e-Cw9umIgecFPEX_4.jpg" alt="Home" class="me-2 menu-icon">
+                    <img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/784035717e2ff1d448c0f6cc4efc89fb.svg" alt="Home" class="me-3 menu-icon" />
+
                     <span>HỌC</span>
                 </div>
 
                 <div class="d-flex align-items-center menu-item" data-url="@Url.Action("Pronunciation", "Home")">
-                    <img src="https://storage.googleapis.com/a1aa/image/3yP6TaIa4BO3kJgAvERAHqm19_qgmxrzWmQ1IIN3b5k.jpg" alt="Phát âm" class="me-2 menu-icon">
+                    <img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/3b4928101472fce4e9edac920c1b3817.svg" alt="Phát âm" class="me-3 menu-icon">
                     <span>PHÁT ÂM</span>
                 </div>
 
-                <div class="d-flex align-items-center menu-item">
-                    <img src="https://storage.googleapis.com/a1aa/image/cQqsg0bjCpq5XoAurymT5QzHUw6THn3KchLShsVte5Q.jpg" alt="Bảng xếp hạng" class="me-2 menu-icon">
+                <div class="d-flex align-items-center menu-item" >
+                    <img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/ca9178510134b4b0893dbac30b6670aa.svg" alt="Bảng xếp hạng" class="me-3 menu-icon">
                     <span>BẢNG XẾP HẠNG</span>
                 </div>
 
                 <div class="d-flex align-items-center menu-item" data-url="@Url.Action("DailyTasks", "Home")">
-                    <img src="https://storage.googleapis.com/a1aa/image/6kBdbbRl_5e6uKGAxkZFCGW8sKRAc2qqwtauZNOhBlo.jpg" alt="Nhiệm vụ" class="me-2 menu-icon">
+                    <img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/7ef36bae3f9d68fc763d3451b5167836.svg" alt="Nhiệm vụ" class="me-3 menu-icon">
                     <span>NHIỆM VỤ</span>
                 </div>
 
                 <div class="d-flex align-items-center menu-item">
-                    <img src="https://storage.googleapis.com/a1aa/image/Xv2ZOenU3Zm8i4moqgGPj2RzMPhyLqBuC-4ehRnINds.jpg" alt="Cửa hàng" class="me-2 menu-icon">
+                    <img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/0e58a94dda219766d98c7796b910beee.svg" alt="Cửa hàng" class="me-3 menu-icon">
                     <span>CỬA HÀNG</span>
                 </div>
 
-                <div class="d-flex align-items-center menu-item">
-                    <img src="https://storage.googleapis.com/a1aa/image/c7sNGy80KvfpI-rgDp5T4opSL2_Vyk0X8Er0D_paCaI.jpg" alt="Hồ sơ" class="me-2 menu-icon">
+                <div class="d-flex align-items-center menu-item" >
+                    <img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/24e0dcdc06870ead47b3600f0d41eb5b.svg" alt="Hồ sơ" class="me-3 menu-icon">
                     <span>HỒ SƠ</span>
                 </div>
 
                 <div class="d-flex align-items-center menu-item">
-                    <img src="https://storage.googleapis.com/a1aa/image/zQcaFt3FtsjfRs2SkauV7yiUKG4HNMjrRdtteyap16c.jpg" alt="Xem thêm" class="me-2 menu-icon">
+                    <img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/7159c0b5d4250a5aea4f396d53f17f0c.svg" alt="Xem thêm" class="me-3 menu-icon">
                     <span>XEM THÊM</span>
                 </div>
             </div>
@@ -132,7 +141,7 @@
         <div class="container mt-4" style="max-width: 400px;">
             <!-- Header -->
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <img src="https://storage.googleapis.com/a1aa/image/rzgJ3V1mN7I2IjRoP2aruD6DgeAOWceptHnTvmoreTE.jpg" alt="Country flag" class="rounded-circle" width="40" height="40" />
+                <img src="~/Assets/Client/clientAssets/img/us.png" alt="Country flag" class="rounded-circle" width="40" height="40" />
                 <div class="d-flex align-items-center gap-3">
                     <div class="d-flex align-items-center text-secondary">
                         <i class="fas fa-fire me-1"></i> <span>0</span>
@@ -150,7 +159,7 @@
             <div class="border rounded p-3 mb-4 bg-white">
                 <h5 class="fw-bold mb-2">Mở khóa Bảng xếp hạng!</h5>
                 <div class="d-flex align-items-center">
-                    <img src="https://storage.googleapis.com/a1aa/image/v2mtvdwCOQZiMADy4hS90ANjYcLOU9xBLn8Q3zTY0rs.jpg" alt="Lock icon" width="40" height="40" class="me-3" />
+                    <img src="https://d35aaqx5ub95lt.cloudfront.net/images/leagues/d4280fdf64d66de7390fe84802432a53.svg" alt="Lock icon" width="40" height="40" class="me-3" />
                     <p class="mb-0">Hoàn thành thêm 10 bài học để bắt đầu thi đua</p>
                 </div>
             </div>
@@ -159,10 +168,10 @@
             <div class="border rounded p-3 mb-4 bg-white">
                 <div class="d-flex justify-content-between align-items-center mb-2">
                     <h5 class="fw-bold mb-0">Nhiệm vụ hằng ngày</h5>
-                    <a href="#" class="text-primary">XEM TẤT CẢ</a>
+                    <a href="~/Views/Home/DailyTasks.cshtml" class="text-primary">XEM TẤT CẢ</a>
                 </div>
                 <div class="d-flex align-items-center mb-2">
-                    <img src="https://storage.googleapis.com/a1aa/image/qqXlJcCZ44dyp7409Da9AET2P52E-63apdEI_VOaGFc.jpg" alt="Lightning icon" width="40" height="40" class="me-3" />
+                    <img src="https://d35aaqx5ub95lt.cloudfront.net/images/goals/2b5a211d830a24fab92e291d50f65d1d.svg" alt="Lightning icon" width="40" height="40" class="me-3" />
                     <p class="mb-0">Kiếm 10 KN</p>
                 </div>
                 <div class="progress mb-1" style="height: 8px;">
@@ -170,7 +179,7 @@
                 </div>
                 <div class="d-flex justify-content-between small">
                     <span>0 / 10</span>
-                    <img src="https://storage.googleapis.com/a1aa/image/NgJUJBweZLTRLnKJa3dUDRu9M8JjSa2IXyO_e2VQ7lU.jpg" alt="Chest icon" width="20" height="20" />
+                    <img src="https://d35aaqx5ub95lt.cloudfront.net/images/goals/df7eda7cc1cc833ba30cd1e82781b68f.svg" alt="Chest icon" width="20" height="20" />
                 </div>
             </div>
 
@@ -178,8 +187,10 @@
             <div class="border rounded p-3 mb-4 bg-white">
                 <h5 class="fw-bold mb-3">Tạo hồ sơ để lưu tiến trình của bạn!</h5>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-success fw-bold">TẠO HỒ SƠ</button>
-                    <button class="btn btn-primary fw-bold">ĐĂNG NHẬP</button>
+                    <button class="btn btn-success fw-bold" >TẠO HỒ SƠ</button>
+                    <a href="@Url.Action("Register", "Account")" >
+                        <button class="btn btn-primary fw-bold w-100">ĐĂNG NHẬP</button>
+                        </a>
                 </div>
             </div>
 
@@ -190,14 +201,39 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         const menuItems = document.querySelectorAll('.menu-item');
+
+        // Hàm kiểm tra và áp dụng trạng thái menu-active dựa trên URL hiện tại
+        function setActiveMenu() {
+            const currentUrl = window.location.pathname; // Lấy đường dẫn hiện tại (ví dụ: "/Home/Learn")
+
+            menuItems.forEach(item => {
+                const itemUrl = item.getAttribute('data-url'); // Lấy data-url của menu-item
+
+                // So sánh URL hiện tại với data-url (bỏ qua domain, chỉ so sánh path)
+                if (itemUrl && currentUrl === new URL(itemUrl, window.location.origin).pathname) {
+                    item.classList.add('menu-active');
+                } else {
+                    item.classList.remove('menu-active');
+                }
+            });
+        }
+
+        // Gọi hàm khi trang được tải
+        window.addEventListener('DOMContentLoaded', setActiveMenu);
+
+        // Xử lý sự kiện click
         menuItems.forEach(item => {
             item.addEventListener('click', function () {
+                // Xóa class menu-active khỏi tất cả các menu-item
                 menuItems.forEach(menu => menu.classList.remove('menu-active'));
+
+                // Thêm class menu-active cho mục được click
                 this.classList.add('menu-active');
+
                 const url = this.getAttribute('data-url');
                 if (url) {
                     setTimeout(() => {
-                        window.location.href = url;
+                        window.location.href = url; // Chuyển hướng đến URL
                     }, 200);
                 }
             });
