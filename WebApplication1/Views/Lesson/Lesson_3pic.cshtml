@@ -2,6 +2,8 @@
     Layout = null;
 }
 
+@model List<Model.EF.Questions>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -285,12 +287,13 @@
 
     <script>
         function goToHome() {
-            window.location.href = "/Home/Learn"; // Chuyển hướng về trang chủ
+            window.location.href = "/Home/Learn";
         }
+
         window.onload = function () {
             const progressBar = document.getElementById('progress-bar');
             const checkBtn = document.getElementById('checkBtn');
-            const skipBtn = document.querySelector('.skip-btn'); // Thêm nút BỎ QUA
+            const skipBtn = document.querySelector('.skip-btn');
             const heartsElement = document.querySelector('.text-danger.fs-4.ms-1');
             const successMessage = document.getElementById('successMessage');
             const correctSound = document.getElementById('correctSound');
@@ -304,46 +307,19 @@
             let wrongQuestions = [];
             let hasShownWrongModal = false;
 
+            // Dữ liệu từ backend thay vì dữ liệu tĩnh
             const questions = [
+                @foreach (var question in Model)
                 {
-                    question: 'Đâu là "cà phê"?',
-                    options: [
-                        { text: 'Coffee', image: 'https://storage.googleapis.com/a1aa/image/8hVYeLQpQHqEh3DzpsrcY5wSZER_iD5yInv7phY4hJQ.jpg', correct: true },
-                        { text: 'Milk', image: 'https://storage.googleapis.com/a1aa/image/ZC5XCJ-iYOIds5z5oX6HUQVGgZSt2T9GjRQHkLXw1Hk.jpg', correct: false },
-                        { text: 'Tea', image: 'https://storage.googleapis.com/a1aa/image/pYO6ZvZBqWj80bVaz8DzztMCvFQ7NluU4ZjHtEbLZS4.jpg', correct: false }
-                    ]
-                },
-                {
-                    question: 'Đâu là "mèo"?',
-                    options: [
-                        { text: 'Cat', image: 'https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=1200', correct: true },
-                        { text: 'Dog', image: 'https://images2.thanhnien.vn/528068263637045248/2024/4/5/edit-8f3f62b6-9941-4be8-97ec-e6b44a87dbd5-17123183829001605752417.jpeg', correct: false },
-                        { text: 'Bird', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV6nlfk6r0PvD_OqZq7-R4YehZUvHmDmL4Qw&s', correct: false }
-                    ]
-                },
-                {
-                    question: 'Đâu là "táo"?',
-                    options: [
-                        { text: 'Apple', image: 'https://storage.googleapis.com/a1aa/image/apple.jpg', correct: true },
-                        { text: 'Banana', image: 'https://storage.googleapis.com/a1aa/image/banana.jpg', correct: false },
-                        { text: 'Orange', image: 'https://storage.googleapis.com/a1aa/image/orange.jpg', correct: false }
-                    ]
-                },
-                {
-                    question: 'Đâu là "sách"?',
-                    options: [
-                        { text: 'Book', image: 'https://storage.googleapis.com/a1aa/image/book.jpg', correct: true },
-                        { text: 'Pen', image: 'https://storage.googleapis.com/a1aa/image/pen.jpg', correct: false },
-                        { text: 'Notebook', image: 'https://storage.googleapis.com/a1aa/image/notebook.jpg', correct: false }
-                    ]
-                },
-                {
-                    question: 'Đâu là "mặt trời"?',
-                    options: [
-                        { text: 'Sun', image: 'https://storage.googleapis.com/a1aa/image/sun.jpg', correct: true },
-                        { text: 'Moon', image: 'https://storage.googleapis.com/a1aa/image/moon.jpg', correct: false },
-                        { text: 'Star', image: 'https://storage.googleapis.com/a1aa/image/star.jpg', correct: false }
-                    ]
+                    @: {
+                    @:     question: '@Html.Raw(question.QuestionText)',
+                    @:     options: [
+                    foreach (var answer in question.Answers)
+                    {
+                        @:         { text: '@Html.Raw(answer.AnswerText)', image: '@Html.Raw(answer.ImagePath)', correct: @answer.IsCorrect.ToString().ToLower() },
+                    }
+                    @:     ]
+                    @: },
                 }
             ];
 
@@ -356,6 +332,20 @@
             }
 
             function loadQuestion(index) {
+                if (index >= currentQuestions.length) {
+                    if (wrongQuestions.length > 0) {
+                        currentQuestions = [...wrongQuestions];
+                        wrongQuestions = [];
+                        index = 0;
+                    } else {
+                        progressBar.style.width = '100%';
+                        progressBar.setAttribute('aria-valuenow', 100);
+                        alert('Chúc mừng! Bạn đã hoàn thành tất cả câu hỏi đúng.');
+                        location.reload();
+                        return;
+                    }
+                }
+
                 const question = currentQuestions[index];
                 questionContainer.textContent = question.question;
 
@@ -364,12 +354,12 @@
                     const div = document.createElement('div');
                     div.className = 'col-12 col-sm-4';
                     div.innerHTML = `
-                                <div class="p-3 text-center option-box" style="padding: 2.5rem !important;" data-answer="${option.correct ? 'correct' : 'incorrect'}">
-                                    <img src="${option.image}" alt="${option.text}" class="mb-3 img-fluid" width="200" height="200" style="margin-bottom: 0.5rem !important;">
-                                    <div class="fw-semibold text-secondary">${option.text}</div>
-                                    <div class="text-muted">${i + 1}</div>
-                                </div>
-                            `;
+                        <div class="p-3 text-center option-box" style="padding: 2.5rem !important;" data-answer="${option.correct ? 'correct' : 'incorrect'}">
+                            <img src="${option.image}" alt="${option.text}" class="mb-3 img-fluid" width="200" height="200" style="margin-bottom: 0.5rem !important;">
+                            <div class="fw-semibold text-secondary">${option.text}</div>
+                            <div class="text-muted">${i + 1}</div>
+                        </div>
+                    `;
                     optionsContainer.appendChild(div);
                 });
 
@@ -462,32 +452,16 @@
                     }
                 } else {
                     currentQuestionIndex++;
-                    if (currentQuestionIndex < currentQuestions.length) {
-                        loadQuestion(currentQuestionIndex);
-                    } else {
-                        if (wrongQuestions.length > 0) {
-                            currentQuestions = [...wrongQuestions];
-                            wrongQuestions = [];
-                            currentQuestionIndex = 0;
-                            loadQuestion(currentQuestionIndex);
-                        } else {
-                            progressBar.style.width = '100%';
-                            progressBar.setAttribute('aria-valuenow', 100);
-                            alert('Chúc mừng! Bạn đã hoàn thành tất cả câu hỏi đúng.');
-                            location.reload();
-                        }
-                    }
+                    loadQuestion(currentQuestionIndex);
                     successMessage.classList.add('d-none');
                 }
             });
 
-            // Sự kiện cho nút "BỎ QUA"
             skipBtn.addEventListener('click', function () {
                 if (!isChecked) {
                     isChecked = true;
                     const footerBtn = document.querySelector('.footer-btn');
 
-                    // Đánh dấu tất cả các tùy chọn là disabled và hiển thị đáp án đúng
                     document.querySelectorAll('.option-box').forEach(box => {
                         const isBoxCorrect = box.getAttribute('data-answer') === 'correct';
                         if (isBoxCorrect) {
@@ -496,31 +470,26 @@
                         box.classList.add('disabled');
                     });
 
-                    // Cập nhật giao diện và logic khi sai
                     footerBtn.classList.remove('correct', 'wrong');
                     footerBtn.classList.add('wrong');
                     wrongSound.play();
                     hearts = Math.max(0, hearts - 1);
                     heartsElement.textContent = hearts;
 
-                    // Thêm câu hỏi vào danh sách sai nếu chưa có
                     if (!wrongQuestions.some(q => q.question === currentQuestions[currentQuestionIndex].question)) {
                         wrongQuestions.push(currentQuestions[currentQuestionIndex]);
                     }
 
-                    // Hiển thị modal lần đầu sai (nếu chưa hiển thị)
                     if (!hasShownWrongModal) {
                         const wrongAnswerModal = new bootstrap.Modal(document.getElementById('wrongAnswerModal'));
                         wrongAnswerModal.show();
                         hasShownWrongModal = true;
                     }
 
-                    // Cập nhật nút "KIỂM TRA" thành "TIẾP TỤC"
                     checkBtn.textContent = 'TIẾP TỤC';
                     checkBtn.classList.remove('btn-disabled');
                     checkBtn.classList.add('btn-active');
 
-                    // Kiểm tra nếu hết tim
                     if (hearts <= 0) {
                         setTimeout(() => {
                             alert('Bạn đã hết trái tim! Trò chơi kết thúc.');
@@ -532,21 +501,7 @@
 
             document.getElementById('continueBtn').addEventListener('click', function () {
                 currentQuestionIndex++;
-                if (currentQuestionIndex < currentQuestions.length) {
-                    loadQuestion(currentQuestionIndex);
-                } else {
-                    if (wrongQuestions.length > 0) {
-                        currentQuestions = [...wrongQuestions];
-                        wrongQuestions = [];
-                        currentQuestionIndex = 0;
-                        loadQuestion(currentQuestionIndex);
-                    } else {
-                        progressBar.style.width = '100%';
-                        progressBar.setAttribute('aria-valuenow', 100);
-                        alert('Chúc mừng! Bạn đã hoàn thành tất cả câu hỏi đúng.');
-                        location.reload();
-                    }
-                }
+                loadQuestion(currentQuestionIndex);
                 successMessage.classList.add('d-none');
             });
 
