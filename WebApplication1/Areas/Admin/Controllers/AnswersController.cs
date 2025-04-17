@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Model.EF;
@@ -14,6 +15,8 @@ namespace WebApplication1.Areas.Admin.Controllers
     public class AnswersController : Controller
     {
         private EnglishOnlineDbContext db = new EnglishOnlineDbContext();
+        private CloudinaryService _cloudinaryService = new CloudinaryService();
+
 
         // GET: Admin/Answers
         public ActionResult Index()
@@ -21,21 +24,6 @@ namespace WebApplication1.Areas.Admin.Controllers
             var answers = db.Answers.Include(a => a.Question);
             return View(answers.ToList());
         }
-
-        // GET: Admin/Answers/Details/5
-        //public ActionResult Details(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Answers answers = db.Answers.Find(id);
-        //    if (answers == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(answers);
-        //}
 
         // GET: Admin/Answers/Create
         public ActionResult Create()
@@ -49,29 +37,33 @@ namespace WebApplication1.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AnswerID,AnswerText,IsCorrect,QuestionID")] Answers answers, HttpPostedFileBase ImageUpload)
+        public async Task<ActionResult> Create([Bind(Include = "AnswerID,AnswerText,IsCorrect,QuestionID")] Answers answers, HttpPostedFileBase ImageUpload)
         {
             if (ModelState.IsValid)
             {
-                // Nếu có file ảnh được upload
+                // Xử lý upload ảnh từ Cloudinary
                 if (ImageUpload != null && ImageUpload.ContentLength > 0)
                 {
-                    // Tạo tên file duy nhất
-                    var fileName = Path.GetFileName(ImageUpload.FileName);
-                    var newFileName = Guid.NewGuid().ToString() + Path.GetExtension(fileName);
+                    try
+                    {
+                        var cloudService = new CloudinaryService(); // Chắc chắn đã cấu hình đúng dịch vụ
+                        var imageUrl = await cloudService.UploadImageAsync(ImageUpload);
 
-                    // Đường dẫn vật lý lưu ảnh
-                    var path = Path.Combine(Server.MapPath("~/Uploads/Images"), newFileName);
-
-                    // Tạo thư mục nếu chưa có
-                    Directory.CreateDirectory(Server.MapPath("~/Uploads/Images"));
-
-                    // Lưu file
-                    ImageUpload.SaveAs(path);
-
-                    // Lưu đường dẫn URL ảnh (để FE dễ lấy)
-                    var baseUrl = Request.Url.GetLeftPart(UriPartial.Authority);
-                    answers.ImagePath = baseUrl + "/Uploads/Images/" + newFileName;
+                        if (!string.IsNullOrEmpty(imageUrl))
+                        {
+                            answers.ImagePath = imageUrl;  // Lưu URL ảnh trả về từ Cloudinary
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "Tải ảnh lên thất bại!");
+                            return View(answers);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        ModelState.AddModelError("", "Lỗi khi tải ảnh lên: " + ex.Message);
+                        return View(answers);
+                    }
                 }
 
                 db.Answers.Add(answers);
@@ -82,6 +74,7 @@ namespace WebApplication1.Areas.Admin.Controllers
             ViewBag.QuestionID = new SelectList(db.Questions, "QuestionID", "QuestionText", answers.QuestionID);
             return View(answers);
         }
+
 
         // GET: Admin/Answers/Edit/5
         public ActionResult Edit(int? id)
@@ -104,24 +97,33 @@ namespace WebApplication1.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Answers answers, HttpPostedFileBase ImageUpload)
+        public async Task<ActionResult> Edit(Answers answers, HttpPostedFileBase ImageUpload)
         {
             if (ModelState.IsValid)
             {
+                // Nếu có ảnh mới được tải lên
                 if (ImageUpload != null && ImageUpload.ContentLength > 0)
                 {
-                    var fileName = Path.GetFileName(ImageUpload.FileName);
-                    var folderPath = Server.MapPath("~/Uploads/Answers");
-
-                    // Tạo thư mục nếu chưa tồn tại
-                    if (!Directory.Exists(folderPath))
+                    try
                     {
-                        Directory.CreateDirectory(folderPath);
-                    }
+                        var cloudService = new CloudinaryService(); // Chắc chắn đã cấu hình đúng dịch vụ
+                        var imageUrl = await cloudService.UploadImageAsync(ImageUpload);
 
-                    var fullPath = Path.Combine(folderPath, fileName);
-                    ImageUpload.SaveAs(fullPath);
-                    answers.ImagePath = "~/Uploads/Answers/" + fileName;
+                        if (!string.IsNullOrEmpty(imageUrl))
+                        {
+                            answers.ImagePath = imageUrl;  // Lưu URL ảnh trả về từ Cloudinary
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "Tải ảnh lên thất bại!");
+                            return View(answers);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        ModelState.AddModelError("", "Lỗi khi tải ảnh lên: " + ex.Message);
+                        return View(answers);
+                    }
                 }
 
                 db.Entry(answers).State = EntityState.Modified;
@@ -132,6 +134,7 @@ namespace WebApplication1.Areas.Admin.Controllers
             ViewBag.QuestionID = new SelectList(db.Questions, "QuestionID", "QuestionText", answers.QuestionID);
             return View(answers);
         }
+    
 
 
 
