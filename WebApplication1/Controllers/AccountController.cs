@@ -44,26 +44,28 @@ namespace WebApplication1.Controllers
                     return Json(new { success = false, message = "Vui lòng nhập đầy đủ thông tin!" });
                 }
 
-                // Kiểm tra xem email hoặc username có tồn tại không
+                // Kiểm tra xem email có tồn tại không
                 var existingUser = db.Users.FirstOrDefault(u => u.Email == email);
                 if (existingUser == null)
                 {
                     return Json(new { success = false, message = "Tài khoản không tồn tại!" });
                 }
 
-                // Mã hóa mật khẩu nhập vào để so sánh với mật khẩu trong database
+                // Mã hóa mật khẩu và kiểm tra
                 string hashedPassword = HashPassword(password);
-
                 Users user = db.Users.FirstOrDefault(u => u.Email == email && u.PasswordHash == hashedPassword);
 
                 if (user != null)
                 {
-                    // Thêm Role vào Claims
+                    // Lưu idUser vào Session
+                    Session["UserId"] = user.UserID;
+
+                    // Tạo cookie đăng nhập cho người dùng
                     var authTicket = new FormsAuthenticationTicket(
                         1,
                         user.Email,
                         DateTime.Now,
-                        DateTime.Now.AddDays(30), // Thời gian sống ticket
+                        DateTime.Now.AddDays(30), // Thời gian sống cookie
                         false,
                         user.Role.ToString()
                     );
@@ -84,10 +86,11 @@ namespace WebApplication1.Controllers
             }
             catch (Exception ex)
             {
-                return Json(new { success = false, message = "Lỗi" + ex });
+                return Json(new { success = false, message = "Lỗi: " + ex.Message });
             }
         }
-       
+
+
         [AllowAnonymous]
         public ActionResult TestAuth()
         {
