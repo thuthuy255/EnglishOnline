@@ -20,6 +20,9 @@ public class Users
 
     [Required, StringLength(255)]
     public string PasswordHash { get; set; }
+    [Url(ErrorMessage = "Avatar phải là một URL hợp lệ!")]
+    [MaxLength(500)]
+    public string Avatar { get; set; }
 
     [Required, StringLength(20)]
     public string Role { get; set; } = UserRole.User.ToString();

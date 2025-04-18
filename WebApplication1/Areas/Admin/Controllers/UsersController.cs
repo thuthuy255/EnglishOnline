@@ -6,8 +6,10 @@ using System.Linq;
 using System.Net;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 using Model.EF;
 
 namespace WebApplication1.Areas.Admin.Controllers
@@ -15,6 +17,8 @@ namespace WebApplication1.Areas.Admin.Controllers
     public class UsersController : Controller
     {
         private EnglishOnlineDbContext db = new EnglishOnlineDbContext();
+        private CloudinaryService _cloudinaryService = new CloudinaryService();
+
 
         // GET: Admin/Users
         public ActionResult Index()
@@ -27,14 +31,14 @@ namespace WebApplication1.Areas.Admin.Controllers
         {
             if (id == null)
             {
-               return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-          }
-          Users users = db.Users.Find(id);
-          if (users == null)
-            {
-              return HttpNotFound();
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-           return View(users);
+            Users users = db.Users.Find(id);
+            if (users == null)
+            {
+                return HttpNotFound();
+            }
+            return View(users);
         }
 
         // GET: Admin/Users/Create
@@ -49,7 +53,7 @@ namespace WebApplication1.Areas.Admin.Controllers
         // POST: Admin/Users/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(string Username, string Email, string Password, string Role)
+        public async Task<ActionResult> Create(string Username, string Email, string Password, string Role, HttpPostedFileBase AvatarUpload)
         {
             if (ModelState.IsValid)
             {
@@ -61,13 +65,22 @@ namespace WebApplication1.Areas.Admin.Controllers
                     Role = Role
                 };
 
+                if (AvatarUpload != null && AvatarUpload.ContentLength > 0)
+                {
+                    // Đảm bảo _cloudinaryService.UploadImageAsync là phương thức bất đồng bộ (async)
+                    string avatarUrl = await _cloudinaryService.UploadImageAsync(AvatarUpload);
+                    user.Avatar = avatarUrl; // Lưu URL của ảnh vào thuộc tính Avatar
+                }
+
                 db.Users.Add(user);
                 db.SaveChanges();
                 TempData["SuccessMessage"] = "Tạo thành công!";
                 return RedirectToAction("Index");
             }
+
             return View();
         }
+
 
 
         // GET: Admin/Users/Edit/5
@@ -86,7 +99,7 @@ namespace WebApplication1.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int? UserID, string Username, string Email, string NewPassword, string ConfirmPassword, string Role)
+        public async Task<ActionResult> Edit(int? UserID, string Username, string Email, string NewPassword, string ConfirmPassword, string Role, HttpPostedFileBase AvatarUpload)
         {
             if (UserID == null)
             {
@@ -103,12 +116,11 @@ namespace WebApplication1.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
-                // Cập nhật thông tin người dùng
                 user.Username = Username;
                 user.Email = Email;
                 user.Role = Role;
 
-                // Kiểm tra nếu có nhập mật khẩu mới
+                // Xử lý mật khẩu
                 if (!string.IsNullOrEmpty(NewPassword))
                 {
                     if (NewPassword != ConfirmPassword)
@@ -117,7 +129,33 @@ namespace WebApplication1.Areas.Admin.Controllers
                         return View(user);
                     }
 
-                    user.PasswordHash = HashPassword(NewPassword); // Mã hóa mật khẩu mới
+                    user.PasswordHash = HashPassword(NewPassword);
+                }
+
+                // Xử lý ảnh đại diện
+                if (AvatarUpload != null && AvatarUpload.ContentLength > 0)
+                {
+                    try
+                    {
+                        // Gọi service để upload ảnh lên Cloudinary
+                        var cloudService = new CloudinaryService(); // chắc chắn đã cấu hình đúng
+                        var imageUrl = await cloudService.UploadImageAsync(AvatarUpload);
+
+                        if (!string.IsNullOrEmpty(imageUrl))
+                        {
+                            user.Avatar = imageUrl;
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "Tải ảnh lên thất bại!");
+                            return View(user);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        ModelState.AddModelError("", "Lỗi khi tải ảnh lên: " + ex.Message);
+                        return View(user);
+                    }
                 }
 
                 try
@@ -140,6 +178,7 @@ namespace WebApplication1.Areas.Admin.Controllers
 
 
 
+
         // GET: Admin/Users/Delete/5
         public ActionResult Delete(int UserID)
         {
@@ -156,7 +195,7 @@ namespace WebApplication1.Areas.Admin.Controllers
         }
 
         [HttpPost]
-      
+
         public ActionResult DeleteConfirmed(int UserID)
         {
             try

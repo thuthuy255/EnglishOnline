@@ -53,7 +53,11 @@ namespace WebApplication1.Controllers
         }
         public ActionResult Learn()
         {
-            var topics = db.Topic.Include(t => t.Lessons).ToList();
+            var topics = db.Topic
+          .Include("Lessons")
+          .OrderBy(t => t.PrerequisiteTopic == null ? 0 : 1) // Đưa topic không có điều kiện lên đầu
+          .ThenBy(t => t.TopicName) // Sắp xếp phụ nếu cần
+          .ToList();
             return View(topics);
         }
         public ActionResult Pronunciation()
