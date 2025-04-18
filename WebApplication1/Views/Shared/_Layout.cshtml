@@ -43,11 +43,11 @@
                     background-color: #F7F7F7;
                 }
 
-      
-        .sidebar .menu-item:hover,
-        .sidebar .menu-item.menu-active {
-            background-color: #F7F7F7;
-        }
+
+                .sidebar .menu-item:hover,
+                .sidebar .menu-item.menu-active {
+                    background-color: #F7F7F7;
+                }
 
         .menu-active {
             background-color: #DDF4FF; /* Giữ màu nền riêng cho trạng thái active */
@@ -55,6 +55,7 @@
             color: #1CB0F6 !important;
             border: 1px solid #84D8FF;
         }
+
         .menu-icon {
             width: 24px;
             height: 24px;
@@ -80,6 +81,20 @@
             font-size: 0.9em;
             background-color: #f5f5f5;
         }
+
+        .btn-success {
+            background-color: rgb(88, 204, 2) !important;
+            color: white;
+            border-radius: 8px;
+            border: none;
+        }
+
+            .btn-success:hover {
+                background-color: rgb(78, 184, 2) !important;
+            }
+        .text-success {
+            color: rgb(88, 204, 2) !important;
+        }
     </style>
 </head>
 <body>
@@ -102,7 +117,7 @@
                     <span>PHÁT ÂM</span>
                 </div>
 
-                <div class="d-flex align-items-center menu-item" >
+                <div class="d-flex align-items-center menu-item">
                     <img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/ca9178510134b4b0893dbac30b6670aa.svg" alt="Bảng xếp hạng" class="me-3 menu-icon">
                     <span>BẢNG XẾP HẠNG</span>
                 </div>
@@ -117,12 +132,12 @@
                     <span>CỬA HÀNG</span>
                 </div>
 
-                <div class="d-flex align-items-center menu-item" >
+                <div class="d-flex align-items-center menu-item">
                     <img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/24e0dcdc06870ead47b3600f0d41eb5b.svg" alt="Hồ sơ" class="me-3 menu-icon">
                     <span>HỒ SƠ</span>
                 </div>
 
-                <div class="d-flex align-items-center menu-item">
+                <div class="d-flex align-items-center menu-item"  data-url="@Url.Action("SeeMore", "Home")">
                     <img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/7159c0b5d4250a5aea4f396d53f17f0c.svg" alt="Xem thêm" class="me-3 menu-icon">
                     <span>XEM THÊM</span>
                 </div>
@@ -138,7 +153,7 @@
 
         <!-- Sidebar phải -->
 
-        <div class="container mt-4" style="max-width: 400px;">
+        <div class="container mt-5 ms-auto me-5" style="max-width: 400px;">
             <!-- Header -->
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <img src="~/Assets/Client/clientAssets/img/us.png" alt="Country flag" class="rounded-circle" width="40" height="40" />
@@ -187,10 +202,14 @@
             <div class="border rounded p-3 mb-4 bg-white">
                 <h5 class="fw-bold mb-3">Tạo hồ sơ để lưu tiến trình của bạn!</h5>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-success fw-bold" >TẠO HỒ SƠ</button>
-                    <a href="@Url.Action("Register", "Account")" >
-                        <button class="btn btn-primary fw-bold w-100">ĐĂNG NHẬP</button>
-                        </a>
+                    <form method="get" action="@Url.Action("Register", "Account")">
+                        <button type="submit" class="btn btn-success fw-bold w-100">TẠO HỒ SƠ</button>
+                    </form>
+
+                    <form method="get" action="@Url.Action("Login", "Account")">
+                        <button type="submit" class="btn btn-primary fw-bold w-100">ĐĂNG NHẬP</button>
+                    </form>
+
                 </div>
             </div>
 

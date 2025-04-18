@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewData["Title"] = "Câu hỏi thường gặp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="container py-5">
+    <nav class="mb-4 text-uppercase fw-bold text-primary small">
+        <a href="#" class="text-decoration-none text-primary">TRUNG TÂM TRỢ GIÚP</a>
+        <span class="mx-2 text-muted"><strong>&gt;</strong></span>
+
+        <a href="#" class="text-decoration-none text-primary">TRANG CHỦ</a>
+    </nav>
+
+    <h1 class="text-center mb-5 fw-bold">Câu hỏi thường gặp</h1>
+
+    <div class="accordion accordion-flush border rounded" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed fw-bold " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+                    Tại sao khóa học của tôi thay đổi?
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Duolingo liên tục cập nhật nội dung để các khóa học tốt hơn và hiệu quả hơn. Mỗi khi chúng tôi cập nhận cải thiện, bạn có thể để ý thấy có những điều chỉnh với nội dung hiện có hoặc giới thiệu những tài liệu hoàn toàn mới. Khi điều này xảy ra, chúng tôi cũng sắp đặt vị trí của bạn trên lộ trình học của mình để phù hợp với nội dung và cấu trúc mới. Bạn cứ yên tâm nhé, điều này giúp bạn có những trải nghiệm học tập mới mẻ nhất và hiệu quả nhất có thể.
+
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed fw-bold " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+                    Streak là gì?
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Streak (biểu tượng ngọn lửa) thể hiện số ngày bạn học liên tục trên Duolingo.
+                    Học ngôn ngữ là hành trình dài nhằm dần dần chinh phục các mục tiêu và streak là phương pháp hiệu quả giúp bạn giữ vững động lực học và luyện tập đều đặn mỗi ngày.
+                    Mẹo: Nhắc nhở luyện tập sẽ giúp bạn không quên học bài. Trong mục cài đặt thông báo bạn có thể chọn bật nhắc nhở luyện tập và chọn thời gian phù hợp nhất với bản thân.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed fw-bold " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree">
+                    Bảng xếp hạng và Giải đấu là gì?
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Bảng xếp hạng là nơi bạn có thể vui vẻ thi đua thành tích hằng tuần cùng những người học Duolingo khác. Bạn càng kiếm được nhiều điểm KN (điểm kinh nghiệm) qua mỗi bài học, bạn càng có vị trí cao trên bảng xếp hạng. Mỗi tuần, bạn sẽ gặp những đối thủ khác nhau. Hãy ghé mục Bảng xếp hạng trên ứng dụng để tham gia thi đua nhé!
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour">
+                    Duolingo có sử dụng thư viện mở nào không?
+                </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Có. Bạn có thể xem các mã nguồn mở mà chúng tôi được quyền sử dụng và tìm hiểu thêm tại trang này.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
