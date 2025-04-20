@@ -1,54 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\",
+  "WorkspaceRootPath": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|c:\\nam 3\\l\u1EADp tr\u00ECnh web n\u00E2ng cao\\baitap\\englishonline\\englishonline\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\englishonline\\api\\services\\topicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\services\\topicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|c:\\nam 3\\l\u1EADp tr\u00ECnh web n\u00E2ng cao\\baitap\\englishonline\\englishonline\\webapplication1\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\englishonline\\api\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|c:\\nam 3\\l\u1EADp tr\u00ECnh web n\u00E2ng cao\\baitap\\englishonline\\englishonline\\webapplication1\\views\\home\\learn.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\learn.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\englishonline\\api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\englishonline\\api\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\webapplication1\\controllers\\onboardingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\onboardingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\model\\ef\\topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|solutionrelative:model\\ef\\topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|c:\\nam 3\\l\u1EADp tr\u00ECnh web n\u00E2ng cao\\baitap\\englishonline\\englishonline\\webapplication1\\views\\home\\dailytasks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\dailytasks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|c:\\nam 3\\l\u1EADp tr\u00ECnh web n\u00E2ng cao\\baitap\\englishonline\\englishonline\\webapplication1\\views\\home\\pronunciation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\pronunciation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|c:\\nam 3\\l\u1EADp tr\u00ECnh web n\u00E2ng cao\\baitap\\englishonline\\englishonline\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\webapplication1\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\webapplication1\\views\\onboarding\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\onboarding\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\webapplication1\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\englishonline\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,162 +38,71 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAgwGoAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T06:43:58.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAKUAAAAAAAAAAAAAALoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T06:42:32.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T06:42:01.071Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Pronunciation.cshtml",
-              "DocumentMoniker": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Home\\Pronunciation.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Pronunciation.cshtml",
-              "ToolTip": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Home\\Pronunciation.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Home\\Pronunciation.cshtml",
-              "ViewState": "AQIAAK4AAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T06:41:53.647Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DailyTasks.cshtml",
-              "DocumentMoniker": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Home\\DailyTasks.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\DailyTasks.cshtml",
-              "ToolTip": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Home\\DailyTasks.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Home\\DailyTasks.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T06:41:00.539Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Topic.cs",
-              "DocumentMoniker": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\Model\\EF\\Topic.cs",
-              "RelativeDocumentMoniker": "Model\\EF\\Topic.cs",
-              "ToolTip": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\Model\\EF\\Topic.cs",
-              "RelativeToolTip": "Model\\EF\\Topic.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBUAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T06:02:04.967Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OnboardingController.cs",
-              "DocumentMoniker": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Controllers\\OnboardingController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\OnboardingController.cs",
-              "ToolTip": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Controllers\\OnboardingController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\OnboardingController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T05:53:34.189Z",
-              "EditorCaption": ""
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAkwEAAAAAVAAAA",
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "API\\Services\\JwtService.cs",
+              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Services\\JwtService.cs",
+              "RelativeToolTip": "API\\Services\\JwtService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T07:37:14.693Z",
+              "WhenOpened": "2025-04-21T19:06:03.251Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Learn.cshtml",
-              "DocumentMoniker": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Home\\Learn.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Learn.cshtml",
-              "ToolTip": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Home\\Learn.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Home\\Learn.cshtml",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAADIAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-09T07:36:36.133Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Onboarding\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Onboarding\\Index.cshtml",
-              "ToolTip": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Onboarding\\Index.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Onboarding\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAMkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-09T07:30:26.175Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RouteConfig.cs",
-              "DocumentMoniker": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\App_Start\\RouteConfig.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\App_Start\\RouteConfig.cs",
-              "ToolTip": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\App_Start\\RouteConfig.cs",
-              "RelativeToolTip": "WebApplication1\\App_Start\\RouteConfig.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwBUAAAAAAAAA",
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\BaseController.cs",
+              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "API\\Controllers\\BaseController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T07:25:35.345Z",
+              "WhenOpened": "2025-04-21T18:57:24.639Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Account\\Login.cshtml",
-              "ViewState": "AQIAAGwAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-09T07:26:08.83Z",
+              "DocumentIndex": 1,
+              "Title": "TopicController.cs",
+              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Controllers\\TopicController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\TopicController.cs",
+              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Controllers\\TopicController.cs",
+              "RelativeToolTip": "API\\Controllers\\TopicController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T18:35:29.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAuwEoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T18:16:46.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TopicService.cs",
+              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Services\\TopicService.cs",
+              "RelativeDocumentMoniker": "API\\Services\\TopicService.cs",
+              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Services\\TopicService.cs",
+              "RelativeToolTip": "API\\Services\\TopicService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA6wCQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T18:10:48.614Z",
               "EditorCaption": ""
             }
           ]
