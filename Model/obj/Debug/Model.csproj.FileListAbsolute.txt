@@ -60,3 +60,21 @@ C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\
 C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.Remove_PrerequisiteTopicName.resources
 C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.AddImagePathToAnswers.resources
 C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.UpdateUserTopic.resources
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\bin\Debug\Model.dll.config
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\bin\Debug\Model.dll
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\bin\Debug\Model.pdb
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\bin\Debug\EntityFramework.dll
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\bin\Debug\EntityFramework.xml
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.InitialCreate.resources
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.Remove_PrerequisiteTopicName.resources
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.AddImagePathToAnswers.resources
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.UpdateUserTopic.resources
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.UpdateUserAvatarUrl.resources
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.csproj.GenerateResource.cache
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.csproj.Up2Date
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.dll
+E:\StudyStudent\Web\Web_Elearning\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.pdb
