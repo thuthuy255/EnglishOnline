@@ -49,3 +49,15 @@ global.json
 
 # ASP.NET temporary files
 __generated/
+
+# Ignore Visual Studio temporary files, build results, and
+# user-specific files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
