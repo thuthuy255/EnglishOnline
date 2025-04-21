@@ -62,6 +62,9 @@
     <Compile Include="DAO\UserProgress_Dao.cs" />
     <Compile Include="DAO\UserTopic_Dao.cs" />
     <Compile Include="DAO\User_Dao.cs" />
+    <Compile Include="DTO\ApiResponse.cs" />
+    <Compile Include="DTO\LoginDTO.cs" />
+    <Compile Include="DTO\RegisterDTO.cs" />
     <Compile Include="EF\Answers.cs" />
     <Compile Include="EF\Badges.cs" />
     <Compile Include="EF\EnglishOnlineDbContext.cs" />
