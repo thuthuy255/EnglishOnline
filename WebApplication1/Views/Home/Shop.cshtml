@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Super Trial";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // tùy theo layout bạn dùng
+}
+
+<div class="container py-5">
+    <div class="card shadow-lg border-0 rounded-4" style="background: linear-gradient(180deg, #0B2A6D 0%, #4B2B6B 100%)">
+        <div class="card-body text-white d-flex flex-column flex-md-row align-items-start gap-4">
+            <img src="https://storage.googleapis.com/a1aa/image/c4432505-3afd-49be-e5bc-f863e18e1dc8.jpg" 
+                 alt="Owl mascot" class="rounded-circle" width="80" height="80" />
+
+            <div class="flex-grow-1">
+                <div class="d-flex justify-content-between align-items-start">
+                    <h2 class="h5 fw-semibold pe-3">
+                        Bắt đầu 2 tuần dùng thử miễn phí để tận hưởng các quyền lợi độc quyền của Super
+                    </h2>
+                    <span class="badge text-white fw-bold px-3 py-1" 
+                          style="background: linear-gradient(90deg, #00FFB0 0%, #FF5AFF 100%)">
+                        SUPER
+                    </span>
+                </div>
+
+                <button type="button" class="btn btn-light text-primary fw-bold mt-4 w-100">
+                    BẮT ĐẦU 14 NGÀY DÙNG THỬ MIỄN PHÍ
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <section class="mt-5">
+        <h3 class="fw-semibold text-secondary mb-4">Trái tim</h3>
+        <div class="border-top border-bottom">
+            <!-- Hồi phục trái tim -->
+            <div class="d-flex justify-content-between align-items-center py-4 border-bottom">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="position-relative" style="width: 56px; height: 56px;">
+                        <img src="https://storage.googleapis.com/a1aa/image/46b23490-b2b1-450c-12c4-da6ccb1d5cd3.jpg"
+                             class="img-fluid rounded-circle border border-4 border-pink" width="56" height="56" />
+                        <div class="position-absolute top-50 start-50 translate-middle bg-danger rounded-circle" 
+                             style="width: 12px; height: 12px;"></div>
+                    </div>
+                    <div>
+                        <h5 class="h6 fw-semibold text-dark mb-1">Hồi phục Trái tim</h5>
+                        <p class="text-muted mb-0" style="max-width: 280px;">
+                            Lấp đầy trái tim để không phải lo lắng mắc lỗi sai trong bài học
+                        </p>
+                    </div>
+                </div>
+                <button class="btn btn-outline-secondary text-muted fw-bold" disabled>ĐẦY ĐỦ</button>
+            </div>
+
+            <!-- Trái tim vô hạn -->
+            <div class="d-flex justify-content-between align-items-center py-4">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="position-relative" style="width: 56px; height: 56px;">
+                        <img src="https://storage.googleapis.com/a1aa/image/f77e0851-95aa-4deb-120a-f9db1d80a98c.jpg"
+                             class="img-fluid rounded-circle" style="background: linear-gradient(180deg, #00FFB0 0%, #5A00FF 100%);" />
+                        <div class="position-absolute top-50 start-50 translate-middle text-white fw-bold" style="font-size: 1.25rem;">
+                            ∞
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="h6 fw-semibold text-dark mb-1">Trái tim vô hạn</h5>
+                        <p class="text-muted mb-0" style="max-width: 280px;">
+                            Không bao giờ hết trái tim khi học với Super!
+                        </p>
+                    </div>
+                </div>
+                <button class="btn btn-outline-danger fw-bold">THỬ MIỄN PHÍ</button>
+            </div>
+        </div>
+    </section>
+</div>
