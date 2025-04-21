@@ -472,5 +472,3 @@ C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\
 C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebAppli.7D14BD69.Up2Date
 C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\WebApplication1\obj\Debug\WebApplication1.pdb
-C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\CloudinaryDotNet.dll
-C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\WebApplication1\bin\CloudinaryDotNet.xml
