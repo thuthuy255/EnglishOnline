@@ -1,0 +1,51 @@
+ # User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+.vscode/
+.vs/
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Dd]Release/
+[Dd]ReleasePublic/
+[Aa]ssemblyInfo.cs
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer files
+app.publish/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Core
+wwwroot/
+
+# User-specific files
+.idea/
+
+# JetBrains Rider
+.idea/
+
+# Tye
+.tye/
+
+# Local development environment
+.env
+
+# NuGet
+*.nupkg
+# .NET Core SDK
+global.json
+
+# ASP.NET temporary files
+__generated/

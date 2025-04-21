@@ -309,19 +309,24 @@
 
             // Dữ liệu từ backend thay vì dữ liệu tĩnh
             const questions = [
-                @foreach (var question in Model)
-                {
-                    @: {
-                    @:     question: '@Html.Raw(question.QuestionText)',
-                    @:     options: [
-                    foreach (var answer in question.Answers)
-                    {
-                        @:         { text: '@Html.Raw(answer.AnswerText)', image: '@Html.Raw(answer.ImagePath)', correct: @answer.IsCorrect.ToString().ToLower() },
-                    }
-                    @:     ]
-                    @: },
-                }
-            ];
+    @foreach (var question in Model)
+    {
+            @: {
+            @:     LessonID: '@Html.Raw(question.LessonID)',
+            @:     question: '@Html.Raw(question.QuestionText)',
+            @:     options: [
+            foreach (var answer in question.Answers)
+            {
+                @:         { text: '@Html.Raw(answer.AnswerText)', image: '@Html.Raw(answer.ImagePath)', correct: @answer.IsCorrect.ToString().ToLower() },
+            }
+            @:     ]
+            @: },
+        }
+    ];
+
+
+
+
 
             let currentQuestions = [...questions];
 
@@ -339,7 +344,8 @@
                         index = 0;
                     } else {
                         // Gọi AJAX để lưu điểm tại đây
-                        let lessonIds = currentQuestions.map(q => q.lessonId);// Lọc các giá trị lessonId = 0
+                        let lessonIds = [...new Set(questions.map(q => q.LessonID))];
+
 
                         console.log("lessonIds:", lessonIds); // Xem dữ liệu gửi lên có đúng không
                         console.log("currentQuestions:", currentQuestions); // Xem dữ liệu gửi lên có đúng không
@@ -354,7 +360,7 @@
                             data: JSON.stringify(lessonIds), // Gửi danh sách ID dưới dạng JSON mảng
                             success: function (data) {
                                 if (data.success) {
-                                    alert(data.message + "\nTổng điểm: " + data.totalScore);
+                                    window.location.href = '/Home/Learn';
                                 } else {
                                     alert("Lỗi: " + data.message);
                                 }

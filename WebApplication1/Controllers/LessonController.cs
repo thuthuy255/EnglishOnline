@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Web.Mvc;
 
 namespace WebApplication1.Controllers
@@ -17,10 +18,16 @@ namespace WebApplication1.Controllers
             db = new EnglishOnlineDbContext();
         }
 
-        public ActionResult Lesson_3pic()
+        public ActionResult Lesson_3pic(int LessonID)
         {
+            if(LessonID==null)
+            {
+                ViewBag.Message = "Không có bài học này";
+                return View();
+            }
             var questions = db.Questions
-                .Include(q => q.Answers) // Sử dụng lambda cho type-safe
+                .Include(q => q.Answers)
+                .Where(q => q.LessonID == LessonID)
                 .ToList();
 
             if (questions == null || !questions.Any())
@@ -60,23 +67,38 @@ namespace WebApplication1.Controllers
                     var lesson = db.Lessons.Find(lessonId);
                     if (lesson != null)
                     {
-                        totalScore += lesson.Score; // Cộng điểm của mỗi bài học
+                        // Kiểm tra nếu đã có tiến độ học cho bài học này
+                        var existingProgress = db.UserProgresses
+                            .FirstOrDefault(up => up.UserID == userId.Value && up.LessonID == lessonId);
 
-                        // Lưu điểm cho mỗi bài học vào UserProgress
-                        var userProgress = new UserProgress
+                        if (existingProgress != null)
                         {
-                            UserID = userId.Value,
-                            LessonID = lessonId, // Lưu ID bài học
-                            Score = lesson.Score // Lưu điểm bài học
-                        };
+                            // Cộng dồn điểm nếu đã có
+                            existingProgress.Score += lesson.Score;
+                            existingProgress.Completed = true; // Đánh dấu đã hoàn thành
+                        }
+                        else
+                        {
+                            // Nếu chưa có, tạo mới
+                            var userProgress = new UserProgress
+                            {
+                                UserID = userId.Value,
+                                LessonID = lessonId,
+                                Score = lesson.Score,
+                                Completed=true,
+                            };
+                            db.UserProgresses.Add(userProgress);
+                        }
 
-                        db.UserProgresses.Add(userProgress);
+                        // Cộng điểm vào tổng điểm
+                        totalScore += lesson.Score;
                     }
                     else
                     {
                         lessonsNotFound.Add(lessonId); // Ghi nhận bài học không tìm thấy
                     }
                 }
+
 
                 // Kiểm tra nếu có bài học không tìm thấy
                 if (lessonsNotFound.Any())

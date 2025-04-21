@@ -17,7 +17,6 @@ namespace WebApplication1.Areas.Admin.Controllers
         private EnglishOnlineDbContext db = new EnglishOnlineDbContext();
         private CloudinaryService _cloudinaryService = new CloudinaryService();
 
-
         // GET: Admin/Answers
         public ActionResult Index()
         {
@@ -28,30 +27,42 @@ namespace WebApplication1.Areas.Admin.Controllers
         // GET: Admin/Answers/Create
         public ActionResult Create()
         {
+            var lessons = db.Lessons.ToList(); // Đã sửa lỗi ở đây
+            ViewBag.listlesson = lessons;
             ViewBag.QuestionID = new SelectList(db.Questions, "QuestionID", "QuestionText");
             return View();
         }
 
-        // POST: Admin/Answers/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpGet]
+        public JsonResult GetQuestionByLessonID(int LessonID)
+        {
+            var questions = db.Questions
+                              .Where(q => q.LessonID == LessonID)
+                              .Select(q => new {
+                                  QuestionID = q.QuestionID,
+                                  QuestionText = q.QuestionText
+                              }).ToList();
+
+            return Json(questions, JsonRequestBehavior.AllowGet);
+        }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create([Bind(Include = "AnswerID,AnswerText,IsCorrect,QuestionID")] Answers answers, HttpPostedFileBase ImageUpload)
         {
             if (ModelState.IsValid)
             {
-                // Xử lý upload ảnh từ Cloudinary
                 if (ImageUpload != null && ImageUpload.ContentLength > 0)
                 {
                     try
                     {
-                        var cloudService = new CloudinaryService(); // Chắc chắn đã cấu hình đúng dịch vụ
+                        var cloudService = new CloudinaryService();
                         var imageUrl = await cloudService.UploadImageAsync(ImageUpload);
 
                         if (!string.IsNullOrEmpty(imageUrl))
                         {
-                            answers.ImagePath = imageUrl;  // Lưu URL ảnh trả về từ Cloudinary
+                            answers.ImagePath = imageUrl;
                         }
                         else
                         {
@@ -75,7 +86,6 @@ namespace WebApplication1.Areas.Admin.Controllers
             return View(answers);
         }
 
-
         // GET: Admin/Answers/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -83,35 +93,33 @@ namespace WebApplication1.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Answers answers = db.Answers.Find(id);
             if (answers == null)
             {
                 return HttpNotFound();
             }
+
             ViewBag.QuestionID = new SelectList(db.Questions, "QuestionID", "QuestionText", answers.QuestionID);
             return View(answers);
         }
 
-        // POST: Admin/Answers/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(Answers answers, HttpPostedFileBase ImageUpload)
         {
             if (ModelState.IsValid)
             {
-                // Nếu có ảnh mới được tải lên
                 if (ImageUpload != null && ImageUpload.ContentLength > 0)
                 {
                     try
                     {
-                        var cloudService = new CloudinaryService(); // Chắc chắn đã cấu hình đúng dịch vụ
+                        var cloudService = new CloudinaryService();
                         var imageUrl = await cloudService.UploadImageAsync(ImageUpload);
 
                         if (!string.IsNullOrEmpty(imageUrl))
                         {
-                            answers.ImagePath = imageUrl;  // Lưu URL ảnh trả về từ Cloudinary
+                            answers.ImagePath = imageUrl;
                         }
                         else
                         {
@@ -134,9 +142,6 @@ namespace WebApplication1.Areas.Admin.Controllers
             ViewBag.QuestionID = new SelectList(db.Questions, "QuestionID", "QuestionText", answers.QuestionID);
             return View(answers);
         }
-    
-
-
 
         // GET: Admin/Answers/Delete/5
         public ActionResult Delete(int? id)
@@ -145,11 +150,13 @@ namespace WebApplication1.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Answers answers = db.Answers.Find(id);
             if (answers == null)
             {
                 return HttpNotFound();
             }
+
             return View(answers);
         }
 
@@ -187,6 +194,7 @@ namespace WebApplication1.Areas.Admin.Controllers
             {
                 db.Dispose();
             }
+
             base.Dispose(disposing);
         }
     }

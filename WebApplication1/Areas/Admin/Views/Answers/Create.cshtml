@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Thêm câu trả lời";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var lessons = ViewBag.listlesson as List<Model.EF.Lessons>;
 }
 
 <!DOCTYPE html>
@@ -23,60 +24,98 @@
             @using (Html.BeginForm("Create", "Answers", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
                 @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-                <div class="form-horizontal">
-                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <!-- LessonID Dropdown -->
+                <div class="mb-3">
+                    <label for="LessonID" class="form-label">Chủ đề</label>
+                    <select id="LessonID" name="LessonID" class="form-select">
+                        <option value="">-- Chọn bài học --</option>
+                        @foreach (var lesson in lessons)
+                        {
+                            <option value="@lesson.LessonID">@lesson.LessonName</option>
+                        }
+                    </select>
+                </div>
+                <!-- QuestionID Dropdown -->
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.QuestionID, "Câu hỏi", htmlAttributes: new { @class = "form-label" })
+                    @Html.DropDownList("QuestionID", new SelectList(Enumerable.Empty<SelectListItem>()), "-- Chọn câu hỏi --", new { @class = "form-select" })
+                    @Html.ValidationMessageFor(model => model.QuestionID, "", new { @class = "text-danger" })
+                </div>
+                <!-- Answer Text -->
+                <div class="mb-3">
+                    @Html.LabelFor(model => model.AnswerText, htmlAttributes: new { @class = "form-label" })
+                    @Html.EditorFor(model => model.AnswerText, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.AnswerText, "", new { @class = "text-danger" })
+                </div>
 
-                    <!-- Answer Text -->
-                    <div class="mb-3 row">
-                        @Html.LabelFor(model => model.AnswerText, htmlAttributes: new { @class = "col-sm-3 col-form-label" })
-                        <div class="col-sm-9">
-                            @Html.EditorFor(model => model.AnswerText, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.AnswerText, "", new { @class = "text-danger" })
-                        </div>
+                <!-- IsCorrect Radio -->
+                <div class="mb-3">
+                    <label class="form-label">Đáp án đúng</label>
+                    <div class="form-check form-check-inline">
+                        @Html.RadioButtonFor(model => model.IsCorrect, true, new { @class = "form-check-input", id = "IsCorrectTrue" })
+                        <label class="form-check-label" for="IsCorrectTrue">Đúng</label>
                     </div>
-
-                    <!-- IsCorrect -->
-                    <div class="mb-3 row">
-                        @Html.Label("IsCorrect", "Đáp án đúng", htmlAttributes: new { @class = "col-sm-3 col-form-label" })
-                        <div class="col-sm-9">
-                            <div class="form-check form-check-inline">
-                                @Html.RadioButtonFor(model => model.IsCorrect, true, new { @class = "form-check-input", id = "IsCorrectTrue" })
-                                <label class="form-check-label" for="IsCorrectTrue">Đúng</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                @Html.RadioButtonFor(model => model.IsCorrect, false, new { @class = "form-check-input", id = "IsCorrectFalse" })
-                                <label class="form-check-label" for="IsCorrectFalse">Sai</label>
-                            </div>
-                            @Html.ValidationMessageFor(model => model.IsCorrect, "", new { @class = "text-danger" })
-                        </div>
+                    <div class="form-check form-check-inline">
+                        @Html.RadioButtonFor(model => model.IsCorrect, false, new { @class = "form-check-input", id = "IsCorrectFalse" })
+                        <label class="form-check-label" for="IsCorrectFalse">Sai</label>
                     </div>
+                    @Html.ValidationMessageFor(model => model.IsCorrect, "", new { @class = "text-danger" })
+                </div>
 
-                    <!-- QuestionID -->
-                    <div class="mb-3 row">
-                        @Html.LabelFor(model => model.QuestionID, "Câu hỏi", htmlAttributes: new { @class = "col-sm-3 col-form-label" })
-                        <div class="col-sm-9">
-                            @Html.DropDownList("QuestionID", null, htmlAttributes: new { @class = "form-select" })
-                            @Html.ValidationMessageFor(model => model.QuestionID, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
 
-                    <!-- Image Upload -->
-                    <div class="mb-3 row">
-                        <label for="ImageUpload" class="col-sm-3 col-form-label">Ảnh minh họa</label>
-                        <div class="col-sm-9">
-                            <input type="file" name="ImageUpload" class="form-control" accept="image/*" />
-                            @* Bạn có thể thêm phần hiển thị lỗi nếu cần *@
-                        </div>
-                    </div>
 
-                    <!-- Submit -->
-                    <div class="text-center">
-                        <input type="submit" value="Tạo Mới" class="btn btn-primary btn-lg mt-3" />
-                    </div>
+                <!-- Image Upload -->
+                <div class="mb-3">
+                    <label for="ImageUpload" class="form-label">Ảnh minh họa</label>
+                    <input type="file" name="ImageUpload" class="form-control" accept="image/*" />
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <input type="submit" value="Tạo Mới" class="btn btn-primary btn-lg mt-3" />
                 </div>
             }
         </div>
     </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#LessonID").change(function () {
+                var lessonID = $(this).val();
+                if (lessonID) {
+                    $.ajax({
+                        url: '/Admin/Answers/GetQuestionByLessonID',
+                        type: 'GET',
+                        data: { LessonID: lessonID },
+                        success: function (data) {
+                            var questionSelect = $("#QuestionID");
+                            questionSelect.empty();
+                            questionSelect.append($('<option>', {
+                                value: '',
+                                text: '-- Chọn câu hỏi --'
+                            }));
+
+                            $.each(data, function (i, question) {
+                                questionSelect.append($('<option>', {
+                                    value: question.QuestionID,
+                                    text: question.QuestionText
+                                }));
+                            });
+                        },
+                        error: function () {
+                            alert("Lỗi khi tải danh sách câu hỏi.");
+                        }
+                    });
+                } else {
+                    $("#QuestionID").empty().append($('<option>', {
+                        value: '',
+                        text: '-- Chọn câu hỏi --'
+                    }));
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -60,3 +60,7 @@ C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\
 C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.Remove_PrerequisiteTopicName.resources
 C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.AddImagePathToAnswers.resources
 C:\Nam 3\Lập trình web nâng cao\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.UpdateUserTopic.resources
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.Remove_PrerequisiteTopicName.resources
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.AddImagePathToAnswers.resources
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.UpdateUserTopic.resources
+C:\Nam 3\Lập trình web nâng cao\Baitap\EnglishOnline\EnglishOnline\Model\obj\Debug\Model.Migrations.UpdateUserAvatarUrl.resources

@@ -1,21 +1,56 @@
 ﻿@{
     ViewBag.Title = "Học Tiếng Anh";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    int currentProgress = 4; // Bài đã học
+
+    var topicStatus = ViewBag.TopicStatus as Dictionary<Guid, bool>;
+    var unlockedTopicIds = new HashSet<Guid>();
+    var orderedTopics = new List<Model.EF.Topic>();
+    var visited = new HashSet<Guid>();
+
+    void TraverseTopic(Model.EF.Topic current)
+    {
+        if (current == null || visited.Contains(current.TopicID)) return;
+
+        visited.Add(current.TopicID);
+        orderedTopics.Add(current);
+
+        // Kiểm tra điều kiện mở khóa topic dựa trên trạng thái của topic phụ thuộc
+        bool isUnlocked = current.PrerequisiteTopicId == null ||
+                          (current.PrerequisiteTopicId.HasValue &&
+                           topicStatus != null &&
+                           topicStatus.ContainsKey(current.PrerequisiteTopicId.Value) &&
+                           topicStatus[current.PrerequisiteTopicId.Value]);
+
+        if (isUnlocked)
+        {
+            unlockedTopicIds.Add(current.TopicID); // Thêm vào danh sách topic đã mở khóa
+        }
+
+        // Duyệt qua các topic có prerequisite là current.TopicID
+        foreach (var next in Model.Where(t => t.PrerequisiteTopicId == current.TopicID))
+        {
+            TraverseTopic(next);
+        }
+    }
+
+    // Tìm topic bắt đầu (không có PrerequisiteTopicId)
+    var startTopic = Model.FirstOrDefault(t => t.PrerequisiteTopicId == null);
+    TraverseTopic(startTopic);
+
+    int index = 1;
 }
 
 @model List<Model.EF.Topic>
-    
+
 <h2 class="text-center mb-5">📘 Chào mừng đến với khóa học tiếng Anh!</h2>
 <div class="container d-flex flex-column align-items-center gap-4">
 
-    @for (int i = 0; i < Model.Count; i++)
+    @foreach (var topic in orderedTopics)
     {
-        var topic = Model[i];
-        var lessonIndex = i + 1;
-        var isCompleted = lessonIndex < currentProgress;
-        var isCurrent = lessonIndex == currentProgress;
-        var isLocked = lessonIndex > currentProgress;
+        bool isCompleted = topicStatus != null && topicStatus.ContainsKey(topic.TopicID) && topicStatus[topic.TopicID];
+        bool isUnlocked = unlockedTopicIds.Contains(topic.TopicID);
+        bool isCurrent = !isCompleted && isUnlocked;
+        bool isLocked = !isUnlocked;
 
         string circleColor = isCompleted ? "bg-success" : isCurrent ? "bg-primary" : "bg-secondary";
         string icon = isCompleted ? "fa-check" : isCurrent ? "fa-play" : "fa-lock";
@@ -27,18 +62,17 @@
                     <i class="fas @icon"></i>
                 </div>
                 <div class="flex-grow-1">
-                    <strong>Bài @lessonIndex: @topic.TopicName</strong>
+                    <strong>Bài @index: @topic.TopicName</strong>
                 </div>
                 @if (!isLocked)
                 {
-                    <button class="btn btn-outline-success main-lesson-btn" type="button" data-bs-toggle="collapse" data-bs-target="#lesson-@lessonIndex" aria-expanded="false" aria-controls="lesson-@lessonIndex">
+                    <button class="btn btn-outline-success main-lesson-btn" type="button" data-bs-toggle="collapse" data-bs-target="#lesson-@index" aria-expanded="false" aria-controls="lesson-@index">
                         Học
                     </button>
                 }
             </div>
 
-            <!-- Danh sách bài học con với Collapse -->
-            <div id="lesson-@lessonIndex" class="collapse mt-3">
+            <div id="lesson-@index" class="collapse mt-3">
                 <div class="d-flex flex-column gap-2 ps-5">
                     @foreach (var lesson in topic.Lessons)
                     {
@@ -48,19 +82,22 @@
                             </a>
                             @if (!isLocked)
                             {
-                                <a href="@Url.Action("Lesson_3pic", "Lesson")" class="btn btn-sm btn-success">Học</a>
+                                <a href="@Url.Action("Lesson_3pic", "Lesson", new { LessonID = lesson.LessonID })" class="btn btn-sm btn-success">Học</a>
                             }
                         </div>
                     }
                 </div>
             </div>
         </div>
+
+        index++;
     }
+
 
 </div>
 
 <div class="alert alert-info mt-5 text-center" role="alert">
-    🌟 Tiến độ của bạn: @currentProgress/@Model.Count bài đã hoàn thành.
+    🌟 Tiến độ của bạn: @(topicStatus?.Count(kv => kv.Value) ?? 0)/@Model.Count bài đã hoàn thành.
 </div>
 
 <style>
@@ -77,7 +114,12 @@
     .lesson-header:hover {
         background-color: #f8f9fa;
     }
-    .bg-success  {
+
+    .bg-success {
         background-color: rgb(78, 184, 2) !important;
     }
+    .opacity-50 {
+        opacity: 0.5;
+    }
+
 </style>
