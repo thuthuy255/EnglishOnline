@@ -1,4 +1,5 @@
-﻿using API.IServices;
+﻿using API.DAOAPI;
+using API.IServices;
 using API.Model;
 using API.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -45,4 +46,45 @@ public class AuthController : ControllerBase
 
         return Unauthorized(response);
     }
+
+    [HttpPost("VerifyOTP")]
+    public async Task<IActionResult> VerifyOTP( string otp, string email)
+    {
+        var response = await _authService.VerifyOTP(email, otp);
+        if (response.Success)
+        {
+            return Ok(response);
+        }
+
+        return Unauthorized(response);
+    }
+
+
+    [HttpPost("CheckEmail")]
+    public async Task<IActionResult> CheckEmail( string email)
+    {
+        var response = await _authService.CheckEmail(email);
+        if (response.Success)
+        {
+            return Ok(response);
+        }
+
+        return Unauthorized(response);
+    }
+
+    [HttpPost("ForgotPassword")]
+    public async Task<IActionResult> ForgotPassword(ForgotPasswordDTO model)
+    {
+        var response = await _authService.ForgotPassword(model);
+        if (response.Success)
+        {
+            return Ok(response);
+        }
+
+        return Unauthorized(response);
+    }
+
+
+
+
 }

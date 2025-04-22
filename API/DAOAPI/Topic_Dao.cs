@@ -16,13 +16,13 @@ namespace API.DAOAPI
         // Lấy tất cả các Topic
         public List<Topic> GetAllTopics()
         {
-            return _context.Topic.ToList();
+            return _context.Topics.ToList();
         }
 
         // Lấy thông tin Topic theo ID
         public Topic GetTopicById(Guid topicId)
         {
-            return _context.Topic
+            return _context.Topics
                            .Include(t => t.Lessons) // Bao gồm thông tin Lessons
                            .FirstOrDefault(t => t.TopicID == topicId);
         }
@@ -30,7 +30,7 @@ namespace API.DAOAPI
         // Thêm Topic mới
         public void AddTopic(Topic topic)
         {
-            _context.Topic.Add(topic);
+            _context.Topics.Add(topic);
             _context.SaveChanges();
         }
 
@@ -44,10 +44,10 @@ namespace API.DAOAPI
         // Xóa Topic
         public void DeleteTopic(Guid topicId)
         {
-            var topic = _context.Topic.Find(topicId);
+            var topic = _context.Topics.Find(topicId);
             if (topic != null)
             {
-                _context.Topic.Remove(topic);
+                _context.Topics.Remove(topic);
                 _context.SaveChanges();
             }
         }

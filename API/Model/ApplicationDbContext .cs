@@ -11,7 +11,7 @@ namespace API.Model
 
         // Định nghĩa DbSet cho các bảng trong cơ sở dữ liệu
         public DbSet<Users> Users { get; set; }
-        public DbSet<Topic> Topic { get; set; }
+        public DbSet<Topic> Topics { get; set; }
         public DbSet<Lessons> Lessons { get; set; }
         public DbSet<Questions> Questions { get; set; }
         public DbSet<Answers> Answers { get; set; }
