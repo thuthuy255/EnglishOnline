@@ -7,7 +7,6 @@
 *.sln.docstates
 
 # Build results
-<<<<<<< Updated upstream
 [Bb]in/
 [Oo]bj/
 =======
@@ -53,4 +52,4 @@ global.json
 
 # ASP.NET temporary files
 __generated/
->>>>>>> Stashed changes
+

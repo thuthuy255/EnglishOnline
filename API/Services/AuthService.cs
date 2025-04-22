@@ -11,6 +11,7 @@ using Microsoft.Extensions.Caching.Distributed;
 using API.DAOAPI;
 using UserDao = API.DAOAPI.UserDao;
 using static Users;
+
 namespace API.Services
 {
     public class AuthService : IAuthService
@@ -19,7 +20,7 @@ namespace API.Services
         private readonly IJwtService _jwtService;
         private readonly IDistributedCache _cache;
         private readonly UserDao _userDao;
-
+     
         public AuthService(ApplicationDbContext context, IJwtService jwtService, IDistributedCache cache, UserDao userDao)
         {
             _context = context;
@@ -64,6 +65,7 @@ namespace API.Services
 
             return new ApiResponse<object>(true, responseData, "Đăng nhập thành công");
         }
+
 
         public async Task<ApiResponse<object>> Register(RegisterDTO model)
         {
@@ -148,7 +150,7 @@ namespace API.Services
             if (storedOtp == otp)
             {
                 return new ApiResponse<object>(true, null, "OTP xác thực thành công.");
-            }
+        }
 
             return new ApiResponse<object>(false, null, "OTP không đúng.");
         }
