@@ -1,4 +1,7 @@
-﻿using API.Model;
+﻿using API.IServices;
+using API.Model;
+using API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,44 +9,32 @@ namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class UserController : BaseController
     {
-        private readonly ApplicationDbContext _context;
-        public UserController(ApplicationDbContext context)
+        private readonly IUserService _userService;
+        public UserController(IUserService userServie)
         {
-            _context = context;
+            _userService = userServie;
         }
 
+
+        [Authorize]
         [HttpGet("GetInfoUser")]
-        public IActionResult GetUserInfo()
+        public async Task<IActionResult> GetUserInfo()
         {
-            // Lấy idUser từ claim trong token
-            var idUserClaim = User.Claims.FirstOrDefault(c => c.Type == "idUser");
-
-            if (idUserClaim == null)
+            if (!UserId.HasValue)
             {
-                return Unauthorized("Không tìm thấy idUser trong token.");
+                return Unauthorized("Không thể xác định người dùng từ token.");
             }
 
-            // Convert idUser từ string sang int (hoặc kiểu dữ liệu của bạn)
-            var idUser = int.Parse(idUserClaim.Value);
+            var response = await _userService.GetUserInfo(UserId.Value);
 
-            // Tìm người dùng trong cơ sở dữ liệu bằng idUser
-            var user = _context.Users.FirstOrDefault(u => u.UserID == idUser);
-
-            if (user == null)
+            if (!response.Success)
             {
-                return NotFound("Người dùng không tồn tại.");
+                return StatusCode(StatusCodes.Status404NotFound, response);
             }
 
-            // Trả về thông tin người dùng
-            return Ok(new
-            {
-                user.UserID,
-                user.Email,
-                user.Username,
-                user.Role
-            });
+            return Ok(response);
         }
     }
 }

@@ -9,50 +9,79 @@ namespace API.Services
 {
     public class TopicService : ITopicService
     {
-        private readonly TopicDAO _topicDAO;
         private readonly ApplicationDbContext _context;
-        public TopicService(TopicDAO topicDAO, ApplicationDbContext context)
+        public TopicService( ApplicationDbContext context)
         {
-            _topicDAO = topicDAO;
             _context = context;
         }
 
-        public async  Task<ApiResponse<object>> GetAllTopics(int UserId)
+        public async Task<ApiResponse<object>> GetAllTopics(int userId)
         {
             try
             {
-              var topics = await _context.Topics
-                .Include(t => t.Lessons) 
-                .ToListAsync();
-                if (topics == null || !topics.Any())
-                {
+                var topics = await _context.Topics
+                    .Include(t => t.Lessons)
+                    .OrderBy(t => t.TopicID) // Sắp xếp nếu cần
+                    .ToListAsync();
+
+                if (!topics.Any())
                     return new ApiResponse<object>(false, null, "Không tìm thấy chủ đề nào.");
-                }
 
-             var userProgressLessonIds = await _context.UserProgresses
-                     .Where(up => up.UserID == UserId)
-                     .Select(up => up.LessonID)
-                     .ToListAsync();
+                // Lấy danh sách bài học đã học của user
+                var userProgressLessonIds = await _context.UserProgresses
+                    .Where(up => up.UserID == userId)
+                    .Select(up => up.LessonID)
+                    .ToListAsync();
 
-              
+                var response = new List<ResponseListTopic>();
 
-                    // Chuyển dữ liệu từ Topic và Lessons sang ResponseListTopic và LessonItem
-                    var response = topics.Select(topic => new ResponseListTopic
+                response = topics.Select((topic, i) =>
                 {
-                    IdTopic = topic.TopicID.ToString(),
-                    NameTopic = topic.TopicName,
-                    ListLessons = topic.Lessons.Select(lesson => new LessonItem
+                    var lessons = topic.Lessons ?? new List<Lessons>();
+
+                    // Nếu không có bài học nào thì trả về topic bị khoá
+                    if (!lessons.Any())
+                    {
+                        return new ResponseListTopic
+                        {
+                            IdTopic = topic.TopicID.ToString(),
+                            NameTopic = topic.TopicName,
+                            ListLessons = new List<LessonItem>(),
+                            Status = "lock"
+                        };
+                    }
+
+                    // Kiểm tra topic trước đã hoàn thành hay chưa
+                    bool previousCompleted = i == 0 ||
+                        (topics[i - 1].Lessons?.All(l => userProgressLessonIds.Contains(l.LessonID)) == true);// ép kiểu dữ liệu về bool
+
+                    // Kiểm tra xem topic này có được mở khoá không
+                    bool isUnlocked = !topic.PrerequisiteTopicId.HasValue || previousCompleted;
+
+                    // Tạo danh sách bài học
+                    var lessonItems = lessons.Select(lesson => new LessonItem
                     {
                         IdLesson = lesson.LessonID.ToString(),
-                        Title = lesson.LessonName,
-                        Status = "unlock"
-                    }).ToList()
+                        Title = lesson.LessonName
+                    }).ToList();
+
+                    return new ResponseListTopic
+                    {
+                        IdTopic = topic.TopicID.ToString(),
+                        NameTopic = topic.TopicName,
+                        ListLessons = lessonItems,
+                        Status = isUnlocked ? "unlock" : "lock"
+                    };
                 }).ToList();
+
+
+
+
                 return new ApiResponse<object>(true, response, "Lấy thành công danh sách chủ đề");
             }
             catch (Exception ex)
             {
-                throw new Exception("Lỗi khi lấy danh sách chủ đề từ cơ sở dữ liệu.", ex);
+                return new ApiResponse<object>(false, null, $"Lỗi khi lấy danh sách chủ đề: {ex.Message}");
             }
         }
 

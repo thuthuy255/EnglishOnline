@@ -17,7 +17,7 @@ namespace API.Controllers
 
         [Authorize]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Topic>>> GetAll()
+        public async Task<ActionResult> GetAll()
         {
             try
             {
@@ -28,9 +28,9 @@ namespace API.Controllers
                 var response = await _topicService.GetAllTopics(UserId.Value);
                 if (response.Success)
                 {
-                    return Ok(response.Data);
+                    return Ok(response);
                 }
-                return StatusCode(StatusCodes.Status500InternalServerError, response.Message);
+                return StatusCode(StatusCodes.Status500InternalServerError, response);
             }
             catch (Exception ex)
             {
@@ -47,9 +47,9 @@ namespace API.Controllers
                 var response = await _topicService.GetTopicById(topicId);
                 if (response.Success)
                 {
-                    return Ok(response.Data);
+                    return Ok(response);
                 }
-                return NotFound(response.Message); // Trả về không tìm thấy
+                return NotFound(response); // Trả về không tìm thấy
             }
             catch (Exception ex)
             {
