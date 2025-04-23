@@ -122,9 +122,61 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+     
         public ActionResult SeeMore()
         {
             return View();
         }
+        public class RankingViewModel
+        {
+            public string Name { get; set; }
+            public int Score { get; set; }
+        }
+        public ActionResult InforUser()
+        {
+            // Kiểm tra đăng nhập
+            if (Session["UserID"] == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            int userId = (int)Session["UserID"];
+
+            // Lấy thông tin user từ bảng Users
+            var user = db.Users.FirstOrDefault(u => u.UserID == userId);
+            if (user == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            // Lấy username
+            string username = user.Username;
+
+            // Tính tổng điểm (score) từ bảng UserProgresses
+            var totalScore = db.UserProgresses
+                               .Where(p => p.UserID == userId)
+                               .Sum(p => (int?)p.Score) ?? 0;
+
+            // Lấy danh sách bảng xếp hạng: gom nhóm theo User, tính tổng điểm, sắp xếp giảm dần
+            var rankingList = db.UserProgresses
+                                .GroupBy(p => p.User)
+                                .Select(g => new RankingViewModel
+                                {
+                                    Name = g.Key.Username,
+                                    Score = g.Sum(x => x.Score),
+                                })
+                                .OrderByDescending(x => x.Score)
+                                .ToList();
+
+            // Truyền sang View bằng ViewBag
+            ViewBag.Username = username;
+            ViewBag.TotalScore = totalScore;
+            ViewBag.RankingList = rankingList;
+
+            return View();
+        }
+
+
+
     }
 }
