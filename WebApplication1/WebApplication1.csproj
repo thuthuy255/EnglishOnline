@@ -257,6 +257,26 @@
     <Content Include="Assets\Admin\assets\css\sb-admin-2.min.css" />
     <Content Include="Assets\Admin\assets\css\style.css" />
     <Content Include="Assets\Admin\assets\css\UserManagement.css" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\demo1.png" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\demo2.png" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\demo3.png" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\demo4.png" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\demo5.png" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\demo6.png" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\demo7.png" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\demo8.png" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\demo9.png" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\duolingo.png" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\favicon.ico" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\favicon.png" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\favicon.svg" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\icon.png" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\icon.svg" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\logo_dark.png" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\logo_dark.svg" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\logo_documentation.png" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\logo_light.png" />
+    <Content Include="Assets\Admin\assets\img\kaiadmin\logo_light.svg" />
     <Content Include="Assets\Admin\assets\img\undraw_posting_photo.svg" />
     <Content Include="Assets\Admin\assets\img\undraw_profile.svg" />
     <Content Include="Assets\Admin\assets\img\undraw_profile_1.svg" />
@@ -2251,6 +2271,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LayoutLogin.cshtml" />
     <Content Include="Views\Shared\_ProgressBar.cshtml" />
+    <Content Include="Views\Home\InforUser.cshtml" />
     <Content Include="Views\Home\Profile.cshtml" />
   </ItemGroup>
   <ItemGroup>
