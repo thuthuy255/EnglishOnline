@@ -9,38 +9,47 @@ using Model.DAO;
 using API.DAOAPI;
 using Microsoft.Extensions.Caching.StackExchangeRedis;
 using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.OpenApi.Models;
 
+// Alias các DAO cho rõ ràng
 using UserDao = API.DAOAPI.UserDao;
 using TopicDAO = API.DAOAPI.TopicDAO;
 using LessonDAO = API.DAOAPI.LessonDAO;
 using Question_Dao = API.DAOAPI.Question_Dao;
 using UserBadges_Dao = API.DAOAPI.UserBadges_Dao;
 using UserProgress_Dao = API.DAOAPI.UserProgress_Dao;
-using Microsoft.OpenApi.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Cấu hình DbContext và chuỗi kết nối từ appsettings.json
+// -------------------- SERVICE CONFIG --------------------
+// Cấu hình DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));  // DefaultConnection là tên chuỗi kết nối trong appsettings.json
-builder.Services.AddScoped<IJwtService,JwtService>();
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Đăng ký các Service
+builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITopicService, TopicService>();
-builder.Services.AddStackExchangeRedisCache(options =>
-{
-    options.Configuration = builder.Configuration["Redis:Configuration"];
-    options.InstanceName = builder.Configuration["Redis:InstanceName"];
-});
+
+// Đăng ký các DAO
 builder.Services.AddScoped<UserDao>();
 builder.Services.AddScoped<TopicDAO>();
 builder.Services.AddScoped<Question_Dao>();
 builder.Services.AddScoped<LessonDAO>();
 builder.Services.AddScoped<UserBadges_Dao>();
 builder.Services.AddScoped<UserProgress_Dao>();
-// Cấu hình đọc SecretKey từ user-secrets
-var jwtSettings = builder.Configuration.GetSection("JwtSettings");
-var secretKey = jwtSettings["SecretKey"]; // Đọc từ user-secrets
 
-// Thêm JWT Authentication
+// Redis
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration["Redis:Configuration"];
+    options.InstanceName = builder.Configuration["Redis:InstanceName"];
+});
+
+// JWT
+var jwtSettings = builder.Configuration.GetSection("JwtSettings");
+var secretKey = jwtSettings["SecretKey"];
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -54,20 +63,26 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-
         ValidIssuer = jwtSettings["Issuer"],
         ValidAudience = jwtSettings["Audience"],
-
-        // Key dùng để validate signature của JWT
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
     };
 });
 
+// CORS ➤ Cho phép tất cả domain gọi đến API
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
 
-// Cấu hình Swagger
+// Swagger
 builder.Services.AddSwaggerGen(options =>
 {
-    // Thêm thông tin về JWT Bearer Authentication cho Swagger
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -78,7 +93,6 @@ builder.Services.AddSwaggerGen(options =>
         Description = "Nhập token JWT vào đây, ví dụ: Bearer {your_token}"
     });
 
-    // Thêm yêu cầu xác thực Bearer cho các API cần bảo vệ
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
@@ -90,36 +104,39 @@ builder.Services.AddSwaggerGen(options =>
                     Id = "Bearer"
                 }
             },
-            new string[] {}
+            Array.Empty<string>()
         }
     });
 });
 
-
-// Add services to the container.
-
+// Controllers & Swagger Explorer
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+// -------------------- APP CONFIG --------------------
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-app.UseAuthentication(); // Thêm Middleware cho Authentication
-app.UseAuthorization();
+// Dùng HTTPS
+app.UseHttpsRedirection();
 
-// Configure the HTTP request pipeline.
+// Bật Swagger UI khi ở chế độ phát triển
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// Bật CORS trước khi xác thực
+app.UseCors("AllowAll");
 
+// Xác thực + phân quyền
+app.UseAuthentication();
 app.UseAuthorization();
 
+// Map Controllers
 app.MapControllers();
 
+// Chạy app
 app.Run();

@@ -3,64 +3,16 @@
   "WorkspaceRootPath": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\englishonline\\api\\daoapi\\user_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\daoapi\\user_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|c:\\nam 3\\l\u1EADp tr\u00ECnh web n\u00E2ng cao\\baitap\\englishonline\\englishonline\\webapplication1\\views\\home\\learn.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\learn.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\englishonline\\api\\daoapi\\answers_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\daoapi\\answers_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|c:\\nam 3\\l\u1EADp tr\u00ECnh web n\u00E2ng cao\\baitap\\englishonline\\englishonline\\webapplication1\\views\\lesson\\lesson_3pic.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\lesson\\lesson_3pic.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\englishonline\\api\\daoapi\\userprogress_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\daoapi\\userprogress_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\model\\dao\\usertopic_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|solutionrelative:model\\dao\\usertopic_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\englishonline\\api\\daoapi\\usertopic_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\daoapi\\usertopic_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\model\\ef\\usertopic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|solutionrelative:model\\ef\\usertopic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\englishonline\\api\\daoapi\\userbadges_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\daoapi\\userbadges_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\englishonline\\api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\model\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|solutionrelative:model\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\englishonline\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\englishonline\\api\\model\\applicationdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\model\\applicationdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\model\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|solutionrelative:model\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\model\\dao\\user_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|solutionrelative:model\\dao\\user_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\englishonline\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\model\\ef\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|solutionrelative:model\\ef\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|c:\\nam 3\\l\u1EADp tr\u00ECnh web n\u00E2ng cao\\baitap\\englishonline\\englishonline\\webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,196 +22,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAGAAAAAAAAAAAADwv24AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T08:41:12.764Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "User_Dao.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\DAOAPI\\User_Dao.cs",
-              "RelativeDocumentMoniker": "API\\DAOAPI\\User_Dao.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\DAOAPI\\User_Dao.cs",
-              "RelativeToolTip": "API\\DAOAPI\\User_Dao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:54:19.174Z",
+              "Title": "Learn.cshtml",
+              "DocumentMoniker": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Home\\Learn.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Learn.cshtml",
+              "ToolTip": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Home\\Learn.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Home\\Learn.cshtml",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAwwHoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-23T08:14:37.065Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Answers_Dao.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\DAOAPI\\Answers_Dao.cs",
-              "RelativeDocumentMoniker": "API\\DAOAPI\\Answers_Dao.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\DAOAPI\\Answers_Dao.cs",
-              "RelativeToolTip": "API\\DAOAPI\\Answers_Dao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:46:59.943Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserTopic_Dao.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\Model\\DAO\\UserTopic_Dao.cs",
-              "RelativeDocumentMoniker": "Model\\DAO\\UserTopic_Dao.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\Model\\DAO\\UserTopic_Dao.cs",
-              "RelativeToolTip": "Model\\DAO\\UserTopic_Dao.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAQAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:54:03.35Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserTopic.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\Model\\EF\\UserTopic.cs",
-              "RelativeDocumentMoniker": "Model\\EF\\UserTopic.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\Model\\EF\\UserTopic.cs",
-              "RelativeToolTip": "Model\\EF\\UserTopic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:53:33.598Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserProgress_Dao.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\DAOAPI\\UserProgress_Dao.cs",
-              "RelativeDocumentMoniker": "API\\DAOAPI\\UserProgress_Dao.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\DAOAPI\\UserProgress_Dao.cs",
-              "RelativeToolTip": "API\\DAOAPI\\UserProgress_Dao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:52:52.68Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserBadges_Dao.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\DAOAPI\\UserBadges_Dao.cs",
-              "RelativeDocumentMoniker": "API\\DAOAPI\\UserBadges_Dao.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\DAOAPI\\UserBadges_Dao.cs",
-              "RelativeToolTip": "API\\DAOAPI\\UserBadges_Dao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:52:29.53Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserTopic_Dao.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\DAOAPI\\UserTopic_Dao.cs",
-              "RelativeDocumentMoniker": "API\\DAOAPI\\UserTopic_Dao.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\DAOAPI\\UserTopic_Dao.cs",
-              "RelativeToolTip": "API\\DAOAPI\\UserTopic_Dao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:43:37.395Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ApplicationDbContext .cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Model\\ApplicationDbContext .cs",
-              "RelativeDocumentMoniker": "API\\Model\\ApplicationDbContext .cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Model\\ApplicationDbContext .cs",
-              "RelativeToolTip": "API\\Model\\ApplicationDbContext .cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:44:40.694Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "User_Dao.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\Model\\DAO\\User_Dao.cs",
-              "RelativeDocumentMoniker": "Model\\DAO\\User_Dao.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\Model\\DAO\\User_Dao.cs",
-              "RelativeToolTip": "Model\\DAO\\User_Dao.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:37:53.641Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Program.cs",
-              "RelativeDocumentMoniker": "API\\Program.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Program.cs",
-              "RelativeToolTip": "API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAawA4AAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:36:15.679Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "API\\Services\\AuthService.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Services\\AuthService.cs",
-              "RelativeToolTip": "API\\Services\\AuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:26:10.119Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Users.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\Model\\EF\\Users.cs",
-              "RelativeDocumentMoniker": "Model\\EF\\Users.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\Model\\EF\\Users.cs",
-              "RelativeToolTip": "Model\\EF\\Users.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwA0AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:24:57.752Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\AuthController.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:23:42.605Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LoginDTO.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\Model\\DTO\\LoginDTO.cs",
-              "RelativeDocumentMoniker": "Model\\DTO\\LoginDTO.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\Model\\DTO\\LoginDTO.cs",
-              "RelativeToolTip": "Model\\DTO\\LoginDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:24:26.95Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RegisterDTO.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\Model\\DTO\\RegisterDTO.cs",
-              "RelativeDocumentMoniker": "Model\\DTO\\RegisterDTO.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\EnglishOnline\\Model\\DTO\\RegisterDTO.cs",
-              "RelativeToolTip": "Model\\DTO\\RegisterDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T17:24:24.4Z"
+              "Title": "Lesson_3pic.cshtml",
+              "DocumentMoniker": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Lesson\\Lesson_3pic.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Lesson\\Lesson_3pic.cshtml",
+              "ToolTip": "C:\\Nam 3\\L\u1EADp tr\u00ECnh web n\u00E2ng cao\\Baitap\\EnglishOnline\\EnglishOnline\\WebApplication1\\Views\\Lesson\\Lesson_3pic.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Lesson\\Lesson_3pic.cshtml",
+              "ViewState": "AQIAAF0BAAAAAAAAAAAIwGoBAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-23T08:08:57.806Z",
+              "EditorCaption": ""
             }
           ]
         }

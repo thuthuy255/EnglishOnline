@@ -99,7 +99,28 @@
 <div class="alert alert-info mt-5 text-center" role="alert">
     🌟 Tiến độ của bạn: @(topicStatus?.Count(kv => kv.Value) ?? 0)/@Model.Count bài đã hoàn thành.
 </div>
+<script>
+    window.difyChatbotConfig = {
+        token: 'PkoO38lK2tMyENbp',
+        systemVariables: {
+            // user_id: 'YOU CAN DEFINE USER ID HERE',
+        },
+    }
+</script>
+<script src="https://udify.app/embed.min.js"
+        id="PkoO38lK2tMyENbp"
+        defer>
+</script>
+<style>
+    #dify-chatbot-bubble-button {
+        background-color: #1C64F2 !important;
+    }
 
+    #dify-chatbot-bubble-window {
+        width: 24rem !important;
+        height: 40rem !important;
+    }
+</style>
 <style>
     .lesson-circle {
         width: 60px;
@@ -118,8 +139,8 @@
     .bg-success {
         background-color: rgb(78, 184, 2) !important;
     }
+
     .opacity-50 {
         opacity: 0.5;
     }
-
 </style>
