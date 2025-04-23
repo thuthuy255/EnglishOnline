@@ -68,7 +68,12 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+     
         public ActionResult SeeMore()
+        {
+            return View();
+        }
+        public ActionResult InforUser()
         {
             return View();
         }

@@ -1,0 +1,122 @@
+﻿@{
+    ViewBag.Title = "Bảng xếp hạng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- GIF ở đầu trang -->
+<div style="text-align:center; height:200px; width:200px; margin: 0 auto;">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbG04OWJ5b3Y1ZHplcW8xNGlkNGpyOGJ2aG9icHNrbjVsNDllenZpNCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/N4l5gQnBfdcWSppezE/giphy.gif" alt="Game GIF" style="width: 100%; height: 100%; object-fit: contain;" />
+</div>
+
+<h2 style="text-align:center;margin-top:20px">Giải đấu Bạc</h2>
+<p style="text-align:center; color:gray">Top 15 sẽ được thăng hạng lên giải đấu cao hơn</p>
+<p style="text-align:center; color:orange; font-weight:bold">1 ngày</p>
+
+<div class="container">
+    @{
+        var rankings = new[]
+        {
+            new { Name = "selvia", Score = 3331, Image = "https://storage.googleapis.com/a1aa/image/062061c4-4e3a-4bdf-a587-db79d5548e2c.jpg" },
+            new { Name = "nguyễn Minh...", Score = 3027, Image = "https://storage.googleapis.com/a1aa/image/4136f746-4204-4177-44ba-284435b6b977.jpg" },
+            new { Name = "Anastasia Go", Score = 2715, Image = "https://placehold.co/32x32/7f7f7f/000000.png?text=A" },
+            new { Name = "yuma", Score = 2602, Image = "https://placehold.co/32x32/7f7f7f/000000.png?text=Y" },
+            new { Name = "Kylie Ky", Score = 2517, Image = "https://placehold.co/32x32/7f7f7f/000000.png?text=K" },
+            // ... bạn có thể thêm tùy ý
+        };
+
+        for (int i = 0; i < rankings.Length; i++)
+        {
+            var user = rankings[i];
+            string gifUrl = null;
+            string colorClass = "";
+
+            if (i == 0)
+            {
+                gifUrl = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbG04OWJ5b3Y1ZHplcW8xNGlkNGpyOGJ2aG9icHNrbjVsNDllenZpNCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/N4l5gQnBfdcWSppezE/giphy.gif";
+                colorClass = "gold";
+            }
+            else if (i == 1)
+            {
+                gifUrl = "https://media.giphy.com/media/VnlCwytmrcuc5jT2GB/giphy.gif";
+                colorClass = "silver";
+            }
+            else if (i == 2)
+            {
+                gifUrl = "https://media.giphy.com/media/9CC21n237GiI1cgeeS/giphy.gif";
+                colorClass = "bronze";
+            }
+
+            <div class="ranking-item">
+                @if (gifUrl != null)
+                {
+                    <img src="@gifUrl" class="rank-gif" />
+                }
+                else
+                {
+                    <span class="rank-number">@((i + 1).ToString())</span>
+                }
+
+                <img src="@user.Image" class="avatar" />
+                <span class="username">@user.Name</span>
+                <span class="score @colorClass">@user.Score KN</span>
+            </div>
+        }
+    }
+</div>
+
+<style>
+    .container {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .ranking-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .rank-gif {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .rank-number {
+        width: 30px;
+        text-align: center;
+        color: gray;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .username {
+        font-weight: 600;
+        flex-grow: 1;
+    }
+
+    .score {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .gold {
+        color: #FBBF24;
+    }
+
+    .silver {
+        color: #60A5FA;
+    }
+
+    .bronze {
+        color: #F87171;
+    }
+</style>
