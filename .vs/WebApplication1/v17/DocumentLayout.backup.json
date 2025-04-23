@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\api\\services\\topicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\services\\topicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\webapplication1\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\api\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\model\\dto\\listuserresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|solutionrelative:model\\dto\\listuserresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\api\\model\\responselisttopic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\model\\responselisttopic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\webapplication1\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,67 +38,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TopicService.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\API\\Services\\TopicService.cs",
-              "RelativeDocumentMoniker": "API\\Services\\TopicService.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\API\\Services\\TopicService.cs",
-              "RelativeToolTip": "API\\Services\\TopicService.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAAC8AAABAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ListUserResponse.cs",
+              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\Model\\DTO\\ListUserResponse.cs",
+              "RelativeDocumentMoniker": "Model\\DTO\\ListUserResponse.cs",
+              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\Model\\DTO\\ListUserResponse.cs",
+              "RelativeToolTip": "Model\\DTO\\ListUserResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T15:24:05.659Z",
+              "WhenOpened": "2025-04-23T18:56:52.472Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ResponseListTopic.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\API\\Model\\ResponseListTopic.cs",
-              "RelativeDocumentMoniker": "API\\Model\\ResponseListTopic.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\API\\Model\\ResponseListTopic.cs",
-              "RelativeToolTip": "API\\Model\\ResponseListTopic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T15:22:54.606Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\WebApplication1\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\WebApplication1\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAHMBAAAAAAAAAAAQwIMBAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-23T17:26:38.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TopicController.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\API\\Controllers\\TopicController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\TopicController.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\API\\Controllers\\TopicController.cs",
-              "RelativeToolTip": "API\\Controllers\\TopicController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\WebApplication1\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\WebApplication1\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebApplication1\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwCsAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T15:21:38.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\AuthController.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAgwD8AAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T15:21:29.757Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\API\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\UserController.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\API\\Controllers\\UserController.cs",
-              "RelativeToolTip": "API\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T15:16:52.969Z",
+              "WhenOpened": "2025-04-23T17:24:35.669Z",
               "EditorCaption": ""
             }
           ]
