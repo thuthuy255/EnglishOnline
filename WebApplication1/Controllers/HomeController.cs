@@ -111,11 +111,34 @@ namespace WebApplication1.Controllers
         }
         public ActionResult Profile()
         {
+            // Kiểm tra đăng nhập
+            if (Session["UserID"] == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            int userId = (int)Session["UserID"];
+
+            // Lấy thông tin user từ bảng Users
+            var user = db.Users.FirstOrDefault(u => u.UserID == userId);
+            if (user == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            // Lấy username
+            string username = user.Username;
+            string email = user.Email;
+
+            // Truyền sang View bằng ViewBag
+            ViewBag.Username = username;
+            ViewBag.Email = email;
             return View();
         }
 
         public ActionResult Pronunciation()
         {
+
             return View();
         }
         public ActionResult DailyTasks()
@@ -125,6 +148,7 @@ namespace WebApplication1.Controllers
      
         public ActionResult SeeMore()
         {
+
             return View();
         }
         public class RankingViewModel
@@ -151,7 +175,7 @@ namespace WebApplication1.Controllers
 
             // Lấy username
             string username = user.Username;
-
+            
             // Tính tổng điểm (score) từ bảng UserProgresses
             var totalScore = db.UserProgresses
                                .Where(p => p.UserID == userId)
@@ -172,6 +196,7 @@ namespace WebApplication1.Controllers
             ViewBag.Username = username;
             ViewBag.TotalScore = totalScore;
             ViewBag.RankingList = rankingList;
+           
 
             return View();
         }
