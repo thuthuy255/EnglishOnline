@@ -21,7 +21,7 @@ namespace Model.DAO
             return db.UserProgresses.Find(id);
         }
 
-        // 3️⃣ Lấy tiến độ học của một người dùng theo UserID
+        // 3️⃣ Lấy  độ học của một người dùng theo UserID
         public List<UserProgress> GetProgressByUserId(int userId)
         {
             return db.UserProgresses.Where(up => up.UserID == userId).ToList();
