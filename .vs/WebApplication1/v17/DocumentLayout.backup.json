@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\webapplication1\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\model\\dto\\listuserresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5150F98-1A05-496C-B61F-02DCD8B9FEC2}|Model\\Model.csproj|solutionrelative:model\\dto\\listuserresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\webapplication1\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{28EA972D-0EED-4E30-AFD7-D88BBA7BA428}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|solutionrelative:api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,41 +38,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ListUserResponse.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\Model\\DTO\\ListUserResponse.cs",
-              "RelativeDocumentMoniker": "Model\\DTO\\ListUserResponse.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\Model\\DTO\\ListUserResponse.cs",
-              "RelativeToolTip": "Model\\DTO\\ListUserResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T18:56:52.472Z",
+              "WhenOpened": "2025-05-03T17:36:28.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwAoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T17:14:34.432Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\WebApplication1\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\WebApplication1\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "WebApplication1\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAHMBAAAAAAAAAAAQwIMBAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-23T17:26:38.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\WebApplication1\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\WebApplication1\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "WebApplication1\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAQwCsAAAAYAAAAAAAAAA==",
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\API\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "API\\WeatherForecast.cs",
+              "ToolTip": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\API\\WeatherForecast.cs",
+              "RelativeToolTip": "API\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T17:24:35.669Z",
+              "WhenOpened": "2025-05-03T17:14:33.855Z",
               "EditorCaption": ""
             }
           ]

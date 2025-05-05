@@ -1,40 +1,43 @@
 ﻿using API.Model;
 using Model.EF;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.DAOAPI
 {
     public class Answers_Dao
     {
         private readonly ApplicationDbContext db;
+
         public Answers_Dao(ApplicationDbContext context)
         {
             db = context;
         }
+
         // 1️⃣ Lấy danh sách tất cả câu trả lời
-        public List<Answers> GetAllAnswers()
+        public async Task<List<Answers>> GetAllAnswersAsync()
         {
-            return db.Answers.ToList();
+            return await db.Answers.ToListAsync();
         }
 
         // 2️⃣ Lấy câu trả lời theo ID
-        public Answers GetAnswerById(int id)
+        public async Task<Answers> GetAnswerByIdAsync(int id)
         {
-            return db.Answers.Find(id);
+            return await db.Answers.FindAsync(id);
         }
 
         // 3️⃣ Lấy danh sách câu trả lời theo ID của câu hỏi
-        public List<Answers> GetAnswersByQuestionId(int questionId)
+        public async Task<List<Answers>> GetAnswersByQuestionIdAsync(int questionId)
         {
-            return db.Answers.Where(a => a.QuestionID == questionId).ToList();
+            return await db.Answers.Where(a => a.QuestionID == questionId).ToListAsync();
         }
 
         // 4️⃣ Thêm câu trả lời mới
-        public bool InsertAnswer(Answers answer)
+        public async Task<bool> InsertAnswerAsync(Answers answer)
         {
             try
             {
-                db.Answers.Add(answer);
-                db.SaveChanges();
+                await db.Answers.AddAsync(answer);
+                await db.SaveChangesAsync();
                 return true;
             }
             catch
@@ -44,16 +47,16 @@ namespace API.DAOAPI
         }
 
         // 5️⃣ Cập nhật câu trả lời
-        public bool UpdateAnswer(Answers answer)
+        public async Task<bool> UpdateAnswerAsync(Answers answer)
         {
             try
             {
-                var existingAnswer = db.Answers.Find(answer.AnswerID);
+                var existingAnswer = await db.Answers.FindAsync(answer.AnswerID);
                 if (existingAnswer == null) return false;
 
                 existingAnswer.AnswerText = answer.AnswerText;
                 existingAnswer.IsCorrect = answer.IsCorrect;
-                db.SaveChanges();
+                await db.SaveChangesAsync();
                 return true;
             }
             catch
@@ -63,15 +66,15 @@ namespace API.DAOAPI
         }
 
         // 6️⃣ Xóa câu trả lời theo ID
-        public bool DeleteAnswer(int id)
+        public async Task<bool> DeleteAnswerAsync(int id)
         {
             try
             {
-                var answer = db.Answers.Find(id);
+                var answer = await db.Answers.FindAsync(id);
                 if (answer == null) return false;
 
                 db.Answers.Remove(answer);
-                db.SaveChanges();
+                await db.SaveChangesAsync();
                 return true;
             }
             catch

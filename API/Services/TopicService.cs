@@ -19,65 +19,59 @@ namespace API.Services
         {
             try
             {
-                var topics = await _context.Topics
+                var allTopics = await _context.Topics
                     .Include(t => t.Lessons)
-                    .OrderBy(t => t.TopicID) // Sắp xếp nếu cần
+                    .OrderBy(t => t.TopicID)
+                    .ToListAsync();
+                // Lấy ra list topic
+
+                var allProgresses = await _context.UserProgresses
+                    .Where(p => p.UserID == userId)
                     .ToListAsync();
 
-                if (!topics.Any())
-                    return new ApiResponse<object>(false, null, "Không tìm thấy chủ đề nào.");
+                // lấy ra tiến trình người học
 
-                // Lấy danh sách bài học đã học của user
-                var userProgressLessonIds = await _context.UserProgresses
-                    .Where(up => up.UserID == userId)
-                    .Select(up => up.LessonID)
-                    .ToListAsync();
+                var progressesLookup = allProgresses
+                 .Where(p => p.Completed)
+                 .ToLookup(p => p.LessonID);
 
-                var response = new List<ResponseListTopic>();
-
-                response = topics.Select((topic, i) =>
+                var listTopics = allTopics.Select((topic, index) =>
                 {
-                    var lessons = topic.Lessons ?? new List<Lessons>();
+                    var lessons = topic.Lessons.ToList();
+                    var totalLesson = lessons.Count;
+                    var completedLesson = lessons.Count(lesson => progressesLookup.Contains(lesson.LessonID));
 
-                    // Nếu không có bài học nào thì trả về topic bị khoá
-                    if (!lessons.Any())
+                    bool isUnlocked = true;
+
+                    // Nếu topic không có bài học => luôn lock
+                    if (totalLesson == 0)
                     {
-                        return new ResponseListTopic
-                        {
-                            IdTopic = topic.TopicID.ToString(),
-                            NameTopic = topic.TopicName,
-                            ListLessons = new List<LessonItem>(),
-                            Status = "lock"
-                        };
+                        isUnlocked = false;
+                    }
+                    else if (index > 0)
+                    {
+                        var previousTopic = allTopics[index - 1];
+                        var previousLessons = previousTopic.Lessons.ToList();
+                        var previousTotal = previousLessons.Count;
+                        var previousCompleted = previousLessons.Count(lesson => progressesLookup.Contains(lesson.LessonID));
+
+                        isUnlocked = previousCompleted == previousTotal;
                     }
 
-                    // Kiểm tra topic trước đã hoàn thành hay chưa
-                    bool previousCompleted = i == 0 ||
-                        (topics[i - 1].Lessons?.All(l => userProgressLessonIds.Contains(l.LessonID)) == true);// ép kiểu dữ liệu về bool
-
-                    // Kiểm tra xem topic này có được mở khoá không
-                    bool isUnlocked = !topic.PrerequisiteTopicId.HasValue || previousCompleted;
-
-                    // Tạo danh sách bài học
-                    var lessonItems = lessons.Select(lesson => new LessonItem
+                    return new
                     {
-                        IdLesson = lesson.LessonID.ToString(),
-                        Title = lesson.LessonName
-                    }).ToList();
-
-                    return new ResponseListTopic
-                    {
-                        IdTopic = topic.TopicID.ToString(),
-                        NameTopic = topic.TopicName,
-                        ListLessons = lessonItems,
-                        Status = isUnlocked ? "unlock" : "lock"
+                        TopicId = topic.TopicID,
+                        TopicName = topic.TopicName,
+                        IsLocked = isUnlocked ? "unlock" : "lock",
+                        Lessons = lessons.Select(lesson => new
+                        {
+                            LessonId = lesson.LessonID,
+                            LessonName = lesson.LessonName,
+                        }).ToList()
                     };
                 }).ToList();
 
-
-
-
-                return new ApiResponse<object>(true, response, "Lấy thành công danh sách chủ đề");
+                return new ApiResponse<object>(true, listTopics, "Lấy thành công danh sách chủ đề");
             }
             catch (Exception ex)
             {
@@ -90,12 +84,28 @@ namespace API.Services
             try
             {
                 var topic = await _context.Topics
-                            .Include(t => t.Lessons)
-                            .FirstOrDefaultAsync(t => t.TopicID== topicId);
+                  .Include(t => t.Lessons)
+                  .Where(p => p.TopicID == topicId)
+                  .Select(t => new
+                  {
+                      TopicId = t.TopicID,
+                      TopicName = t.TopicName,
+                      Lesson = t.Lessons.Select(l => new
+                      {
+                          LessonId = l.LessonID,
+                          LessonName = l.LessonName,
+                          LessonContent = l.LessonContent,
+                          LessonType = l.LessonType,
+                          DifficultyLevel = l.DifficultyLevel
+                      })
+                  })
+                  .ToListAsync();
                 if (topic == null)
                 {
                     return new ApiResponse<object>(false, null, "Không tìm thấy chủ đề với ID: " + topicId);
                 }
+               
+                    
                 return new ApiResponse<object>(true, topic, "Lấy thông tin chủ đề thành công.");
             }
             catch (Exception ex)

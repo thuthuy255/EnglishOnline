@@ -1,0 +1,68 @@
+2025-05-03 17:24:21.653 +07:00 [INF] User profile is available. Using 'C:\Users\Vu Tien Khoai\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-03 17:24:21.841 +07:00 [INF] Now listening on: https://localhost:7035
+2025-05-03 17:24:21.842 +07:00 [INF] Now listening on: http://localhost:5283
+2025-05-03 17:24:21.918 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-03 17:24:21.920 +07:00 [INF] Hosting environment: Development
+2025-05-03 17:24:21.920 +07:00 [INF] Content root path: E:\StudyStudent\Web\Web_Elearning\EnglishOnline\API
+2025-05-03 17:24:22.485 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7035/swagger/index.html - -
+2025-05-03 17:24:22.638 +07:00 [INF] HTTP GET /swagger/index.html responded 200 in 48.4214 ms
+2025-05-03 17:24:22.644 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7035/swagger/index.html - - - 200 - text/html;charset=utf-8 161.3939ms
+2025-05-03 17:24:22.727 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7035/_vs/browserLink - -
+2025-05-03 17:24:22.766 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.5425ms
+2025-05-03 17:24:22.818 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - -
+2025-05-03 17:24:22.829 +07:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 10.2726 ms
+2025-05-03 17:24:22.831 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 13.4276ms
+2025-05-03 17:24:47.565 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7035/api/Auth/login application/json 64
+2025-05-03 17:24:47.578 +07:00 [INF] CORS policy execution successful.
+2025-05-03 17:24:48.176 +07:00 [INF] Executing endpoint 'AuthController.Login (API)'
+2025-05-03 17:24:48.198 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Model.DTO.LoginDto) on controller AuthController (API).
+2025-05-03 17:24:49.967 +07:00 [INF] Executed DbCommand (82ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserID], [u].[Avatar], [u].[CreatedAt], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-03 17:24:50.041 +07:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'Model.DTO.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-03 17:24:50.048 +07:00 [INF] Executed action AuthController.Login (API) in 1845.102ms
+2025-05-03 17:24:50.050 +07:00 [INF] Executed endpoint 'AuthController.Login (API)'
+2025-05-03 17:24:50.051 +07:00 [INF] HTTP POST /api/Auth/login responded 401 in 2476.8569 ms
+2025-05-03 17:24:50.057 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7035/api/Auth/login application/json 64 - 401 - application/json;+charset=utf-8 2492.6733ms
+2025-05-03 22:51:09.977 +07:00 [INF] User profile is available. Using 'C:\Users\Vu Tien Khoai\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-03 22:51:10.318 +07:00 [INF] Now listening on: https://localhost:7035
+2025-05-03 22:51:10.319 +07:00 [INF] Now listening on: http://localhost:5283
+2025-05-03 22:51:10.423 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-03 22:51:10.424 +07:00 [INF] Hosting environment: Development
+2025-05-03 22:51:10.424 +07:00 [INF] Content root path: E:\StudyStudent\Web\Web_Elearning\EnglishOnline\API
+2025-05-03 22:51:11.094 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7035/swagger/index.html - -
+2025-05-03 22:51:11.315 +07:00 [INF] HTTP GET /swagger/index.html responded 200 in 64.6429 ms
+2025-05-03 22:51:11.326 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7035/swagger/index.html - - - 200 - text/html;charset=utf-8 234.2056ms
+2025-05-03 22:51:11.432 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7035/_vs/browserLink - -
+2025-05-03 22:51:11.481 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 49.7678ms
+2025-05-03 22:51:11.567 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - -
+2025-05-03 22:51:11.580 +07:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 11.6094 ms
+2025-05-03 22:51:11.583 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 16.2818ms
+2025-05-03 22:51:58.871 +07:00 [INF] User profile is available. Using 'C:\Users\Vu Tien Khoai\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-03 22:51:59.077 +07:00 [INF] Now listening on: https://localhost:7035
+2025-05-03 22:51:59.079 +07:00 [INF] Now listening on: http://localhost:5283
+2025-05-03 22:51:59.204 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-03 22:51:59.206 +07:00 [INF] Hosting environment: Development
+2025-05-03 22:51:59.207 +07:00 [INF] Content root path: E:\StudyStudent\Web\Web_Elearning\EnglishOnline\API
+2025-05-03 22:52:00.067 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7035/swagger/index.html - -
+2025-05-03 22:52:00.310 +07:00 [INF] HTTP GET /swagger/index.html responded 200 in 96.5156 ms
+2025-05-03 22:52:00.330 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7035/swagger/index.html - - - 200 - text/html;charset=utf-8 267.8424ms
+2025-05-03 22:52:00.448 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7035/_vs/browserLink - -
+2025-05-03 22:52:00.500 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 51.8062ms
+2025-05-03 22:52:00.552 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - -
+2025-05-03 22:52:00.567 +07:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 13.2601 ms
+2025-05-03 22:52:00.570 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 18.4879ms
+2025-05-03 22:52:08.867 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7035/api/Auth/login application/json 47
+2025-05-03 22:52:08.890 +07:00 [INF] CORS policy execution successful.
+2025-05-03 22:52:09.782 +07:00 [INF] Executing endpoint 'AuthController.Login (API)'
+2025-05-03 22:52:09.830 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Model.DTO.LoginDto) on controller AuthController (API).
+2025-05-03 22:52:12.255 +07:00 [INF] Executed DbCommand (94ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserID], [u].[Avatar], [u].[CreatedAt], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-03 22:52:12.294 +07:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'Model.DTO.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-03 22:52:12.306 +07:00 [INF] Executed action AuthController.Login (API) in 2471.0321ms
+2025-05-03 22:52:12.308 +07:00 [INF] Executed endpoint 'AuthController.Login (API)'
+2025-05-03 22:52:12.309 +07:00 [INF] HTTP POST /api/Auth/login responded 401 in 3433.2775 ms
+2025-05-03 22:52:12.320 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7035/api/Auth/login application/json 47 - 401 - application/json;+charset=utf-8 3453.8752ms

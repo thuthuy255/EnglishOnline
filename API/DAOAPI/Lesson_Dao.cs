@@ -14,38 +14,37 @@ namespace API.DAOAPI
         }
 
         // Lấy thông tin Lesson theo LessonID
-        public Lessons? GetLessonById(int lessonId)
+        public async Task<Lessons?> GetLessonByIdAsync(int lessonId)
         {
-            var lesson = _context.Lessons
-                                 .Include(l => l.Questions)
-                                 .FirstOrDefault(l => l.LessonID == lessonId);
+            var lesson = await _context.Lessons
+                                       .Include(l => l.Questions)
+                                       .FirstOrDefaultAsync(l => l.LessonID == lessonId);
 
             return lesson;
         }
 
-
         // Thêm Lesson mới
-        public void AddLesson(Lessons lesson)
+        public async Task AddLessonAsync(Lessons lesson)
         {
-            _context.Lessons.Add(lesson);
-            _context.SaveChanges();
+            await _context.Lessons.AddAsync(lesson);
+            await _context.SaveChangesAsync();
         }
 
         // Cập nhật Lesson
-        public void UpdateLesson(Lessons lesson)
+        public async Task UpdateLessonAsync(Lessons lesson)
         {
             _context.Entry(lesson).State = EntityState.Modified;
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
         // Xóa Lesson
-        public void DeleteLesson(int lessonId)
+        public async Task DeleteLessonAsync(int lessonId)
         {
-            var lesson = _context.Lessons.Find(lessonId);
+            var lesson = await _context.Lessons.FindAsync(lessonId);
             if (lesson != null)
             {
                 _context.Lessons.Remove(lesson);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
         }
     }

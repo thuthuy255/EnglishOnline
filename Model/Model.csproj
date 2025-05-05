@@ -68,6 +68,7 @@
     <Compile Include="DTO\LoginDTO.cs" />
     <Compile Include="DTO\RegisterDTO.cs" />
     <Compile Include="DTO\ResetPasswordDto.cs" />
+    <Compile Include="DTO\UserResponse.cs" />
     <Compile Include="EF\Answers.cs" />
     <Compile Include="EF\Badges.cs" />
     <Compile Include="EF\EnglishOnlineDbContext.cs" />

@@ -26,12 +26,7 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> Login([FromBody] LoginDto model)
     {
         var response = await _authService.Login(model);
-        if (response.Success)
-        {
             return Ok(response);
-        }
-
-        return Unauthorized(response);
     }
 
 
@@ -39,12 +34,12 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> Register([FromBody] RegisterDTO model)
     {
         var response = await _authService.Register(model);
-        if (response.Success)
-        {
+        //if (response.Success)
+        //{
             return Ok(response);
-        }
+        //}
 
-        return Unauthorized(response);
+        //return Unauthorized(response);
     }
 
     [HttpPost("VerifyOTP")]

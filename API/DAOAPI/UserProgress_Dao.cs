@@ -1,4 +1,5 @@
 ﻿using API.Model;
+using Microsoft.EntityFrameworkCore;
 using Model.EF;
 
 namespace API.DAOAPI
@@ -12,36 +13,47 @@ namespace API.DAOAPI
         }
 
         // 1️⃣ Lấy danh sách tất cả tiến độ học
-        public List<UserProgress> GetAllUserProgress()
+        public async Task<List<UserProgress>> GetAllUserProgressAsync()
         {
-            return db.UserProgresses.ToList();
+            return await db.UserProgresses.ToListAsync();
+        }
+
+        // 1️⃣ Lấy tổng điểm của người học
+        public async Task<int> GetScoreByIDUser(int idUser)
+        {
+            var getScore = await db.UserProgresses.Where(p => p.UserID == idUser).SumAsync(p=>p.Score);
+            return getScore;
         }
 
         // 2️⃣ Lấy tiến độ học theo ID
-        public UserProgress GetUserProgressById(int id)
+        public async Task<UserProgress> GetUserProgressByIdAsync(int id)
         {
-            return db.UserProgresses.Find(id);
+            return await db.UserProgresses.FindAsync(id);
         }
 
         // 3️⃣ Lấy tiến độ học của một người dùng theo UserID
-        public List<UserProgress> GetProgressByUserId(int userId)
+        public async Task<List<UserProgress>> GetProgressByUserIdAsync(int userId)
         {
-            return db.UserProgresses.Where(up => up.UserID == userId).ToList();
+            return await db.UserProgresses
+                           .Where(up => up.UserID == userId)
+                           .ToListAsync();
         }
 
         // 4️⃣ Lấy tiến độ học của một bài học theo LessonID
-        public List<UserProgress> GetProgressByLessonId(int lessonId)
+        public async Task<List<UserProgress>> GetProgressByLessonIdAsync(int lessonId)
         {
-            return db.UserProgresses.Where(up => up.LessonID == lessonId).ToList();
+            return await db.UserProgresses
+                           .Where(up => up.LessonID == lessonId)
+                           .ToListAsync();
         }
 
         // 5️⃣ Thêm tiến độ học mới
-        public bool InsertUserProgress(UserProgress progress)
+        public async Task<bool> InsertUserProgressAsync(UserProgress progress)
         {
             try
             {
-                db.UserProgresses.Add(progress);
-                db.SaveChanges();
+                await db.UserProgresses.AddAsync(progress);
+                await db.SaveChangesAsync();
                 return true;
             }
             catch
@@ -51,17 +63,17 @@ namespace API.DAOAPI
         }
 
         // 6️⃣ Cập nhật tiến độ học
-        public bool UpdateUserProgress(UserProgress progress)
+        public async Task<bool> UpdateUserProgressAsync(UserProgress progress)
         {
             try
             {
-                var existingProgress = db.UserProgresses.Find(progress.ProgressID);
+                var existingProgress = await db.UserProgresses.FindAsync(progress.ProgressID);
                 if (existingProgress == null) return false;
 
                 existingProgress.Score = progress.Score;
                 existingProgress.Completed = progress.Completed;
 
-                db.SaveChanges();
+                await db.SaveChangesAsync();
                 return true;
             }
             catch
@@ -71,15 +83,15 @@ namespace API.DAOAPI
         }
 
         // 7️⃣ Xóa tiến độ học theo ID
-        public bool DeleteUserProgress(int id)
+        public async Task<bool> DeleteUserProgressAsync(int id)
         {
             try
             {
-                var progress = db.UserProgresses.Find(id);
+                var progress = await db.UserProgresses.FindAsync(id);
                 if (progress == null) return false;
 
                 db.UserProgresses.Remove(progress);
-                db.SaveChanges();
+                await db.SaveChangesAsync();
                 return true;
             }
             catch

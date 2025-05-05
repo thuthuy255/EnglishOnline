@@ -5,12 +5,9 @@ using API.Model;
 using Microsoft.EntityFrameworkCore;
 using API.Services;
 using API.IServices;
-using Model.DAO;
-using API.DAOAPI;
-using Microsoft.Extensions.Caching.StackExchangeRedis;
-using Microsoft.Extensions.Caching.Distributed;
+using Serilog;
 using Microsoft.OpenApi.Models;
-
+using Serilog.Events;
 // Alias các DAO cho rõ ràng
 using UserDao = API.DAOAPI.UserDao;
 using TopicDAO = API.DAOAPI.TopicDAO;
@@ -21,6 +18,13 @@ using UserProgress_Dao = API.DAOAPI.UserProgress_Dao;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Cấu hình Serilog
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()  // Ghi log vào console (dễ dàng khi debug)
+    .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day) // Ghi log vào file, mỗi ngày tạo 1 file mới
+    .CreateLogger();
+
+
 // -------------------- SERVICE CONFIG --------------------
 // Cấu hình DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -30,6 +34,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITopicService, TopicService>();
+builder.Services.AddScoped<ILessonService, LessonService>();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = builder.Configuration["Redis:Configuration"];
@@ -71,7 +77,8 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
     };
 });
-
+// Đăng ký Serilog với dịch vụ logging của .NET
+builder.Host.UseSerilog();
 // CORS ➤ Cho phép tất cả domain gọi đến API
 builder.Services.AddCors(options =>
 {
@@ -120,16 +127,19 @@ builder.Services.AddSwaggerGen();
 
 // -------------------- APP CONFIG --------------------
 var app = builder.Build();
+// ... existing code ...  
 
+// Ghi log yêu cầu HTTP  
+//app.UseSerilogRequestLogging(); 
 // Dùng HTTPS
 app.UseHttpsRedirection();
 
 // Bật Swagger UI khi ở chế độ phát triển
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
 // Bật CORS trước khi xác thực
 app.UseCors("AllowAll");

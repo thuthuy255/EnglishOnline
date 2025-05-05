@@ -14,41 +14,41 @@ namespace API.DAOAPI
         }
 
         // Lấy tất cả các Topic
-        public List<Topic> GetAllTopics()
+        public async Task<List<Topic>> GetAllTopicsAsync()
         {
-            return _context.Topics.ToList();
+            return await _context.Topics.ToListAsync();
         }
 
         // Lấy thông tin Topic theo ID
-        public Topic GetTopicById(Guid topicId)
+        public async Task<Topic?> GetTopicByIdAsync(Guid topicId)
         {
-            return _context.Topics
-                           .Include(t => t.Lessons) // Bao gồm thông tin Lessons
-                           .FirstOrDefault(t => t.TopicID == topicId);
+            return await _context.Topics
+                                 .Include(t => t.Lessons) // Bao gồm thông tin Lessons
+                                 .FirstOrDefaultAsync(t => t.TopicID == topicId);
         }
 
         // Thêm Topic mới
-        public void AddTopic(Topic topic)
+        public async Task AddTopicAsync(Topic topic)
         {
-            _context.Topics.Add(topic);
-            _context.SaveChanges();
+            await _context.Topics.AddAsync(topic);
+            await _context.SaveChangesAsync();
         }
 
         // Cập nhật Topic
-        public void UpdateTopic(Topic topic)
+        public async Task UpdateTopicAsync(Topic topic)
         {
             _context.Entry(topic).State = EntityState.Modified;
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
         // Xóa Topic
-        public void DeleteTopic(Guid topicId)
+        public async Task DeleteTopicAsync(Guid topicId)
         {
-            var topic = _context.Topics.Find(topicId);
+            var topic = await _context.Topics.FindAsync(topicId);
             if (topic != null)
             {
                 _context.Topics.Remove(topic);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
         }
     }

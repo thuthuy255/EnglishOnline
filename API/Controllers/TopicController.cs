@@ -44,6 +44,10 @@ namespace API.Controllers
         {
             try
             {
+                if(topicId == Guid.Empty)
+                {
+                    throw new Exception("TopicId là bắt buộc");
+                }
                 var response = await _topicService.GetTopicById(topicId);
                 if (response.Success)
                 {

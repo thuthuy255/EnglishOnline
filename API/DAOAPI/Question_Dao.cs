@@ -1,5 +1,6 @@
 ﻿
 using API.Model;
+using Microsoft.EntityFrameworkCore;
 using Model.EF;
 
 namespace API.DAOAPI
@@ -11,31 +12,34 @@ namespace API.DAOAPI
         {
             db = context;
         }
+
         // Lấy danh sách tất cả câu hỏi
-        public List<Questions> GetAllQuestions()
+        public async Task<List<Questions>> GetAllQuestionsAsync()
         {
-            return db.Questions.ToList();
+            return await db.Questions.ToListAsync();
         }
 
         // Lấy câu hỏi theo ID
-        public Questions GetQuestionById(int id)
+        public async Task<Questions?> GetQuestionByIdAsync(int id)
         {
-            return db.Questions.Find(id);
+            return await db.Questions.FindAsync(id);
         }
 
         // Lấy danh sách câu hỏi theo ID bài học
-        public List<Questions> GetQuestionsByLessonId(int lessonId)
+        public async Task<List<Questions>> GetQuestionsByLessonIdAsync(int lessonId)
         {
-            return db.Questions.Where(q => q.LessonID == lessonId).ToList();
+            return await db.Questions
+                           .Where(q => q.LessonID == lessonId)
+                           .ToListAsync();
         }
 
         // Thêm câu hỏi mới
-        public bool InsertQuestion(Questions question)
+        public async Task<bool> InsertQuestionAsync(Questions question)
         {
             try
             {
-                db.Questions.Add(question);
-                db.SaveChanges();
+                await db.Questions.AddAsync(question);
+                await db.SaveChangesAsync();
                 return true;
             }
             catch
@@ -45,16 +49,17 @@ namespace API.DAOAPI
         }
 
         // Cập nhật thông tin câu hỏi
-        public bool UpdateQuestion(Questions question)
+        public async Task<bool> UpdateQuestionAsync(Questions question)
         {
             try
             {
-                var existingQuestion = db.Questions.Find(question.QuestionID);
+                var existingQuestion = await db.Questions.FindAsync(question.QuestionID);
                 if (existingQuestion == null) return false;
+
                 existingQuestion.QuestionText = question.QuestionText;
                 existingQuestion.QuestionType = question.QuestionType;
 
-                db.SaveChanges();
+                await db.SaveChangesAsync();
                 return true;
             }
             catch
@@ -64,15 +69,15 @@ namespace API.DAOAPI
         }
 
         // Xóa câu hỏi theo ID
-        public bool DeleteQuestion(int id)
+        public async Task<bool> DeleteQuestionAsync(int id)
         {
             try
             {
-                var question = db.Questions.Find(id);
+                var question = await db.Questions.FindAsync(id);
                 if (question == null) return false;
 
                 db.Questions.Remove(question);
-                db.SaveChanges();
+                await db.SaveChangesAsync();
                 return true;
             }
             catch
