@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\StudyStudent\\Web\\Web_Elearning\\EnglishOnline\\",
+  "WorkspaceRootPath": "D:\\nam_3\\WebNC\\EnglishOnline\\",
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{39227688-9F7A-46D4-9E72-DCF357377D67}|API\\API.csproj|e:\\studystudent\\web\\web_elearning\\englishonline\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,12 +29,40 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_LeftMenu.cshtml",
+              "DocumentMoniker": "D:\\nam_3\\WebNC\\EnglishOnline\\WebApplication1\\Areas\\Admin\\Views\\Shared\\_LeftMenu.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Admin\\Views\\Shared\\_LeftMenu.cshtml",
+              "ToolTip": "D:\\nam_3\\WebNC\\EnglishOnline\\WebApplication1\\Areas\\Admin\\Views\\Shared\\_LeftMenu.cshtml",
+              "RelativeToolTip": "WebApplication1\\Areas\\Admin\\Views\\Shared\\_LeftMenu.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEsAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T03:09:11.316Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\nam_3\\WebNC\\EnglishOnline\\WebApplication1\\Areas\\Admin\\Views\\Lessons\\Delete.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Admin\\Views\\Lessons\\Delete.cshtml",
+              "ToolTip": "D:\\nam_3\\WebNC\\EnglishOnline\\WebApplication1\\Areas\\Admin\\Views\\Lessons\\Delete.cshtml",
+              "RelativeToolTip": "WebApplication1\\Areas\\Admin\\Views\\Lessons\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T03:08:55.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\nam_3\\WebNC\\EnglishOnline\\WebApplication1\\Areas\\Admin\\Views\\Lessons\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Areas\\Admin\\Views\\Lessons\\Edit.cshtml",
+              "ToolTip": "D:\\nam_3\\WebNC\\EnglishOnline\\WebApplication1\\Areas\\Admin\\Views\\Lessons\\Edit.cshtml",
+              "RelativeToolTip": "WebApplication1\\Areas\\Admin\\Views\\Lessons\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T03:08:22.805Z"
             },
             {
               "$type": "Document",

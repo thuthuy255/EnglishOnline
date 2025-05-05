@@ -19,7 +19,7 @@
 
     <div class="d-flex justify-content-center align-items-center mt-5">
         <div class="col-md-8 bg-white p-5 rounded shadow vh-10">
-            <h2 class="text-center">Thêm Người Dùng</h2>
+            <h2 class="text-center">Thêm Chủ Đề</h2>
             @using (Html.BeginForm())
             {
                 @Html.AntiForgeryToken()
@@ -41,7 +41,6 @@
                         <div class="mb-3">
                             @Html.DropDownListFor(model => model.PrerequisiteTopicId,
                                 (SelectList)ViewBag.PrerequisiteTopicId,
-                                "Không có",
                                 new { @class = "form-control" })
                         </div>
                     </div>
