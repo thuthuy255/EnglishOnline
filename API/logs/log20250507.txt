@@ -1,0 +1,71 @@
+2025-05-07 08:14:03.665 +07:00 [INF] User profile is available. Using 'C:\Users\Vu Tien Khoai\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-07 08:14:03.911 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/swagger - -
+2025-05-07 08:14:04.002 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-07 08:14:04.003 +07:00 [INF] Hosting environment: Development
+2025-05-07 08:14:04.003 +07:00 [INF] Content root path: E:\StudyStudent\Web\Web_Elearning\EnglishOnline\API
+2025-05-07 08:14:04.044 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/swagger/index.html - -
+2025-05-07 08:14:04.056 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/swagger - - - 301 - - 140.1458ms
+2025-05-07 08:14:04.104 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/swagger/index.html - - - 200 - text/html;charset=utf-8 57.4286ms
+2025-05-07 08:14:04.113 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/swagger/swagger-ui-standalone-preset.js - -
+2025-05-07 08:14:04.115 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/swagger/swagger-ui-bundle.js - -
+2025-05-07 08:14:04.115 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/swagger/swagger-ui.css - -
+2025-05-07 08:14:04.138 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/_vs/browserLink - -
+2025-05-07 08:14:04.147 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-05-07 08:14:04.147 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-05-07 08:14:04.154 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/swagger/swagger-ui.css - - - 200 144929 text/css 38.6982ms
+2025-05-07 08:14:04.156 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 43.2630ms
+2025-05-07 08:14:04.168 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-05-07 08:14:04.183 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 45.6002ms
+2025-05-07 08:14:04.184 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 70.8194ms
+2025-05-07 08:14:04.309 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/swagger/v1/swagger.json - -
+2025-05-07 08:14:04.319 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 10.1911ms
+2025-05-07 08:24:37.357 +07:00 [INF] User profile is available. Using 'C:\Users\Vu Tien Khoai\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-07 08:24:37.553 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/swagger/index.html - -
+2025-05-07 08:24:37.670 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-07 08:24:37.671 +07:00 [INF] Hosting environment: Development
+2025-05-07 08:24:37.671 +07:00 [INF] Content root path: E:\StudyStudent\Web\Web_Elearning\EnglishOnline\API
+2025-05-07 08:24:37.751 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/swagger/index.html - - - 200 - text/html;charset=utf-8 199.9414ms
+2025-05-07 08:24:37.791 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/_vs/browserLink - -
+2025-05-07 08:24:37.849 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 58.7182ms
+2025-05-07 08:24:38.001 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/swagger/v1/swagger.json - -
+2025-05-07 08:24:38.017 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 15.1522ms
+2025-05-07 08:27:05.905 +07:00 [INF] User profile is available. Using 'C:\Users\Vu Tien Khoai\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-07 08:27:06.078 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/swagger/index.html - -
+2025-05-07 08:27:06.196 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-07 08:27:06.196 +07:00 [INF] Hosting environment: Development
+2025-05-07 08:27:06.196 +07:00 [INF] Content root path: E:\StudyStudent\Web\Web_Elearning\EnglishOnline\API
+2025-05-07 08:27:06.279 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/swagger/index.html - - - 200 - text/html;charset=utf-8 202.3171ms
+2025-05-07 08:27:06.310 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/_vs/browserLink - -
+2025-05-07 08:27:06.354 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 43.5508ms
+2025-05-07 08:27:06.497 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/swagger/v1/swagger.json - -
+2025-05-07 08:27:06.507 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 10.1574ms
+2025-05-07 08:30:50.950 +07:00 [INF] User profile is available. Using 'C:\Users\Vu Tien Khoai\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-07 08:30:51.107 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/swagger/index.html - -
+2025-05-07 08:30:51.224 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-07 08:30:51.224 +07:00 [INF] Hosting environment: Development
+2025-05-07 08:30:51.224 +07:00 [INF] Content root path: E:\StudyStudent\Web\Web_Elearning\EnglishOnline\API
+2025-05-07 08:30:51.311 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/swagger/index.html - - - 200 - text/html;charset=utf-8 204.9662ms
+2025-05-07 08:30:51.338 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/_vs/browserLink - -
+2025-05-07 08:30:51.385 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 46.6039ms
+2025-05-07 08:30:51.455 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/swagger/v1/swagger.json - -
+2025-05-07 08:30:51.467 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 11.8792ms
+2025-05-07 08:33:28.845 +07:00 [INF] User profile is available. Using 'C:\Users\Vu Tien Khoai\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-07 08:33:29.028 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/swagger/index.html - -
+2025-05-07 08:33:29.165 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-07 08:33:29.166 +07:00 [INF] Hosting environment: Development
+2025-05-07 08:33:29.166 +07:00 [INF] Content root path: E:\StudyStudent\Web\Web_Elearning\EnglishOnline\API
+2025-05-07 08:33:29.254 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/swagger/index.html - - - 200 - text/html;charset=utf-8 225.0158ms
+2025-05-07 08:33:29.299 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/_vs/browserLink - -
+2025-05-07 08:33:29.330 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.7753ms
+2025-05-07 08:33:29.394 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/swagger/v1/swagger.json - -
+2025-05-07 08:33:29.402 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 7.4552ms
+2025-05-07 08:35:10.573 +07:00 [INF] User profile is available. Using 'C:\Users\Vu Tien Khoai\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-07 08:35:10.757 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/swagger/index.html - -
+2025-05-07 08:35:10.876 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-07 08:35:10.876 +07:00 [INF] Hosting environment: Development
+2025-05-07 08:35:10.876 +07:00 [INF] Content root path: E:\StudyStudent\Web\Web_Elearning\EnglishOnline\API
+2025-05-07 08:35:10.963 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/swagger/index.html - - - 200 - text/html;charset=utf-8 209.4042ms
+2025-05-07 08:35:11.008 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/_vs/browserLink - -
+2025-05-07 08:35:11.047 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.0701ms
+2025-05-07 08:35:11.205 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44351/swagger/v1/swagger.json - -
+2025-05-07 08:35:11.214 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44351/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 8.8432ms

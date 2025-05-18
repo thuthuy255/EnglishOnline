@@ -1,0 +1,98 @@
+2025-05-09 08:08:18.151 +07:00 [INF] User profile is available. Using 'C:\Users\Vu Tien Khoai\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-09 08:08:18.318 +07:00 [WRN] Overriding address(es) 'http://0.0.0.0:5283'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-05-09 08:08:18.340 +07:00 [INF] Now listening on: http://[::]:5283
+2025-05-09 08:08:18.435 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 08:08:18.436 +07:00 [INF] Hosting environment: Development
+2025-05-09 08:08:18.436 +07:00 [INF] Content root path: E:\StudyStudent\Web\Web_Elearning\EnglishOnline\API
+2025-05-09 08:08:19.469 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/index.html - -
+2025-05-09 08:08:19.660 +07:00 [WRN] Failed to determine the https port for redirect.
+2025-05-09 08:08:19.745 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/index.html - - - 200 - text/html;charset=utf-8 281.3817ms
+2025-05-09 08:08:19.766 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5283/_vs/browserLink - -
+2025-05-09 08:08:19.826 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5283/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 59.8057ms
+2025-05-09 08:08:19.909 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - -
+2025-05-09 08:08:19.924 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5283/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 15.6036ms
+2025-05-09 08:08:37.042 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/swagger/index.html - -
+2025-05-09 08:08:37.049 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/swagger/index.html - - - 200 - text/html;charset=utf-8 6.7991ms
+2025-05-09 08:08:37.076 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/swagger/swagger-ui.css - -
+2025-05-09 08:08:37.082 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/swagger/swagger-ui-bundle.js - -
+2025-05-09 08:08:37.087 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/swagger/swagger-ui-standalone-preset.js - -
+2025-05-09 08:08:37.092 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/_vs/browserLink - -
+2025-05-09 08:08:37.121 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.2572ms
+2025-05-09 08:08:37.139 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-05-09 08:08:37.139 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-05-09 08:08:37.142 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 54.9479ms
+2025-05-09 08:08:37.142 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/swagger/swagger-ui.css - - - 200 144929 text/css 66.3446ms
+2025-05-09 08:08:37.155 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-05-09 08:08:37.156 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 73.0369ms
+2025-05-09 08:08:37.300 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/swagger/v1/swagger.json - -
+2025-05-09 08:08:37.306 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 5.6721ms
+2025-05-09 08:08:37.411 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/swagger/favicon-32x32.png - -
+2025-05-09 08:08:37.412 +07:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-05-09 08:08:37.413 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/swagger/favicon-32x32.png - - - 200 628 image/png 2.0656ms
+2025-05-09 08:08:43.828 +07:00 [INF] Request starting HTTP/1.1 POST http://10.110.50.125:5283/api/Auth/login application/json 47
+2025-05-09 08:08:43.833 +07:00 [INF] CORS policy execution successful.
+2025-05-09 08:08:43.906 +07:00 [INF] Executing endpoint 'AuthController.Login (API)'
+2025-05-09 08:08:43.934 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Model.DTO.LoginDto) on controller AuthController (API).
+2025-05-09 08:08:45.013 +07:00 [INF] Executed DbCommand (40ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserID], [u].[Avatar], [u].[CreatedAt], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-09 08:08:45.185 +07:00 [INF] Executing OkObjectResult, writing value of type 'Model.DTO.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 08:08:45.196 +07:00 [INF] Executed action AuthController.Login (API) in 1258.672ms
+2025-05-09 08:08:45.198 +07:00 [INF] Executed endpoint 'AuthController.Login (API)'
+2025-05-09 08:08:45.204 +07:00 [INF] Request finished HTTP/1.1 POST http://10.110.50.125:5283/api/Auth/login application/json 47 - 200 - application/json;+charset=utf-8 1376.1591ms
+2025-05-09 08:09:36.781 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/swagger/index.html - -
+2025-05-09 08:09:36.785 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/swagger/index.html - - - 200 - text/html;charset=utf-8 4.0907ms
+2025-05-09 08:09:36.831 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/swagger/swagger-ui.css - -
+2025-05-09 08:09:36.846 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/swagger/swagger-ui-bundle.js - -
+2025-05-09 08:09:36.861 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/swagger/swagger-ui-standalone-preset.js - -
+2025-05-09 08:09:36.861 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/_vs/browserLink - -
+2025-05-09 08:09:36.898 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-05-09 08:09:36.899 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/swagger/swagger-ui.css - - - 200 144929 text/css 68.8322ms
+2025-05-09 08:09:36.950 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 88.5282ms
+2025-05-09 08:09:36.989 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-05-09 08:09:36.990 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 129.1151ms
+2025-05-09 08:09:37.074 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-05-09 08:09:37.074 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 228.6105ms
+2025-05-09 08:09:37.323 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/swagger/v1/swagger.json - -
+2025-05-09 08:09:37.327 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 4.3386ms
+2025-05-09 08:09:37.490 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/swagger/favicon-32x32.png - -
+2025-05-09 08:09:37.491 +07:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-05-09 08:09:37.491 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/swagger/favicon-32x32.png - - - 200 628 image/png 1.7262ms
+2025-05-09 08:09:49.691 +07:00 [INF] Request starting HTTP/1.1 POST http://10.110.50.125:5283/api/Auth/login application/json 47
+2025-05-09 08:09:49.693 +07:00 [INF] CORS policy execution successful.
+2025-05-09 08:09:49.694 +07:00 [INF] Executing endpoint 'AuthController.Login (API)'
+2025-05-09 08:09:49.695 +07:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Model.DTO.LoginDto) on controller AuthController (API).
+2025-05-09 08:09:49.718 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserID], [u].[Avatar], [u].[CreatedAt], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__model_Email_0
+2025-05-09 08:09:49.721 +07:00 [INF] Executing OkObjectResult, writing value of type 'Model.DTO.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 08:09:49.722 +07:00 [INF] Executed action AuthController.Login (API) in 26.1523ms
+2025-05-09 08:09:49.723 +07:00 [INF] Executed endpoint 'AuthController.Login (API)'
+2025-05-09 08:09:49.723 +07:00 [INF] Request finished HTTP/1.1 POST http://10.110.50.125:5283/api/Auth/login application/json 47 - 200 - application/json;+charset=utf-8 32.5080ms
+2025-05-09 08:10:11.721 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/api/Topic - -
+2025-05-09 08:10:11.735 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-09 08:10:11.740 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-09 08:10:11.741 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/api/Topic - - - 401 0 - 19.5551ms
+2025-05-09 08:10:20.015 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/api/User/GetInfoUser - -
+2025-05-09 08:10:20.018 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-09 08:10:20.018 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-09 08:10:20.019 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/api/User/GetInfoUser - - - 401 0 - 4.3372ms
+2025-05-09 08:10:40.496 +07:00 [INF] Request starting HTTP/1.1 GET http://10.110.50.125:5283/api/User/GetInfoUser - -
+2025-05-09 08:10:40.535 +07:00 [INF] Executing endpoint 'API.Controllers.UserController.GetUserInfo (API)'
+2025-05-09 08:10:40.540 +07:00 [INF] Route matched with {action = "GetUserInfo", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserInfo() on controller API.Controllers.UserController (API).
+2025-05-09 08:10:40.598 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserID], [u].[Avatar], [u].[CreatedAt], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[UserID] = @__p_0
+2025-05-09 08:10:40.622 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__idUser_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([u].[Score]), 0)
+FROM [UserProgresses] AS [u]
+WHERE [u].[UserID] = @__idUser_0
+2025-05-09 08:10:40.626 +07:00 [INF] Executing OkObjectResult, writing value of type 'Model.DTO.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-09 08:10:40.632 +07:00 [INF] Executed action API.Controllers.UserController.GetUserInfo (API) in 91.5566ms
+2025-05-09 08:10:40.633 +07:00 [INF] Executed endpoint 'API.Controllers.UserController.GetUserInfo (API)'
+2025-05-09 08:10:40.634 +07:00 [INF] Request finished HTTP/1.1 GET http://10.110.50.125:5283/api/User/GetInfoUser - - - 200 - application/json;+charset=utf-8 137.5560ms

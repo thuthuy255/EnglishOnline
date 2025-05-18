@@ -17,7 +17,15 @@ using UserBadges_Dao = API.DAOAPI.UserBadges_Dao;
 using UserProgress_Dao = API.DAOAPI.UserProgress_Dao;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
 // Cấu hình Serilog
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()  // Ghi log vào console (dễ dàng khi debug)
@@ -80,15 +88,7 @@ builder.Services.AddAuthentication(options =>
 // Đăng ký Serilog với dịch vụ logging của .NET
 builder.Host.UseSerilog();
 // CORS ➤ Cho phép tất cả domain gọi đến API
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll", builder =>
-    {
-        builder.AllowAnyOrigin()
-               .AllowAnyMethod()
-               .AllowAnyHeader();
-    });
-});
+
 
 // Swagger
 builder.Services.AddSwaggerGen(options =>
@@ -124,7 +124,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
+builder.WebHost.ConfigureKestrel(serverOptions =>
+{
+    serverOptions.ListenAnyIP(5283); // Lắng nghe mọi IP trên cổng 5283
+});
 // -------------------- APP CONFIG --------------------
 var app = builder.Build();
 // ... existing code ...  
